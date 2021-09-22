@@ -10,21 +10,30 @@ html(lang='en-US')
 		link(href="https://fonts.gstatic.com" rel="preconnect")
 		title Museum
 	body
-		header
-		main
-			section(class='main__section welcome')
-				h1(class='section__title') Welcome to the Louvre
-			section(class='main__section visiting')
-				h2(class='section__title') Virtual tour
-			section(class='main__section explore')
-				h2(class='section__title') Picture explore
-			section(class='main__section video')
-				h2(class='section__title') Video journey
-			section(class='main__section gallery')
-				h2(class='section__title') Art Gallery
-			section(class='main__section tickets')
-				h2(class='section__title') Buy tickets
-			section(class='main__section contacts')
-				h2(class='section__title') Contacts
-		footer
+		header.header
+			div.container.header__container
+		main.main
+			section(class='section section_dark welcome')
+				div.container.welcome__container
+					h1(class='section__title') Welcome to the Louvre
+			section(class='section visiting')
+				div.container.visiting__container
+					h2(class='section__title') Virtual tour
+			section(class='section section_dark explore')
+				div.container.explore__container
+					h2(class='section__title') Picture explore
+			section(class='section video')
+				div.container.video__container
+					h2(class='section__title') Video journey
+			section(class='section section_dark gallery')
+				div.container.gallery__container
+					h2(class='section__title') Art Gallery
+			section(class='section tickets')
+				div.container.tickets__container
+					h2(class='section__title') Buy tickets
+			section(class='section contacts')
+				div.container.contacts__container
+					h2(class='section__title') Contacts
+		footer.footer
+			div.container.footer__container
 		//script(src='../js/script.js')
