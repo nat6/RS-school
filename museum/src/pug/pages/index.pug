@@ -12,26 +12,12 @@ html(lang='en-US')
 	body
 		include ../layout/header.pug
 		main.main
-			section(class='section section_dark welcome')
-				div.container.welcome__container
-					h1(class='section__title') Welcome to the Louvre
-			section(class='section visiting')
-				div.container.visiting__container
-					h2(class='section__title') Virtual tour
-			section(class='section section_dark explore')
-				div.container.explore__container
-					h2(class='section__title') Picture explore
-			section(class='section video')
-				div.container.video__container
-					h2(class='section__title') Video journey
-			section(class='section section_dark gallery')
-				div.container.gallery__container
-					h2(class='section__title') Art Gallery
-			section(class='section tickets')
-				div.container.tickets__container
-					h2(class='section__title') Buy tickets
-			section(class='section contacts')
-				div.container.contacts__container
-					h2(class='section__title') Contacts
+			include ../layout/welcome.pug
+			include ../layout/visiting.pug
+			include ../layout/explore.pug
+			include ../layout/video.pug
+			include ../layout/gallery.pug
+			include ../layout/tickets.pug
+			include ../layout/contacts.pug
 		include ../layout/footer.pug
 		//script(src='../js/script.js')
