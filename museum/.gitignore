@@ -38,5 +38,6 @@ node_modules
 ../.DS_Store
 
 #temp
-dist/styles
-dist/pages
+dist/index.html
+dist/style.css
+
