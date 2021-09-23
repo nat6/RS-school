@@ -9,15 +9,16 @@ html(lang='en-US')
 		link(href='assets/icons/favicon.ico' rel='shortcut icon')
 		link(href="https://fonts.gstatic.com" rel="preconnect")
 		title Museum
+		include ../layouts/_variables.pug
 	body
-		include ../layout/header.pug
+		include ../layout/_header.pug
 		main.main
-			include ../layout/welcome.pug
-			include ../layout/visiting.pug
-			include ../layout/explore.pug
-			include ../layout/video.pug
-			include ../layout/gallery.pug
-			include ../layout/tickets.pug
-			include ../layout/contacts.pug
-		include ../layout/footer.pug
+			include ../layout/_welcome.pug
+			include ../layout/_visiting.pug
+			include ../layout/_explore.pug
+			include ../layout/_video.pug
+			include ../layout/_gallery.pug
+			include ../layout/_tickets.pug
+			include ../layout/_contacts.pug
+		include ../layout/_footer.pug
 		//script(src='../js/script.js')
