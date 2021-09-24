@@ -1,3 +1,27 @@
-section(class='section tickets')
+section.section.tickets
 	div.container.tickets__container
-		h2(class='section__title') Buy tickets
+		h2.section__title Buy tickets
+		div.tickets__img_container
+			img.tickets__img(src=ticketsSrc, alt='Pompeo Girolam Batoni')
+		div.tickets__content
+			div.tickets__type
+				div.tickets__subtitle Ticket Type
+				div.type__wrapper
+					label.type__item.tickets__text Permanent exhibition
+						input.type__input(type='radio' checked='checked' name='tickets-type')
+						span.type__checkmark
+					label.type__item.tickets__text Temporary exhibition
+						input.type__input(type='radio' name='tickets-type')
+						span.type__checkmark
+					label.type__item.tickets__text Combined Admission
+						input.type__input(type='radio' name='tickets-type')
+						span.type__checkmark
+			div.tickets__amount
+				div.tickets__subtitle Amount
+				div.amount__wrapper
+					p.tickets__text Basic 18+
+					include ../components/_block-amount.pug
+					p.tickets__text Senior 65+
+					include ../components/_block-amount.pug
+				div.tickets__result Total €220
+				include ../components/_button-buy.pug
