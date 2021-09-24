@@ -10,3 +10,15 @@ mixin social__item(href, name)
 	li.social__item
 		a.social__link(href=href target='_blank')
 			div.social__icon(class='social__icon_' + name)
+
+mixin video__item(width, height, src, loading)
+	iframe(
+		width=width
+		height=height
+		src=src
+		title='YouTube video player'
+		frameborder='0'
+		loading=loading
+		allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+		allowfullscreen
+	)
