@@ -5,3 +5,7 @@ mixin visiting__card(href, src, title)
 			h3.visiting__title=title
 			p.visiting__subtitle 360° Virtual Tour
 			p.visiting__text Google Street Panorama View
+
+mixin social__item(href, name)
+	a.social__link(href=href target='_blank')
+		div.social__icon(class='social__icon_' + name)
