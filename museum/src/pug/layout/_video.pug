@@ -1,3 +1,12 @@
-section(class='section video')
+section.section.video
 	div.container.video__container
-		h2(class='section__title') Video journey
+		div.video__container_top
+			h2.section__title.section__title_gold Video journey
+			p.video__text Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+		div.video__container_bottom
+			div.video__main
+				+video__item('560', '315', welcomeHref)
+			div.video__more
+				+video__item('360', '200', expositionHref, 'lazy')
+				+video__item('360', '200', louvreHref, 'lazy')
+				+video__item('360', '200', promenadeHref, 'lazy')
