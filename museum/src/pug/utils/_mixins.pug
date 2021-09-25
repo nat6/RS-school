@@ -1,3 +1,7 @@
+mixin nav__item(name)
+	li.nav__item
+		a.nav__link(href='#' + name)=name
+
 mixin visiting__card(href, src, title)
 	a.visiting__link(href=href target='_blank')
 		div.visiting__card
