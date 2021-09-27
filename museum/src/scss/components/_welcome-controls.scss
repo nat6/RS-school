@@ -1,0 +1,64 @@
+.welcome__controls {
+  @include flex-basic;
+  width: 451px;
+  height: 120px;
+  padding-left: 74px;
+  padding-right: 75px;
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  background: $dark-color;
+  font-size: 22px;
+  line-height: 40px;
+  color: $light-color;
+}
+
+.controls__num {
+  width: 76px;
+  @include flex-basic;
+}
+.controls__pagination {
+  width: 180px;
+  @include flex-basic;
+  margin-right: 4px;
+}
+
+.pagination_square {
+  width: 16px;
+  height: 16px;
+  background: $light-color;
+  cursor: pointer;
+}
+
+.pagination_square:first-child {
+  background: $light-gold-color;
+}
+
+.pagination_square:hover {
+  background: $additional-color;
+  @include trans-medium;
+}
+
+.controls__buttons {
+  width: 80px;
+  @include flex-basic;
+}
+
+.controls__arrow {
+  width: 30px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  &_left {
+    background-image: url(assets/svg/arrow-left.svg);
+  }
+  &_right {
+    background-image: url(assets/svg/arrow-right.svg);
+  }
+}
+
+.controls__arrow:hover {
+  @include gold-filter;
+  @include trans-medium;
+}

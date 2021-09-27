@@ -51,6 +51,3 @@ volume.addEventListener('input', function () {
 	this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`
 })
 
-
-// Объедините весь код в одну функцию и вызовите её. Теперь каждый раз при перезагрузке страницы у вас будет новое рандомное расположение изображений в галерее.
-
