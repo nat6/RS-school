@@ -1,27 +1,29 @@
 section.section.tickets(id='tickets')
 	div.container.tickets__container
-		h2.section__title.section__title_gold Buy tickets
-		div.tickets__img_container
-			img.tickets__img(src=ticketsSrc, alt='Pompeo Girolam Batoni')
+		h2.section__title.section__title_gold.section__title_underline Buy tickets
 		div.tickets__content
-			div.tickets__type
-				div.tickets__subtitle Ticket Type
-				div.type__wrapper
-					label.type__item.tickets__text Permanent exhibition
-						input.type__input(type='radio' checked='checked' name='tickets-type')
-						span.type__checkmark
-					label.type__item.tickets__text Temporary exhibition
-						input.type__input(type='radio' name='tickets-type')
-						span.type__checkmark
-					label.type__item.tickets__text Combined Admission
-						input.type__input(type='radio' name='tickets-type')
-						span.type__checkmark
-			div.tickets__amount
-				div.tickets__subtitle Amount
-				div.amount__wrapper
-					p.tickets__text Basic 18+
-					include ../components/_block-amount.pug
-					p.tickets__text Senior 65+
-					include ../components/_block-amount.pug
-				div.tickets__result Total €220
-				include ../components/_button-buy.pug
+			div.tickets__img_container
+				img.tickets__img(src=ticketsSrc, alt='Pompeo Girolam Batoni')
+			div.tickets__form
+				div.tickets__type
+					div.tickets__subtitle Ticket Type
+					div.type__container
+						label.radio__item.type__item.tickets__text Permanent exhibition
+							input.radio__input.type__input(type='radio' checked='checked' name='tickets-type')
+							span.radio__checkmark.type__checkmark
+						label.radio__item.type__item.tickets__text Temporary exhibition
+							input.radio__input.type__input(type='radio' name='tickets-type')
+							span.radio__checkmark.type__checkmark
+						label.radio__item.type__item.tickets__text Combined Admission
+							input.radio__input.type__input(type='radio' name='tickets-type')
+							span.radio__checkmark.type__checkmark
+				div.tickets__amount
+					div.tickets__subtitle.subtitle_amount Amount
+					div.amount__container
+						p.tickets__text Basic 18+
+						include ../components/_block-amount.pug
+						p.tickets__text Senior 65+
+						include ../components/_block-amount.pug
+					div.tickets__result Total €220
+					div.tickets__buy
+						include ../components/_button-buy.pug
