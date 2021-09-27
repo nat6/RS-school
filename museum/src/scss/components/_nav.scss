@@ -1,0 +1,15 @@
+.nav__list {
+  width: 775px;
+  @include flex-basic;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav__link {
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: $light-color;
+}

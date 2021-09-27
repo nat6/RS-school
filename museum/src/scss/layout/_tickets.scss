@@ -1,0 +1,24 @@
+@import '../components/_ticket-form.scss';
+
+.tickets {
+	padding-bottom: 69px;
+}
+
+.tickets__content {
+  margin-top: 103px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.tickets__img {
+  width: 720px;
+  height: 550px;
+}
+
+.tickets__buy {
+  margin-top: 60px;
+  border: none;
+}

@@ -1,0 +1,41 @@
+@import '../components/_buttons.scss';
+
+.welcome {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+.welcome__container {
+	height: 750px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url(./assets/img/welcome-slider/1.jpg);
+}
+
+.welcome__container::before {
+  content: '';
+  width: 1000px;
+  height: 750px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, black 0%, transparent 30%);
+}
+
+.welcome__content {
+	max-width: 598px;
+  margin-top: 150px;
+  z-index: 2;
+	color: $light-color;
+}
+
+.welcome__text {
+	margin-top: 25px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+}

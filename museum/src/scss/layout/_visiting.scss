@@ -1,0 +1,12 @@
+@import '../components/_visiting-card.scss';
+
+.visiting {
+  padding-bottom: 0;
+}
+
+.visiting__cards {
+  margin-top: 103px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

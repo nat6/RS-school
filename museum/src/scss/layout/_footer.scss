@@ -1,0 +1,54 @@
+@import '../components/_social.scss';
+
+.footer {
+  padding-top: 85px;
+  position: relative;
+}
+
+.footer__block_top {
+  display: flex;
+}
+
+.footer__block_top::after {
+  content: '';
+  position: absolute;
+  bottom: 124px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: $gray-color;
+}
+
+.footer__nav {
+  width: 50%;
+  display: flex;
+}
+
+.footer__nav .nav__list {
+  width: 363px;
+  margin-left: 141px;
+  margin-top: 3px;
+	display: block;
+  column-count: 2;
+  column-gap: 150px;
+}
+
+.footer__nav .nav__item {
+  margin-bottom: 25px;
+}
+
+.footer__block_bottom {
+  padding-top: 79px;
+  padding-bottom: 50px;
+	display: flex;
+  justify-content: space-between;
+}
+
+.footer__text {
+  display: block;
+  color: $light-color;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
