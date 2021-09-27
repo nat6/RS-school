@@ -23,9 +23,28 @@
 	-o-transition: 1s linear;
 	transition: 1s linear;
 }
-@mixin trans {
+@mixin trans-medium {
+	-webkit-transition: 0.5s linear;
+	-moz-transition: 0.5s linear;
+	-o-transition: 0.5s linear;
+	transition: 0.5s linear;
+}
+
+@mixin trans-fast {
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
 	-o-transition: 0.2s linear;
 	transition: 0.2s linear;
+}
+
+@mixin gold-filter {
+	filter: invert(60%) sepia(7%) saturate(1802%) hue-rotate(356deg) brightness(160%) contrast(77%);
+}
+
+@mixin gray-filter {
+	filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(184deg) brightness(130%) contrast(88%);
+}
+
+@mixin red-filter {
+	filter: invert(11%) sepia(26%) saturate(6519%) hue-rotate(352deg) brightness(50%) contrast(102%);
 }

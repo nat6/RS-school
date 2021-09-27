@@ -13,3 +13,13 @@
   text-transform: capitalize;
   color: $light-color;
 }
+
+.nav__link:hover {
+  color: $additional-color;
+  @include trans-medium;
+}
+
+.nav__link:active {
+  color: $dark-gold-color;
+  @include trans-medium;
+}

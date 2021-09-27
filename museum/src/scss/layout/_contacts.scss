@@ -27,6 +27,11 @@
   color: $dark-color;
 }
 
+.contacts__link:hover {
+  color: $main-color;
+  @include trans-medium;
+}
+
 .map__img {
   width: 960px;
 }

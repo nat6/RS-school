@@ -20,7 +20,7 @@
 .radio__checkmark:before {
   content: '';
   position: absolute;
-  display: none;
+  visibility: hidden;
   background-color: black;
   height: 7px;
   width: 7px;
@@ -36,12 +36,14 @@
 }
 
 .radio__item:hover .radio__checkmark:before {
-  display: block;
+  visibility: visible;
   background-color: $additional-color;
+  @include trans-medium;
 }
 
 .radio__input:checked ~ .radio__checkmark:before {
-  display: block;
+  visibility: visible;
+  @include trans-medium;
 }
 
 

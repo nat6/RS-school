@@ -9,6 +9,7 @@
 
 .controls {
   &_icon {
+    cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -27,6 +28,11 @@
     height: 35px;
     background: url(assets/svg/fullscreen.svg)
   }
+}
+
+.controls_icon:hover {
+  @include gray-filter;
+  @include trans-fast;
 }
 
 .controls_range {
@@ -53,53 +59,3 @@
    width: 153px;
    background: linear-gradient(to right, $main-color 0%, $main-color 43%, $light-gray-color 43%, $light-gray-color 100%);
  }
-
-.welcome__controls {
-  @include flex-basic;
-  width: 451px;
-  height: 120px;
-  padding-left: 74px;
-  padding-right: 75px;
-  position: absolute;
-  right: 0;
-  bottom: -60px;
-  background: $dark-color;
-  font-size: 22px;
-  line-height: 40px;
-  color: $light-color;
-}
-.controls__num {
-  width: 76px;
-  @include flex-basic;
-}
-.controls__pagination {
-  width: 180px;
-  @include flex-basic;
-  margin-right: 4px;
-}
-.pagination_square {
-  width: 16px;
-  height: 16px;
-  background: $light-color;
-}
-.pagination_square:first-child {
-  background: $additional-color;
-}
-
-.controls__buttons {
-  width: 80px;
-  @include flex-basic;
-}
-
-.controls__arrow {
-  width: 30px;
-  height: 8px;
-  background-repeat: no-repeat;
-  background-position: center;
-  &_left {
-    background-image: url(assets/svg/arrow-left.svg);
-  }
-  &_right {
-    background-image: url(assets/svg/arrow-right.svg);
-  }
-}

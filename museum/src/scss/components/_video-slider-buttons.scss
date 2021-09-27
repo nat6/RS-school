@@ -29,6 +29,11 @@
   }
 }
 
+.double__arrow:hover {
+  @include red-filter;
+  @include trans-fast;
+}
+
 .video__slider_pagination {
   position: relative;
 }
@@ -44,6 +49,7 @@
 
 .video__slider_pagination:hover .pagination__dot {
   background-color: $main-color;
+  @include trans-medium;
 }
 
 

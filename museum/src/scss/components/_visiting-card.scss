@@ -46,3 +46,12 @@
   line-height: 21px;
 }
 
+.visiting__card:hover .visiting__title::after {
+  width: 100%;
+  @include trans-medium;
+}
+
+.visiting__card:hover .visiting__title {
+  color: $additional-color;
+  @include trans-fast;
+}

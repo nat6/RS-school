@@ -30,14 +30,14 @@
 }
 
 .amount__block {
-  width: 126px;
+  width: 146px;
   height: 46px;
-  padding-left: 10px;
-  padding-right: 10px;
   border: 2px solid $dark-color;
   @include flex-basic;
 }
+
 .amount__button {
+  cursor: pointer;
   font-family: $text-font;
   font-style: normal;
   font-weight: normal;
@@ -46,14 +46,21 @@
   font-size: 32px;
   line-height: 37px;
   height: 46px;
-  width: 20px;
+  width: 46px;
   text-align: center;
 }
+
+.amount__button:hover {
+  background: $additional-color;
+  @include trans-medium;
+}
+
 .amount__input {
   all: unset;
-  width: 3em;
+
   text-align: center;
 }
+
 .tickets__result {
   margin-top: 50px;
   font-weight: bold;

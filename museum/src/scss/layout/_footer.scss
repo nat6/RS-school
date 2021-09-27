@@ -52,3 +52,8 @@
   line-height: 22px;
   letter-spacing: 2px;
 }
+
+.footer__link:hover {
+  color: $dark-gray-color;
+  @include trans-medium;
+}
