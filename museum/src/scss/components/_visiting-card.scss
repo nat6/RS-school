@@ -1,0 +1,48 @@
+.visiting__card {
+  margin-bottom: 75px;
+  font-family: $text-font;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
+  color: $dark-color;
+}
+
+.visiting__img {
+  width: 440px;
+  height: 285px;
+}
+
+.visiting__title {
+  margin-top: 19px;
+  margin-bottom: 0;
+  position: relative;
+  font-family: $title-font;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    width: 300px;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    background-color: $main-color;
+  }
+  
+}
+
+.visiting__subtitle {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+.visiting__text {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 21px;
+}
+

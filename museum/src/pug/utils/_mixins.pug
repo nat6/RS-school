@@ -1,0 +1,33 @@
+mixin nav__item(name)
+	li.nav__item
+		a.nav__link(href='#' + name)=name
+
+mixin visiting__card(href, src, title)
+	a.visiting__link(href=href target='_blank')
+		div.visiting__card
+			img.visiting__img(src=src alt=title)
+			h3.visiting__title=title
+			p.visiting__subtitle 360° Virtual Tour
+			p.visiting__text Google Street Panorama View
+
+mixin social__item(href, name)
+	li.social__item
+		a.social__link(href=href target='_blank')
+			div.social__icon(class='social__icon_' + name)
+
+mixin video__item(width, height, src, loading)
+	button.video_play
+	iframe(
+		width=width
+		height=height
+		src=src
+		title='YouTube video player'
+		loading=loading
+		allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+		allowfullscreen
+	)
+
+mixin radio__item(block, text, name, checked)
+	label.radio__item(class=`${block}`)=text
+		span.radio__checkmark(class=block + '__checkmark')
+		input.radio__input(class=block + '__input' type='radio' name=name checked=checked)

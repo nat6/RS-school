@@ -1,0 +1,32 @@
+.contacts {
+  padding-bottom: 68px;
+}
+
+.contacts__content {
+  margin-top: 103px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.contacts__subtitle {
+  margin-bottom: 50px;
+  max-width: 227px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.contacts__text {
+  margin-bottom: 25px;
+}
+
+.contacts__link {
+  color: $dark-color;
+}
+
+.map__img {
+  width: 960px;
+}

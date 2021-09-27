@@ -1,0 +1,22 @@
+.logo {
+  width: 199px;
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__icon {
+  width: 49px;
+  height: 26px;
+  background-image: url('assets/svg/logo.svg');
+}
+
+.logo__title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $light-color;
+}

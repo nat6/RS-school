@@ -1,0 +1,47 @@
+.radio__item {
+	margin-bottom: 25px;
+	padding-left: 40px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+	@include none-select;
+}
+
+.radio__checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+	width: 13px;
+  height: 13px;
+  border: 2px solid $dark-color;
+  border-radius: 50%;
+}
+
+.radio__checkmark:before {
+  content: '';
+  position: absolute;
+  display: none;
+  background-color: black;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+}
+
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio__item:hover .radio__checkmark:before {
+  display: block;
+  background-color: $additional-color;
+}
+
+.radio__input:checked ~ .radio__checkmark:before {
+  display: block;
+}
+
+

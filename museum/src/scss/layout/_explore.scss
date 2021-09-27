@@ -1,0 +1,31 @@
+.explore__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore__content {
+  max-width: 659px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: $light-color;
+}
+
+.explore__text_container {
+  margin-top: 104px;
+}
+
+.explore__text {
+  margin-bottom: 26px;
+
+  &_gold {
+    color: $additional-color;
+  }
+
+}
+
+.explore__slider {
+  margin-top: 15px;
+  width: 720px;
+  height: 700px;
+}

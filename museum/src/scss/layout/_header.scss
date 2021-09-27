@@ -1,0 +1,8 @@
+@import '../components/_logo.scss';
+@import '../components/_nav.scss';
+
+.header__container {
+  padding-top: 59px;
+  padding-bottom: 58px;
+  @include flex-basic;
+}
