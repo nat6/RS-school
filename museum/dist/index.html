@@ -241,11 +241,11 @@
                   <input class="booking__input" type="tel" placeholder="Phone">
                 </div>
                 <div class="input__wrap input__wrap_ticket">
-                  <select class="booking__input">
-                    <option disabled selected>Ticket Type</option>
-                    <option>Permanent exhibition</option>
-                    <option>Temporary exhibition</option>
-                    <option>Combined Admission</option>
+                  <select class="booking__input booking__select">
+                    <option class="booking__option" disabled selected>Ticket Type</option>
+                    <option class="booking__option">Permanent exhibition</option>
+                    <option class="booking__option">Temporary exhibition</option>
+                    <option class="booking__option">Combined Admission</option>
                   </select>
                 </div>
                 <fieldset class="booking__amount">
@@ -311,12 +311,34 @@
                   <div>60 €</div>
                 </div>
                 <div class="pay__cards">
-                  <div class="pay__card pay__card_back"></div>
+                  <div class="pay__card pay__card_back">
+                    <div class="back__line"></div>
+                    <div class="back__content">
+                      <div class="back__text back__title">CVC/CVV</div>
+                      <input class="back__input" type="text">
+                      <div class="back__text back__text_small">The last 3 or 4 digits on back of the card</div>
+                    </div>
+                  </div>
                   <div class="pay__card pay__card_front">
                     <p class="card__text">Card number</p>
                     <input class="pay__input pay__input_number" type="number">
                     <p class="card__text">Expiration date</p>
-                    <input class="pay__input pay__input_number" type="number">
+                    <label class="pay__label">
+                      <select class="pay__input pay__select">
+                        <option class="pay__option">01</option>
+                        <option class="pay__option">02</option>
+                        <option class="pay__option" selected>03</option>
+                        <option class="pay__option">04</option>
+                      </select>
+                    </label>
+                    <label class="pay__label">
+                      <select class="pay__input pay__select">
+                        <option class="pay__option">2021</option>
+                        <option class="pay__option">2022</option>
+                        <option class="pay__option">2023</option>
+                        <option class="pay__option" selected>2024</option>
+                      </select>
+                    </label>
                     <p class="card__text">Cardholder name</p>
                     <input class="pay__input pay__input_name" type="text">
                     <div class="card__img card__img_visa"></div>

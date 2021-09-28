@@ -18,11 +18,11 @@ aside.form-buy(id='form-buy')
 				div.input__wrap.input__wrap_phone
 					input.booking__input(type='tel' placeholder='Phone')
 				div.input__wrap.input__wrap_ticket
-					select.booking__input
-						option(disabled selected) Ticket Type
-						option Permanent exhibition
-						option Temporary exhibition
-						option Combined Admission
+					select.booking__input.booking__select
+						option.booking__option(disabled selected) Ticket Type
+						option.booking__option Permanent exhibition
+						option.booking__option Temporary exhibition
+						option.booking__option Combined Admission
 				fieldset.booking__amount
 					p.booking__amount_title Entry ticket
 					div.booking__amount_container
@@ -32,7 +32,6 @@ aside.form-buy(id='form-buy')
 						div.booking__amount_item
 							p.booking__text Senior 65+ (10 €)
 							include ../components/_block-amount.pug
-
 		div.form-buy__overview
 			div.overview__title Overview
 			div.overview__subtitle Tour to Louvre
@@ -64,11 +63,27 @@ aside.form-buy(id='form-buy')
 					div 60 €
 				div.pay__cards
 					div.pay__card.pay__card_back
+						div.back__line
+						div.back__content
+							div.back__text.back__title CVC/CVV
+							input.back__input(type='text')
+							div.back__text.back__text_small The last 3 or 4 digits on back of the card
 					div.pay__card.pay__card_front
 						p.card__text Card number
 						input.pay__input.pay__input_number(type='number')
 						p.card__text Expiration date
-						input.pay__input.pay__input_number(type='number')
+						label.pay__label
+							select.pay__input.pay__select
+								option.pay__option 01
+								option.pay__option 02
+								option.pay__option(selected) 03
+								option.pay__option 04
+						label.pay__label
+							select.pay__input.pay__select
+								option.pay__option 2021
+								option.pay__option 2022
+								option.pay__option 2023
+								option.pay__option(selected) 2024
 						p.card__text Cardholder name
 						input.pay__input.pay__input_name(type='text')
 						div.card__img.card__img_visa
