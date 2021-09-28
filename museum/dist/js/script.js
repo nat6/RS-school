@@ -51,3 +51,47 @@ volume.addEventListener('input', function () {
 	this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`
 })
 
+
+function showModalWin() {
+
+	let darkLayer = document.createElement('div');
+	darkLayer.id = 'shadow';
+	document.body.appendChild(darkLayer);
+
+	let formBuy = document.getElementById('form-buy')
+	formBuy.style.display = 'block';
+
+	let formClose = document.querySelector('.form-buy__close');
+	formClose.onclick = function () {
+		darkLayer.parentNode.removeChild(darkLayer);
+		formBuy.style.display = 'none';
+		return false;
+	};
+	darkLayer.onclick = function () {
+		darkLayer.parentNode.removeChild(darkLayer);
+		formBuy.style.display = 'none';
+		return false;
+	};
+}
+
+const buttonBook = document.querySelector('.button__book')
+
+buttonBook.addEventListener('click', function (e) {
+	const x = e.clientX
+	const y = e.clientY
+
+	const buttonTop = e.target.offsetTop
+	const buttonLeft = e.target.offsetLeft
+
+	const xInside = x - buttonLeft
+	const yInside = y - buttonTop
+
+	const circle = document.createElement('span')
+	circle.classList.add('circle')
+	circle.style.top = yInside + 'px'
+	circle.style.left = xInside + 'px'
+
+	this.appendChild(circle)
+
+	setTimeout(() => circle.remove(), 500)
+})

@@ -39,8 +39,8 @@
           <div class="welcome__content">
             <h1 class="section__title section__title_light">Welcome </h1>
             <h2 class="section__title section__title_light">to the Louvre</h2>
-            <p class="welcome__text">From the castle to the museum</p>
-            <div class="button button_discover"><a class="button__link button__link_discover" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">Discover the Louvre</a></div>
+            <p class="welcome__text">From the castle to the museum</p><a class="button__link button__link_discover" href="tours/tour7.html" target="_blank"> 
+              <div class="button button_discover">Discover the Louvre</div></a>
           </div>
           <div class="welcome__controls">
             <div class="controls__num">
@@ -69,32 +69,32 @@
       <section class="section visiting" id="visiting">
         <div class="container visiting__container">
           <h2 class="section__title section__title_gold section__title_underline">Virtual tour</h2>
-          <div class="visiting__cards"><a class="visiting__link" href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815" target="_blank">
+          <div class="visiting__cards"><a class="visiting__link" href="tours/tour1.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/royal.jpg" alt="Royal Palace">
                     <h3 class="visiting__title">Royal Palace</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
                     <p class="visiting__text">Google Street Panorama View</p>
-                  </div></a><a class="visiting__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500" target="_blank">
+                  </div></a><a class="visiting__link" href="tours/tour2.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/denon.jpg" alt="Denon Wing">
                     <h3 class="visiting__title">Denon Wing</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
                     <p class="visiting__text">Google Street Panorama View</p>
-                  </div></a><a class="visiting__link" href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120" target="_blank">
+                  </div></a><a class="visiting__link" href="tours/tour3.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/colonnade.jpg" alt="Colonnade Perrault">
                     <h3 class="visiting__title">Colonnade Perrault</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
                     <p class="visiting__text">Google Street Panorama View</p>
-                  </div></a><a class="visiting__link" href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736" target="_blank">
+                  </div></a><a class="visiting__link" href="tours/tour4.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/greek.jpg" alt="Greek hall">
                     <h3 class="visiting__title">Greek hall</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
                     <p class="visiting__text">Google Street Panorama View</p>
-                  </div></a><a class="visiting__link" href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120" target="_blank">
+                  </div></a><a class="visiting__link" href="tours/tour5.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/mona.jpg" alt="Mona Lisa">
                     <h3 class="visiting__title">Mona Lisa</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
                     <p class="visiting__text">Google Street Panorama View</p>
-                  </div></a><a class="visiting__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652" target="_blank">
+                  </div></a><a class="visiting__link" href="tours/tour6.html" target="_blank">
                   <div class="visiting__card"><img class="visiting__img" src="assets/img/visiting-cards/night.jpg" alt="Night Palace">
                     <h3 class="visiting__title">Night Palace</h3>
                     <p class="visiting__subtitle">360° Virtual Tour</p>
@@ -218,12 +218,122 @@
                 </div>
                 <div class="tickets__result">Total €220</div>
                 <div class="tickets__buy">
-                  <button class="button__buy" type="button" onclick="">Buy Now</button>
+                  <button class="button__buy" type="button" onclick="showModalWin()">Buy Now</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <aside class="form-buy" id="form-buy">
+          <div class="form-buy__container"> 
+            <div class="form-buy__booking">
+              <div class="form-buy__logo"></div>
+              <h2 class="section__title section__title_gold section__title_underline form-buy__title">Booking tickets</h2>
+              <p class="form-buy__subtitle">Tour to Louvre</p>
+              <form class="booking__form">
+                <input class="booking__input_hidden" type="date">
+                <input class="booking__input_hidden" type="time">
+                <div class="input__wrap input__wrap_date">
+                  <input class="booking__input booking__input_narrow" placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+                </div>
+                <div class="input__wrap input__wrap_time">
+                  <input class="booking__input booking__input_narrow" placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')">
+                </div>
+                <div class="input__wrap input__wrap_name">
+                  <input class="booking__input" type="text" placeholder="Name">
+                </div>
+                <div class="input__wrap input__wrap_mail">
+                  <input class="booking__input" type="email" placeholder="E-mail">
+                </div>
+                <div class="input__wrap input__wrap_phone">
+                  <input class="booking__input" type="tel" placeholder="Phone">
+                </div>
+                <div class="input__wrap input__wrap_ticket">
+                  <input class="booking__input" type="select" placeholder="Ticket Type">
+                </div>
+                <fieldset class="booking__amount">
+                  <p class="booking__amount_title">Entry ticket</p>
+                  <div class="booking__amount_container">
+                    <div class="booking__amount_item">
+                      <p class="booking__text">Basic 18+ (20 €)</p>
+                      <div class="amount__block">
+                        <button class="amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+                        <input class="amount__input" type="number" min="0" max="20" value="1" readonly>
+                        <button class="amount__button" type="button" onclick="previousElementSibling.stepUp()">+</button>
+                      </div>
+                    </div>
+                    <div class="booking__amount_item">
+                      <p class="booking__text">Senior 65+ (10 €)</p>
+                      <div class="amount__block">
+                        <button class="amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+                        <input class="amount__input" type="number" min="0" max="20" value="1" readonly>
+                        <button class="amount__button" type="button" onclick="previousElementSibling.stepUp()">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="form-buy__overview">
+              <div class="overview__title">Overview</div>
+              <div class="overview__subtitle">Tour to Louvre</div>
+              <div class="overview__info">
+                <div class="overview__item">
+                  <div class="overview__icon overview__icon_date"></div>
+                  <div class="overview__text">Friday, August 19</div>
+                </div>
+                <div class="overview__item">
+                  <div class="overview__icon overview__icon_time"></div>
+                  <div class="overview__text">16 : 30</div>
+                </div>
+                <div class="overview__item">
+                  <div class="overview__icon overview__icon_check"></div>
+                  <div class="overview__text">Temporary exhibition</div>
+                </div>
+                <div class="overview__img"></div>
+              </div>
+              <div class="overview__cost">
+                <div class="overview__item cost__item">
+                  <div class="overview__item_container">
+                    <div class="cost__icon"></div>
+                    <div class="cost__text">Basic (20 €)</div>
+                  </div>
+                  <div class="cost__total">40 €</div>
+                </div>
+                <div class="overview__item cost__item">
+                  <div class="overview__item_container">
+                    <div class="cost__icon"></div>
+                    <div class="cost__text">Senior (10 €)</div>
+                  </div>
+                  <div class="cost__total">20 €</div>
+                </div>
+              </div>
+              <div class="overview__pay">
+                <div class="pay__total">
+                  <div>Total: </div>
+                  <div>60 €</div>
+                </div>
+                <div class="pay__cards">
+                  <div class="pay__card pay__card_back">
+                    <p class="card__text">Card number</p>
+                    <input class="pay__input pay__input_number" type="number">
+                    <p class="card__text">Expiration date</p>
+                    <input class="pay__input pay__input_number" type="number">
+                    <p class="card__text">Cardholder name</p>
+                    <input class="pay__input pay__input_name" type="text">
+                  </div>
+                  <div class="card__img card__img_visa"></div>
+                  <div class="card__img card__img_master"></div>
+                  <div class="pay__card pay__card_front"></div>
+                </div>
+                <div class="button__book_container">
+                  <button class="button__book">Book</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-buy__close"></div>
+          </div>
+        </aside>
       </section>
       <div class="parallax"></div>
       <section class="section contacts" id="contacts">
@@ -280,6 +390,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"> </script>
   </body>
 </html>
