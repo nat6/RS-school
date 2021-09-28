@@ -1,17 +1,17 @@
 .form-buy {
-  display: none;
-  position: fixed;
-  z-index: 100;
+  // display: none;
+  // position: fixed;
+  // z-index: 100;
   width: 1440px;
   height: 755px;
   margin: 0 auto;
   margin-top: 50px;
   padding-top: 91px;
-  top:0;
-  right: 0;
-  left: 0;
-  background-color: white;
-  @include trans-slow;
+  // top:0;
+  // right: 0;
+  // left: 0;
+  // background-color: white;
+  // @include trans-slow;
 }
 #shadow { 
   position: fixed;
@@ -260,9 +260,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.pay__card {
 
-}
 .overview__text {
   font-family: $text-font;
   font-style: normal;
@@ -271,6 +269,7 @@
   line-height: 21px;
   color: #030303;
 }
+
 .booking__input::-webkit-input-placeholder {
   font-family: $text-font;
   font-style: normal;
@@ -441,3 +440,87 @@
   }
 }
 
+.booking__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 45px;
+  font-family: $text-font;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.pay__select {
+  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: $text-font;
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 10px;
+  color: #161615;
+  margin-right: 12px;
+}
+
+.pay__label {
+  position:relative
+}
+
+.pay__label:after {
+  content:'';
+  width: 28px;
+  height: 35px;
+  background-image: url(assets/svg/arrows-card.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -7px;
+  left: 71px;
+  border-left:1px solid #ddd;
+  position:absolute;
+  pointer-events:none;
+}
+.back__text {
+  font-family: $text-font;
+  font-size: 10px;
+  line-height: 12px;
+  color: #161615;
+}
+.back__title {
+  font-size: 12px;
+  line-height: 14px;
+}
+.back__input {
+  width: 75px;
+  height: 35px;
+}
+
+.back__line {
+  width: 360px;
+  height: 45px;
+  background-color: #161615;
+  margin-top: 25px;
+}
+
+.pay__card_back {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+}
+
+.back__text_small {
+  max-width: 47px;
+}
+.back__content {
+  margin-right: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back__input {
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
