@@ -18,8 +18,11 @@ aside.form-buy(id='form-buy')
 				div.input__wrap.input__wrap_phone
 					input.booking__input(type='tel' placeholder='Phone')
 				div.input__wrap.input__wrap_ticket
-					input.booking__input(type='select' placeholder='Ticket Type')
-
+					select.booking__input
+						option(disabled selected) Ticket Type
+						option Permanent exhibition
+						option Temporary exhibition
+						option Combined Admission
 				fieldset.booking__amount
 					p.booking__amount_title Entry ticket
 					div.booking__amount_container
