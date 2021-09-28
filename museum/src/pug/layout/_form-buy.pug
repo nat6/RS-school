@@ -1,0 +1,75 @@
+aside.form-buy(id='form-buy')
+	div.form-buy__container 
+		div.form-buy__booking
+			div.form-buy__logo
+			h2.section__title.section__title_gold.section__title_underline.form-buy__title Booking tickets
+			p.form-buy__subtitle Tour to Louvre
+			form.booking__form
+				input.booking__input_hidden(type="date")
+				input.booking__input_hidden(type="time")
+				div.input__wrap.input__wrap_date
+					input.booking__input.booking__input_narrow(placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')")
+				div.input__wrap.input__wrap_time
+					input.booking__input.booking__input_narrow(placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')")
+				div.input__wrap.input__wrap_name
+					input.booking__input(type='text' placeholder='Name')
+				div.input__wrap.input__wrap_mail
+					input.booking__input(type='email' placeholder='E-mail')
+				div.input__wrap.input__wrap_phone
+					input.booking__input(type='tel' placeholder='Phone')
+				div.input__wrap.input__wrap_ticket
+					input.booking__input(type='select' placeholder='Ticket Type')
+
+				fieldset.booking__amount
+					p.booking__amount_title Entry ticket
+					div.booking__amount_container
+						div.booking__amount_item
+							p.booking__text Basic 18+ (20 €)
+							include ../components/_block-amount.pug
+						div.booking__amount_item
+							p.booking__text Senior 65+ (10 €)
+							include ../components/_block-amount.pug
+
+		div.form-buy__overview
+			div.overview__title Overview
+			div.overview__subtitle Tour to Louvre
+			div.overview__info
+				div.overview__item
+					div.overview__icon.overview__icon_date
+					div.overview__text Friday, August 19
+				div.overview__item
+					div.overview__icon.overview__icon_time
+					div.overview__text 16 : 30
+				div.overview__item
+					div.overview__icon.overview__icon_check
+					div.overview__text Temporary exhibition
+				div.overview__img
+			div.overview__cost
+				div.overview__item.cost__item
+					div.overview__item_container
+						div.cost__icon
+						div.cost__text Basic (20 €)
+					div.cost__total 40 €
+				div.overview__item.cost__item
+					div.overview__item_container
+						div.cost__icon
+						div.cost__text Senior (10 €)
+					div.cost__total 20 €
+			div.overview__pay
+				div.pay__total
+					div Total: 
+					div 60 €
+				div.pay__cards
+					div.pay__card.pay__card_back
+						p.card__text Card number
+						input.pay__input.pay__input_number(type='number')
+						p.card__text Expiration date
+						input.pay__input.pay__input_number(type='number')
+						p.card__text Cardholder name
+						input.pay__input.pay__input_name(type='text')
+					div.card__img.card__img_visa
+					div.card__img.card__img_master
+					div.pay__card.pay__card_front
+				div.button__book_container
+					button.button__book Book
+		div.form-buy__close
