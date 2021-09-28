@@ -955,11 +955,22 @@ body {
 }
 
 .form-buy {
+  display: none;
+  position: fixed;
+  z-index: 100;
   width: 1440px;
   height: 755px;
   margin: 0 auto;
   margin-top: 50px;
   padding-top: 91px;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -o-transition: 1s linear;
+  transition: 1s linear;
 }
 
 #shadow {
