@@ -1314,20 +1314,64 @@ body {
 
 .pay__card {
   position: absolute;
-  width: 360px;
-  height: 211px;
 }
 
 .pay__card_front {
+  width: 320px;
+  height: 176px;
   top: 10px;
   left: 0;
+  padding: 15px 20px 20px 20px;
   background-color: #BCBCBC;
+  position: relative;
 }
 
 .pay__card_back {
+  width: 360px;
+  height: 211px;
   top: 40px;
   right: 0;
   background-color: #939393;
+}
+
+.card__text {
+  margin-bottom: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.pay__input {
+  height: 35px;
+  border: none;
+  margin-bottom: 10px;
+}
+.pay__input_number {
+  width: 215px;
+}
+.pay__input_name {
+  width: 320px;
+}
+
+.card__img {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card__img_visa {
+  width: 55px;
+  height: 16px;
+  top: 34px;
+  right: 20px;
+  background-image: url(assets/icons/visa.png);
+}
+.card__img_master {
+  width: 53px;
+  height: 32px;
+  top: 65px;
+  right: 20px;
+  background-image: url(assets/icons/master.png);
 }
 
 .button__book_container {

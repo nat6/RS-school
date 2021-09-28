@@ -115,15 +115,9 @@
   line-height: 21px;
 }
 
-// div.amount__block
-// 	button.amount__button(type='button' onclick='this.nextElementSibling.stepDown()') —
-// 	input.amount__input(type='number' min='0' max='20' value='1' readonly)
-// 	button.amount__button(type='button' onclick='previousElementSibling.stepUp()') +
-
 .booking__amount_container {
   margin-top: 20px;
 }
-
 
 .booking__amount_item .amount__block {
   width: 105px;
@@ -346,20 +340,64 @@
 
 .pay__card {
   position: absolute;
-  width: 360px;
-  height: 211px;
 }
 
 .pay__card_front {
+  width: 320px;
+  height: 176px;
   top: 10px;
   left: 0;
+  padding: 15px 20px 20px 20px;
   background-color: #BCBCBC;
+  position: relative;
 }
 .pay__card_back {
+  width: 360px;
+  height: 211px;
   top: 40px;
   right: 0;
-  background-color: #939393;;
+  background-color: #939393;
 }
+
+.card__text {
+  margin-bottom: 4px;
+  font-family: $text-font;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+.pay__input {
+  height: 35px;
+  border: none;
+  margin-bottom: 10px;
+  &_number {
+    width: 215px;
+  }
+  &_name {
+    width: 320px;
+  }
+}
+
+.card__img {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_visa {
+    width: 55px;
+    height: 16px;
+    top: 34px;
+    right: 20px;
+    background-image: url(assets/icons/visa.png);
+  }
+  &_master {
+    width: 53px;
+    height: 32px;
+    top: 65px;
+    right: 20px;
+    background-image: url(assets/icons/master.png);
+  }
+}
+
 .button__book_container {
   position: absolute;
   bottom: 26px;
@@ -402,3 +440,4 @@
     opacity: 0;
   }
 }
+
