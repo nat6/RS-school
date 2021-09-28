@@ -339,6 +339,34 @@
   background-image: url(assets/svg/arrow-form.svg);
 }
 
+.pay__cards {
+  width: 470px;
+  position: relative;
+}
+
+.pay__card {
+  position: absolute;
+  width: 360px;
+  height: 211px;
+}
+
+.pay__card_front {
+  top: 10px;
+  left: 0;
+  background-color: #BCBCBC;
+}
+.pay__card_back {
+  top: 40px;
+  right: 0;
+  background-color: #939393;;
+}
+.button__book_container {
+  position: absolute;
+  bottom: 26px;
+  right: 30px;
+}
+
+
 .button__book {
   width: 220px;
   height: 45px;
@@ -373,30 +401,4 @@
     transform: translate(-50%, -50%) scale(3);
     opacity: 0;
   }
-}
-.pay__cards {
-  width: 470px;
-  position: relative;
-}
-
-.pay__card {
-  position: absolute;
-  width: 360px;
-  height: 211px;
-}
-
-.pay__card_front {
-  top: 10px;
-  left: 0;
-  background-color: #BCBCBC;
-}
-.pay__card_back {
-  top: 40px;
-  right: 0;
-  background-color: #939393;;
-}
-.button__book_container {
-  position: absolute;
-  bottom: 26px;
-  right: 30px;
 }
