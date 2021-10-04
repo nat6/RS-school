@@ -21,12 +21,24 @@
 		height: 3000px;
 		column-count: 3;
 		column-gap: 36px;
+		@include for-laptop {
+			height: 2046px;
+		}
 	}
+
+	@include for-laptop {
+		margin-top: 50px;
+		height: 1266px;
+	}
+
 }
 
 .gallery__img {
   width: 456px;
   margin-bottom: 20px;
+	@include for-laptop {
+		width: 304px;
+	}
 }
 
 .gallery__img:nth-child(1),

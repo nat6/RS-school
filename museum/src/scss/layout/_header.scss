@@ -5,4 +5,8 @@
   padding-top: 59px;
   padding-bottom: 58px;
   @include flex-basic;
+  @include for-laptop {
+    padding-top: 49px;
+    padding-bottom: 48px;
+  }
 }

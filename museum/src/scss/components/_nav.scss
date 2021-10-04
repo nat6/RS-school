@@ -3,6 +3,11 @@
   @include flex-basic;
   margin-top: 0;
   margin-bottom: 0;
+  z-index: 3;
+  @include for-laptop {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .nav__link {
@@ -22,4 +27,74 @@
 .nav__link:active {
   color: $dark-gold-color;
   @include trans-medium;
+}
+
+
+.nav__container {
+  position: relative;
+//	width: 100px;
+}
+#nav-button {
+  opacity: 0;
+  display: none;
+}
+.nav__label {
+  display: none;
+  width: 32px;
+  height: 21px;
+  position: absolute;
+  top: 11px;
+  right: 0;
+  cursor: pointer;
+  @include for-laptop {
+    display: block;
+  }
+}
+
+.nav__button_span,
+.nav__button_span::before,
+.nav__button_span::after {
+	width: 32px;
+  height: 2px;
+  display: block;
+  position: absolute;
+	background-color: $light-color;
+}
+
+.nav__button_span::before {
+  content: '';
+  top: -8px; 
+}
+
+.nav__button_span::after {
+  content: '';
+  top: 8px; 
+}
+
+#nav-button:checked ~ .nav__label .nav__button_span {
+  transform: rotate(45deg);
+  width: 33px; 
+}
+
+#nav-button:checked ~ .nav__label .nav__button_span::before {
+  top: 0;
+  transform: rotate(90deg);
+  width: 33px; 
+}
+
+#nav-button:checked ~ .nav__label .nav__button_span::after {
+  display: none;
+}
+
+.nav__container .nav {
+  @include for-laptop {
+    visibility: hidden; 
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+  }
+}
+
+#nav-button:checked ~ .nav {
+	visibility: visible; 
 }

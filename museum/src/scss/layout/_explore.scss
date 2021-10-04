@@ -1,6 +1,9 @@
 .explore__container {
   display: flex;
   justify-content: space-between;
+  @include for-laptop {
+    display: block;
+  }
 }
 
 .explore__content {
@@ -9,10 +12,17 @@
   font-size: 22px;
   line-height: 38px;
   color: $light-color;
+  @include for-laptop {
+    max-width: 984px;
+    font-size: 20px;
+  }
 }
 
 .explore__text_container {
   margin-top: 104px;
+  @include for-laptop {
+    margin-top: 73px;
+  }
 }
 
 .explore__text {
@@ -22,10 +32,24 @@
     color: $additional-color;
   }
 
+  &_hidden {
+    @include for-laptop {
+      display: none;
+    }
+  }
+
+  @include for-laptop {
+    margin-bottom: 0;
+  }
 }
 
 .explore__slider {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15px;
   width: 720px;
   height: 700px;
+  @include for-laptop {
+    margin-top: 58px;
+  }
 }

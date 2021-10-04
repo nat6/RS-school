@@ -1,4 +1,8 @@
 header.header.section_dark
 	div.container.header__container
 		include ../components/_logo.pug
-		include ../components/_nav.pug
+		div.nav__container
+			input.nav__button(type='checkbox' id='nav-button' name='nav-button')
+			label.nav__label(for='nav-button')
+				span.nav__button_span
+			include ../components/_nav.pug

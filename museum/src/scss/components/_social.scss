@@ -4,6 +4,9 @@
   display: flex;
   justify-content: end;
   align-items: flex-end;
+  @include for-laptop {
+    padding-bottom: 28px;
+  }
 }
 
 .social__list {

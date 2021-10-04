@@ -7,6 +7,10 @@
   &_dark {
     background-color: $dark-color;
   }
+  @include for-laptop {
+    padding-top: 54px;
+    padding-bottom: 60px;
+  }
 }
 
 @import '../layout/_header.scss';
@@ -45,6 +49,9 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  @include for-laptop {
+    max-width: 984px;
+  }
 }
 
 .section__title {
@@ -75,7 +82,13 @@ body {
       right: 0;
       height: 3px;
       background-color: $main-color;
+      @include for-laptop {
+        bottom: -14px;
+      }
     }
+  }
+  @include for-laptop {
+    font-size: 50px;
   }
 
 }

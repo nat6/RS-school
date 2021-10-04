@@ -2,6 +2,9 @@
 	width: 660px;
   display: flex;
   justify-content: space-between;
+  @include for-laptop {
+    width: 175px;
+  }
 }
 
 .tickets__subtitle {
@@ -14,19 +17,41 @@
   margin-top: 51px;
 }
 
+.tickets__type {
+  @include for-laptop {
+    display: none;
+  }
+}
+
 .tickets__amount {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @include for-laptop {
+    align-items: flex-start;
+  }
 }
 
 .amount__container {
   margin-top: 15px;
+  @include for-laptop {
+    margin-top: 0;
+  }
 }
 
 .tickets__text {
   margin-top: 11px;
   margin-bottom: 14px;
+  @include for-laptop {
+    margin-top: 31px;
+    margin-bottom: 8px;
+  }
+}
+
+.tickets__result_container {
+  display: flex;
+  justify-content: space-between;
+  width: 166px;
 }
 
 .amount__block {
@@ -34,6 +59,11 @@
   height: 46px;
   border: 2px solid $dark-color;
   @include flex-basic;
+  @include for-laptop {
+    width: 169px;
+    height: 44px;
+    border: 3px solid $dark-color;
+  }
 }
 
 .amount__button {
@@ -48,6 +78,11 @@
   height: 46px;
   width: 46px;
   text-align: center;
+  @include for-laptop {
+    width: 44px;
+    height: 44px;
+    margin-top: 0;
+  }
 }
 
 .amount__button:hover {
@@ -67,6 +102,9 @@
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 1.65px;
+  @include for-laptop {
+    margin-top: 25px;
+  }
 }
 
 

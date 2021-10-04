@@ -1,0 +1,113 @@
+doctype html
+html(lang='en-US')
+	head
+		meta(charset='utf-8')
+		meta(name='description' content='')
+		meta(name='keywords' content='')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(href='style.css' rel='stylesheet')
+		link(href='assets/icons/favicon.ico' rel='shortcut icon')
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+		link(href='https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700&display=swap' rel='stylesheet')
+		title form
+		include ../utils/_variables.pug
+		include ../utils/_mixins.pug
+	body
+		aside.form-buy(id='form-buy')
+			div.form-buy__container 
+				div.form-buy__booking
+					div.form-buy__logo
+					h2.section__title.section__title_gold.section__title_underline.form-buy__title Booking tickets
+					p.form-buy__subtitle Tour to Louvre
+					form.booking__form
+						input.booking__input_hidden(type="date")
+						input.booking__input_hidden(type="time")
+						div.input__wrap.input__wrap_date
+							input.booking__input.booking__input_narrow(placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')")
+						div.input__wrap.input__wrap_time
+							input.booking__input.booking__input_narrow(placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')")
+						div.input__wrap.input__wrap_name
+							input.booking__input(type='text' placeholder='Name')
+						div.input__wrap.input__wrap_mail
+							input.booking__input(type='email' placeholder='E-mail')
+						div.input__wrap.input__wrap_phone
+							input.booking__input(type='tel' placeholder='Phone')
+						div.input__wrap.input__wrap_ticket
+							select.booking__input.booking__select
+								option.booking__option(disabled selected) Ticket Type
+								option.booking__option Permanent exhibition
+								option.booking__option Temporary exhibition
+								option.booking__option Combined Admission
+
+						fieldset.booking__amount
+							p.booking__amount_title Entry ticket
+							div.booking__amount_container
+								div.booking__amount_item
+									p.booking__text Basic 18+ (20 €)
+									include ../components/_block-amount.pug
+								div.booking__amount_item
+									p.booking__text Senior 65+ (10 €)
+									include ../components/_block-amount.pug
+
+				div.form-buy__overview
+					div.overview__title Overview
+					div.overview__subtitle Tour to Louvre
+					div.overview__info
+						div.overview__item
+							div.overview__icon.overview__icon_date
+							div.overview__text Friday, August 19
+						div.overview__item
+							div.overview__icon.overview__icon_time
+							div.overview__text 16 : 30
+						div.overview__item
+							div.overview__icon.overview__icon_check
+							div.overview__text Temporary exhibition
+						div.overview__img
+					div.overview__cost
+						div.overview__item.cost__item
+							div.overview__item_container
+								div.cost__icon
+								div.cost__text Basic (20 €)
+							div.cost__total 40 €
+						div.overview__item.cost__item
+							div.overview__item_container
+								div.cost__icon
+								div.cost__text Senior (10 €)
+							div.cost__total 20 €
+					div.overview__pay
+						div.pay__total
+							div Total: 
+							div 60 €
+						div.pay__cards
+							div.pay__card.pay__card_back
+								div.back__line
+								div.back__content
+									div.back__text.back__title CVC/CVV
+									input.back__input(type='text')
+									div.back__text.back__text_small The last 3 or 4 digits on back of the card
+							div.pay__card.pay__card_front
+								p.card__text Card number
+								input.pay__input.pay__input_number(type='number')
+								p.card__text Expiration date
+								label.pay__label
+									select.pay__input.pay__select
+										option.pay__option 01
+										option.pay__option 02
+										option.pay__option(selected) 03
+										option.pay__option 04
+								label.pay__label
+									select.pay__input.pay__select
+										option.pay__option 2021
+										option.pay__option 2022
+										option.pay__option 2023
+										option.pay__option(selected) 2024
+								p.card__text Cardholder name
+								input.pay__input.pay__input_name(type='text')
+								div.card__img.card__img_visa
+								div.card__img.card__img_master
+						div.button__book_container
+							button.button__book Book
+				div.form-buy__close
+
+		script(src='js/script.js')
