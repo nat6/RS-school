@@ -11,16 +11,29 @@
   font-size: 22px;
   line-height: 40px;
   color: $light-color;
+  @include for-laptop {
+    font-weight: normal;
+    width: 401px;
+    padding-left: 224px;
+    font-size: 20px;
+    line-height: 40px;
+  }
 }
 
 .controls__num {
   width: 76px;
   @include flex-basic;
+  @include for-laptop {
+    width: 71px;
+  }
 }
 .controls__pagination {
   width: 180px;
   @include flex-basic;
   margin-right: 4px;
+  @include for-laptop {
+    width: 160px;
+  }
 }
 
 .pagination_square {
@@ -28,6 +41,10 @@
   height: 16px;
   background: $light-color;
   cursor: pointer;
+  @include for-laptop {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .pagination_square:first-child {
@@ -50,6 +67,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  display: block;
   &_left {
     background-image: url(assets/svg/arrow-left.svg);
   }

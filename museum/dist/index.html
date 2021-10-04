@@ -21,16 +21,20 @@
           <div class="logo__icon"></div>
           <div class="logo__title">Louvre</div>
         </div>
-        <nav class="nav">
-          <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#visiting">visiting</a></li>
-                <li class="nav__item"><a class="nav__link" href="#explore">explore</a></li>
-                <li class="nav__item"><a class="nav__link" href="#video">video</a></li>
-                <li class="nav__item"><a class="nav__link" href="#gallery">gallery</a></li>
-                <li class="nav__item"><a class="nav__link" href="#tickets">tickets</a></li>
-                <li class="nav__item"><a class="nav__link" href="#contacts">contacts</a></li>
-          </ul>
-        </nav>
+        <div class="nav__container">
+          <input class="nav__button" type="checkbox" id="nav-button" name="nav-button">
+          <label class="nav__label" for="nav-button"><span class="nav__button_span"></span></label>
+          <nav class="nav">
+            <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="#visiting">visiting</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#explore">explore</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#video">video</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#gallery">gallery</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#tickets">tickets</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#contacts">contacts</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -106,7 +110,7 @@
             <div class="explore__text_container">
               <p class="explore__text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
               <p class="explore__text">It was cleaned in 1984 to remove a <span class="explore__text_gold">"yellow veil" </span>of dust that had gathered since the previous restoration in the 19th century.</p>
-              <p class="explore__text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+              <p class="explore__text explore__text_hidden">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
             </div>
           </div>
           <div class="explore__slider"><img class="explore__img" src="assets/img/explore-slider/temp.png" alt="before / after"></div>
@@ -126,9 +130,9 @@
               </div>
               <div class="video__controls">
                 <div class="controls_icon controls_play"></div>
-                <input class="controls_range controls_progress" type="range" value="54" min="0" max="100" step="1">
+                <input class="controls_range controls_progress" type="range" value="40" min="0" max="100" step="1">
                 <div class="controls_icon controls_audio"></div>
-                <input class="controls_range controls_volume" type="range" value="43" min="0" max="100" step="1">
+                <input class="controls_range controls_volume" type="range" value="38" min="0" max="100" step="1">
                 <div class="controls_icon controls_fullscreen"></div>
               </div>
             </div>
@@ -208,7 +212,10 @@
                     <button class="amount__button" type="button" onclick="previousElementSibling.stepUp()">+</button>
                   </div>
                 </div>
-                <div class="tickets__result">Total €220</div>
+                <div class="tickets__result_container">
+                  <p class="tickets__result">Total € </p>
+                  <p class="tickets__result">220</p>
+                </div>
                 <div class="tickets__buy">
                   <button class="button__buy" type="button" onclick="showModalWin()">Buy Now</button>
                 </div>

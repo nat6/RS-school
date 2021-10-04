@@ -48,3 +48,9 @@
 @mixin red-filter {
 	filter: invert(11%) sepia(26%) saturate(6519%) hue-rotate(352deg) brightness(50%) contrast(102%);
 }
+
+@mixin for-laptop {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}

@@ -1,5 +1,8 @@
 .contacts {
   padding-bottom: 68px;
+  @include for-laptop {
+    padding-bottom: 56px;
+  }
 }
 
 .contacts__content {
@@ -9,6 +12,11 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
+  @include for-laptop {
+    margin-top: 74px;
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .contacts__subtitle {
@@ -17,10 +25,19 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 33px;
+  @include for-laptop {
+    margin-bottom: 35px;
+    max-width: 185px;
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .contacts__text {
   margin-bottom: 25px;
+  @include for-laptop {
+    margin-bottom: 15px;
+  }
 }
 
 .contacts__link {
@@ -34,4 +51,8 @@
 
 .map__img {
   width: 960px;
+  @include for-laptop {
+    width: calc(100vw - 330px);
+    height: calc(65vw - 212px);
+  }
 }

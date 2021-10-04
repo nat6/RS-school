@@ -2,6 +2,9 @@
 
 .tickets {
 	padding-bottom: 69px;
+  @include for-laptop {
+    padding-bottom: 55px;
+  }
 }
 .tickets__container {
 	position: relative;
@@ -14,11 +17,20 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
+  @include for-laptop {
+    margin-top: 74px;
+    max-width: 955px;
+  }
 }
 
 .tickets__img {
+  object-fit: cover;
   width: 720px;
   height: 550px;
+  @include for-laptop {
+    width: 700px;
+    height: 440px;
+  }
 }
 
 .tickets__buy {

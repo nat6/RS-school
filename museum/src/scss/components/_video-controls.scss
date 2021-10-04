@@ -5,6 +5,12 @@
   padding-left: 30px;
   padding-right: 30px;
   background-color: $dark-color;
+  @include for-laptop {
+    width: 904px;
+    height: 61px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .controls {
@@ -16,17 +22,35 @@
   &_play {
     width: 23px;
     height: 31px;
-    background: url(assets/svg/play.svg)
+    background: url(assets/svg/play.svg);
+    @include for-laptop {
+      width: 23px;
+      height: 29px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   &_audio {
     width: 36px;
     height: 31px;
-    background: url(assets/svg/audio.svg)
+    background: url(assets/svg/audio.svg);
+    @include for-laptop {
+      width: 26px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   &_fullscreen {
     width: 35px;
     height: 35px;
-    background: url(assets/svg/fullscreen.svg)
+    background: url(assets/svg/fullscreen.svg);
+    @include for-laptop {
+      width: 26px;
+      height: 26px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -40,6 +64,9 @@
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+  @include for-laptop {
+    height: 5px;
+  }
 }
 
 .controls_range::-webkit-slider-thumb {
@@ -49,13 +76,25 @@
   -webkit-appearance: none;
   cursor: ew-resize;
   background: $light-color;
+  @include for-laptop {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .controls_progress {
   width: 929px;
   background: linear-gradient(to right, $main-color 0%, $main-color 54%, $light-gray-color 54%, $light-gray-color 100%);
+  @include for-laptop {
+    width: 564px;
+    background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
+  }
 }
 .controls_volume {
    width: 153px;
    background: linear-gradient(to right, $main-color 0%, $main-color 43%, $light-gray-color 43%, $light-gray-color 100%);
+   @include for-laptop {
+    width: 143px;
+    background: linear-gradient(to right, $main-color 0%, $main-color 38%, $light-gray-color 38%, $light-gray-color 100%);
+  }
  }

@@ -3,6 +3,9 @@
 .footer {
   padding-top: 85px;
   position: relative;
+  @include for-laptop {
+    padding-top: 60px;
+  }
 }
 
 .footer__block_top {
@@ -31,6 +34,11 @@
 	display: block;
   column-count: 2;
   column-gap: 150px;
+  @include for-laptop {
+    width: 265px;
+    margin-top: 7px;
+    margin-left: 40px;
+  }
 }
 
 .footer__nav .nav__item {
@@ -42,6 +50,9 @@
   padding-bottom: 50px;
 	display: flex;
   justify-content: space-between;
+  @include for-laptop {
+    padding-bottom: 48px;
+  }
 }
 
 .footer__text {
