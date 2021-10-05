@@ -49,10 +49,12 @@
   right: 0;
   cursor: pointer;
   @include for-laptop {
+    top: 64px;
+    right: 20px;
     display: block;
   }
   @include for-tablet {
-    top: 54px;
+    top: 94px;
     right: 20px;
   }
   @include for-tablet {
