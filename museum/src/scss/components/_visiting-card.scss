@@ -11,6 +11,11 @@
     font-size: 20px;
     line-height: 23px;
   }
+  @include for-tablet {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 41px;
+  }
 }
 
 .visiting__img {
@@ -19,6 +24,10 @@
   @include for-laptop {
     width: 330px;
     height: 215px;
+  }
+  @include for-tablet {
+    width: 280px;
+    height: 180px;
   }
 }
 
@@ -50,6 +59,11 @@
     font-size: 28px;
     line-height: 31px;
     letter-spacing: 3px;
+  }
+  @include for-tablet {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 20px;
   }
 }
 

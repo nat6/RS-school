@@ -24,13 +24,21 @@
 		@include for-laptop {
 			height: 2046px;
 		}
+		@include for-tablet {
+			column-count: 2;
+			column-gap: 24px;
+			height: 3224px;
+		}
 	}
 
 	@include for-laptop {
 		margin-top: 50px;
 		height: 1266px;
 	}
-
+	@include for-tablet {
+		margin-top: 40px;
+		height: 1080px;
+	}
 }
 
 .gallery__img {
@@ -38,6 +46,10 @@
   margin-bottom: 20px;
 	@include for-laptop {
 		width: 304px;
+	}
+	@include for-tablet {
+		width: 352px;
+		margin-bottom: 24px;
 	}
 }
 

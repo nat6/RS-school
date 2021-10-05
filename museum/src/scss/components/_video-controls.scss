@@ -1,6 +1,7 @@
 .video__controls {
   width: 1380px;
   height: 85px;
+  position: relative;
   @include flex-basic;
   padding-left: 30px;
   padding-right: 30px;
@@ -10,6 +11,12 @@
     height: 61px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  @include for-tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 668px;
+    height: 56px;
   }
 }
 
@@ -89,6 +96,12 @@
     width: 564px;
     background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
   }
+  @include for-tablet {
+    width: 728px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 .controls_volume {
    width: 153px;
@@ -96,5 +109,8 @@
    @include for-laptop {
     width: 143px;
     background: linear-gradient(to right, $main-color 0%, $main-color 38%, $light-gray-color 38%, $light-gray-color 100%);
+  }
+  @include for-tablet {
+    width: 486px;
   }
  }

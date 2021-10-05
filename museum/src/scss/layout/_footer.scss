@@ -6,10 +6,16 @@
   @include for-laptop {
     padding-top: 60px;
   }
+  @include for-tablet {
+    padding-top: 50px;
+  }
 }
 
 .footer__block_top {
   display: flex;
+  @include for-tablet {
+    flex-direction: column;
+  }
 }
 
 .footer__block_top::after {
@@ -20,6 +26,10 @@
   right: 0;
   height: 3px;
   background-color: $gray-color;
+  @include for-tablet {
+    height: 1px;
+    bottom: 110px;
+  }
 }
 
 .footer__nav {
@@ -39,10 +49,21 @@
     margin-top: 7px;
     margin-left: 40px;
   }
+  @include for-tablet {
+    margin-left: 100px;
+    column-gap: 245px;
+  }
 }
 
 .footer__nav .nav__item {
   margin-bottom: 25px;
+}
+
+.footer__nav .nav__link {
+  @include for-tablet {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .footer__block_bottom {
@@ -52,6 +73,9 @@
   justify-content: space-between;
   @include for-laptop {
     padding-bottom: 48px;
+  }
+  @include for-tablet {
+    padding-top: 82px;
   }
 }
 

@@ -23,6 +23,9 @@
   @include for-laptop {
     margin-top: 73px;
   }
+  @include for-tablet {
+    display: none;
+  }
 }
 
 .explore__text {
@@ -51,5 +54,17 @@
   height: 700px;
   @include for-laptop {
     margin-top: 58px;
+  }
+  @include for-tablet {
+    margin-top: 63px;
+    width: 728px;
+    height: 705px;
+  }
+}
+
+.explore__img {
+  @include for-tablet {
+    width: 728px;
+    height: 705px;
   }
 }

@@ -37,6 +37,9 @@
   @include for-laptop {
     margin-top: 0;
   }
+  @include for-tablet {
+    margin-top: 15px;
+  }
 }
 
 .tickets__text {
@@ -46,12 +49,18 @@
     margin-top: 31px;
     margin-bottom: 8px;
   }
+  @include for-tablet {
+    margin-top: 26px;
+  }
 }
 
 .tickets__result_container {
   display: flex;
   justify-content: space-between;
   width: 166px;
+  @include for-tablet {
+    margin-top: 15px;
+  }
 }
 
 .amount__block {

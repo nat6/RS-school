@@ -6,6 +6,9 @@
   @include for-laptop {
     padding-bottom: 55px;
   }
+  @include for-tablet {
+    padding-bottom: 77px;
+  }
 }
 
 .video__container_top {
@@ -26,6 +29,9 @@
   @include for-laptop {
     margin-top: 30px;
   }
+  @include for-tablet {
+    margin-top: 20px;
+  }
 }
 
 .video__item_main {
@@ -34,6 +40,10 @@
   @include for-laptop {
     width: 984px;
     height: 444px;
+  }
+  @include for-tablet {
+    width: 728px;
+    height: 329px;
   }
 }
 
@@ -46,11 +56,23 @@
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  @include for-tablet {
+    margin-top: 21px;
+  }
 }
 
 .video__more iframe {
   @include for-laptop {
     width: 300px;
     height: 170px;
+  }
+  @include for-tablet {
+    width: 354px;
+    height: 199px;
+  }
+}
+.video__more iframe:last-child {
+  @include for-tablet {
+    display: none;
   }
 }

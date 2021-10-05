@@ -18,6 +18,12 @@
   @include for-laptop {
     height: 525px;
   }
+  @include for-tablet {
+    height: 800px;
+    background-position: bottom 40px center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .welcome__container::before {
@@ -32,6 +38,9 @@
     width: 700px;
     height: 525px;
   }
+  @include for-tablet {
+    display: none;
+  }
 }
 
 .welcome__content {
@@ -41,6 +50,9 @@
 	color: $light-color;
   @include for-laptop {
     margin-top: 50px;
+  }
+  @include for-tablet {
+    margin-top: 0;
   }
 }
 
@@ -53,5 +65,9 @@
   @include for-laptop {
     font-size: 24px;
     line-height: 28px;
+  }
+  @include for-tablet {
+    font-size: 20px;
+    line-height: 23px;
   }
 }

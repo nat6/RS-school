@@ -7,12 +7,20 @@
   @include for-laptop {
     padding-bottom: 28px;
   }
+  @include for-tablet {
+    margin-top: 24px;
+    padding-bottom: 0;
+    width: 100%;
+  }
 }
 
 .social__list {
   width: 340px;
   display: flex;
   justify-content: space-between;
+  @include for-tablet {
+    margin-right: 90px;
+  }
 }
 
 .social__link {

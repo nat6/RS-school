@@ -10,6 +10,10 @@
   height: 26px;
   background-image: url('assets/svg/logo.svg');
   margin-right: 25px;
+  @include for-phone {
+    width: 29px;
+    height: 16px;
+  }
 }
 
 .logo__title {
@@ -20,4 +24,8 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: $light-color;
+  @include for-phone {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

@@ -18,8 +18,21 @@
     font-size: 20px;
     line-height: 40px;
   }
+  @include for-tablet {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
+.welcome__controls_container {
+  width: 401px;
+  display: flex;
+  justify-content: space-between;
+}
 .controls__num {
   width: 76px;
   @include flex-basic;
