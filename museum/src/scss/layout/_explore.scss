@@ -60,11 +60,19 @@
     width: 728px;
     height: 705px;
   }
+  @include for-phone {
+    width: 380px;
+    height: 368px;
+  }
 }
 
 .explore__img {
   @include for-tablet {
     width: 728px;
     height: 705px;
+  }
+  @include for-phone {
+    width: 380px;
+    height: 368px;
   }
 }

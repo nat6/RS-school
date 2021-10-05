@@ -26,18 +26,29 @@
     padding-left: 0;
     padding-right: 0;
   }
+  @include for-phone {
+    height: 70px;
+    font-size: 16px;
+    bottom: -56px;
+  }
 }
 
 .welcome__controls_container {
   width: 401px;
   display: flex;
   justify-content: space-between;
+  @include for-phone {
+    width: 230px;
+  }
 }
 .controls__num {
   width: 76px;
   @include flex-basic;
   @include for-laptop {
     width: 71px;
+  }
+  @include for-phone {
+    width: 50px;
   }
 }
 .controls__pagination {
@@ -46,6 +57,9 @@
   margin-right: 4px;
   @include for-laptop {
     width: 160px;
+  }
+  @include for-laptop {
+    width: 75px;
   }
 }
 
@@ -57,6 +71,10 @@
   @include for-laptop {
     width: 12px;
     height: 12px;
+  }
+  @include for-phone {
+    width: 7px;
+    height: 7px;
   }
 }
 
@@ -72,6 +90,9 @@
 .controls__buttons {
   width: 80px;
   @include flex-basic;
+  @include for-phone {
+    width: 55px;
+  }
 }
 
 .controls__arrow {
@@ -83,9 +104,18 @@
   display: block;
   &_left {
     background-image: url(assets/svg/arrow-left.svg);
+    @include for-phone {
+      background-image: url(assets/svg/arrow-left-small.svg)
+    }
   }
   &_right {
     background-image: url(assets/svg/arrow-right.svg);
+    @include for-phone {
+      background-image: url(assets/svg/arrow-right-small.svg)
+    }
+  }
+  @include for-phone {
+    width: 20px;
   }
 }
 

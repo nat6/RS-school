@@ -59,6 +59,9 @@ body {
   @include for-tablet {
     max-width: 728px;
   }
+  @include for-phone {
+    max-width: 380px;
+  }
 }
 
 .section__title {
@@ -103,6 +106,10 @@ body {
   @include for-tablet {
     font-size: 40px;
     line-height: 60px;
+  }
+  @include for-phone {
+    font-size: 28px;
+    line-height: 40px;
   }
 
 }

@@ -32,6 +32,9 @@
   @include for-tablet {
     margin-top: 20px;
   }
+  @include for-phone {
+    margin-top: 17px;
+  }
 }
 
 .video__item_main {
@@ -44,6 +47,10 @@
   @include for-tablet {
     width: 728px;
     height: 329px;
+  }
+  @include for-phone {
+    width: 380px;
+    height: 172px;
   }
 }
 
@@ -59,6 +66,9 @@
   @include for-tablet {
     margin-top: 21px;
   }
+  @include for-phone {
+    margin-top: 40px;
+  }
 }
 
 .video__more iframe {
@@ -69,6 +79,10 @@
   @include for-tablet {
     width: 354px;
     height: 199px;
+  }
+  @include for-phone {
+    width: 180px;
+    height: 101px;
   }
 }
 .video__more iframe:last-child {

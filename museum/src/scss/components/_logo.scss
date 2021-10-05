@@ -3,6 +3,10 @@
   height: 33px;
   display: flex;
   justify-content: space-between;
+  @include for-phone {
+    width: 138px;
+    height: 20px;
+  }
 }
 
 .logo__icon {
@@ -10,9 +14,13 @@
   height: 26px;
   background-image: url('assets/svg/logo.svg');
   margin-right: 25px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   @include for-phone {
     width: 29px;
     height: 16px;
+    // margin-right: 32px;
   }
 }
 

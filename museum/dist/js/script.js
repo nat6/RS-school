@@ -95,3 +95,5 @@ buttonBook.addEventListener('click', function (e) {
 
 	setTimeout(() => circle.remove(), 500)
 })
+
+console.log('Привет! Не успела доделать часть задач. Если возможно, проверьте таск завтра или оставьте контакты для связи. Спасибо!')
