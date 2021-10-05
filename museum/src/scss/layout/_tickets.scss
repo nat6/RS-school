@@ -5,6 +5,9 @@
   @include for-laptop {
     padding-bottom: 55px;
   }
+  @include for-tablet {
+    padding-bottom: 40px;
+  }
 }
 .tickets__container {
 	position: relative;
@@ -21,6 +24,10 @@
     margin-top: 74px;
     max-width: 955px;
   }
+  @include for-tablet {
+    margin-top: 64px;
+    max-width: 679px;
+  }
 }
 
 .tickets__img {
@@ -31,9 +38,16 @@
     width: 700px;
     height: 440px;
   }
+  @include for-tablet {
+    width: 444px;
+    height: 340px;
+  }
 }
 
 .tickets__buy {
   margin-top: 60px;
   border: none;
+  @include for-tablet {
+    margin-top: 30px;
+  }
 }

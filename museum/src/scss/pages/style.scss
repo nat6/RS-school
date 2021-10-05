@@ -11,6 +11,10 @@
     padding-top: 54px;
     padding-bottom: 60px;
   }
+  @include for-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @import '../layout/_header.scss';
@@ -52,6 +56,12 @@ body {
   @include for-laptop {
     max-width: 984px;
   }
+  @include for-tablet {
+    max-width: 728px;
+  }
+  @include for-phone {
+    max-width: 380px;
+  }
 }
 
 .section__title {
@@ -85,10 +95,21 @@ body {
       @include for-laptop {
         bottom: -14px;
       }
+      @include for-tablet {
+        bottom: -22px;
+      }
     }
   }
   @include for-laptop {
     font-size: 50px;
+  }
+  @include for-tablet {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  @include for-phone {
+    font-size: 28px;
+    line-height: 40px;
   }
 
 }

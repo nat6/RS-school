@@ -5,8 +5,10 @@
   margin-bottom: 0;
   z-index: 3;
   @include for-laptop {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    // width: 200px; 
+    display: none;//TODO:temp!
   }
 }
 
@@ -31,7 +33,7 @@
 
 
 .nav__container {
-  position: relative;
+  // position: relative;
 //	width: 100px;
 }
 #nav-button {
@@ -48,6 +50,14 @@
   cursor: pointer;
   @include for-laptop {
     display: block;
+  }
+  @include for-tablet {
+    top: 54px;
+    right: 20px;
+  }
+  @include for-tablet {
+    top: 44px;
+    right: 20px;
   }
 }
 
@@ -96,5 +106,5 @@
 }
 
 #nav-button:checked ~ .nav {
-	visibility: visible; 
+	visibility: visible;
 }

@@ -3,6 +3,9 @@
   @include for-laptop {
     padding-bottom: 56px;
   }
+  @include for-tablet {
+    padding-bottom: 61px;
+  }
 }
 
 .contacts__content {
@@ -17,6 +20,12 @@
     font-size: 20px;
     line-height: 23px;
   }
+  @include for-tablet {
+    margin-top: 64px;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .contacts__subtitle {
@@ -30,6 +39,12 @@
     max-width: 185px;
     font-size: 24px;
     line-height: 28px;
+  }
+  @include for-tablet {
+    margin-bottom: 40px;
+    max-width: 155px;
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 
@@ -48,11 +63,20 @@
   color: $main-color;
   @include trans-medium;
 }
+.contacts__map {
+  @include for-tablet {
+    margin-top: 24px;
+  }
+}
 
 .map__img {
   width: 960px;
   @include for-laptop {
     width: calc(100vw - 330px);
     height: calc(65vw - 212px);
+  }
+  @include for-tablet {
+    width: calc(100vw - 40px);
+    height: calc(65vw - 21px);
   }
 }

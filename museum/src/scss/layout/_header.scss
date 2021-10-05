@@ -9,4 +9,12 @@
     padding-top: 49px;
     padding-bottom: 48px;
   }
+  @include for-tablet {
+    padding-top: 45px;
+    padding-bottom: 34px;
+  }
+  @include for-phone {
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
 }

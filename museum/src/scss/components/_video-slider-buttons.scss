@@ -1,4 +1,6 @@
 .video__slider {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 22px;
   margin-top: 35px;
@@ -8,7 +10,16 @@
 		width: 212px;
 		height: 22px;
     @include flex-basic;
+    @include for-tablet {
+      width: 200px;
+      height: 20px;
+    }
 	}
+
+  @include for-tablet {
+    height: 20px;
+    margin-top: 15px;
+  }
 
 }
 
@@ -18,6 +29,15 @@
   width: 22px;
   height: 22px;
   cursor: pointer;
+  background-size: cover;
+  @include for-tablet {
+    width: 20px;
+    height: 20px;
+  }
+  @include for-phone {
+    width: 7px;
+    height: 8px;
+  }
 }
 .double__arrow {
   background-position: center;
@@ -46,6 +66,14 @@
   top: 5px;
   left: 5px;
   background-color: $dark-gray-color;
+  @include for-tablet {
+    width: 10px;
+    height: 10px;
+  }
+  @include for-phone {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .video__slider_pagination:hover .pagination__dot {
@@ -57,12 +85,3 @@
 .pagination__dot_first {
   background-color: $so-dark-gray-color;
 }
-// div.video__slider
-// div.video__slider_container
-//   div.double__arrow_left
-//   div.video__slider_pagination
-//   div.video__slider_pagination
-//   div.video__slider_pagination
-//   div.video__slider_pagination
-//   div.video__slider_pagination
-//   div.double__arrow_right
