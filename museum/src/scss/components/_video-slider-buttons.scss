@@ -14,6 +14,9 @@
       width: 200px;
       height: 20px;
     }
+    @include for-phone {
+      width: 188px;
+    }
 	}
 
   @include for-tablet {
@@ -21,10 +24,14 @@
     margin-top: 15px;
   }
 
+  @include for-phone {
+    margin-top: 35px;
+  }
 }
 
 .video__slider_pagination,
-.double__arrow {
+.video__slider_container .button_right,
+.video__slider_container .button_left {
   display: block;
   width: 22px;
   height: 22px;
@@ -34,22 +41,36 @@
     width: 20px;
     height: 20px;
   }
-  @include for-phone {
-    width: 7px;
-    height: 8px;
-  }
 }
+
 .double__arrow {
   background-position: center;
   background-repeat: no-repeat;
+  width: 10px;
+  height: 12px;
   &_left {
     background-image: url(assets/svg/arrow-double-left.svg);
   }
   &_right {
     background-image: url(assets/svg/arrow-double-right.svg);
   }
+  @include for-phone {
+    width: 7px;
+    height: 8px;
+  }
 }
 
+.video__slider_container .button_left,
+.video__slider_container .button_right {
+
+  @include for-phone {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .double__arrow:hover {
   @include red-filter;
   @include trans-fast;
@@ -58,6 +79,7 @@
 .video__slider_pagination {
   position: relative;
 }
+
 .pagination__dot {
   width: 12px;
   height: 12px;
@@ -66,6 +88,7 @@
   top: 5px;
   left: 5px;
   background-color: $dark-gray-color;
+
   @include for-tablet {
     width: 10px;
     height: 10px;
@@ -74,6 +97,7 @@
     width: 8px;
     height: 8px;
   }
+
 }
 
 .video__slider_pagination:hover .pagination__dot {

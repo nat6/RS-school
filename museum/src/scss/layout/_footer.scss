@@ -9,6 +9,9 @@
   @include for-tablet {
     padding-top: 50px;
   }
+  @include for-phone {
+    padding-top: 40px;
+  }
 }
 
 .footer__block_top {
@@ -28,13 +31,27 @@
   background-color: $gray-color;
   @include for-tablet {
     height: 1px;
-    bottom: 110px;
+    bottom: 103px;
   }
 }
 
 .footer__nav {
   width: 50%;
   display: flex;
+  @include for-phone {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.footer__nav .logo {
+  @include for-phone {
+    width: 134px;
+  }
+}
+.footer__nav .logo__icon {
+  @include for-phone {
+    margin-right: 10px;
+  }
 }
 
 .footer__nav .nav__list {
@@ -53,16 +70,31 @@
     margin-left: 100px;
     column-gap: 245px;
   }
+  @include for-phone {
+    margin-left: 0;
+    margin-top: 40px;
+    column-count: 3;
+    margin-left: 0;
+    column-gap: 57%;
+    margin-right: 0;
+  }
 }
 
 .footer__nav .nav__item {
   margin-bottom: 25px;
+  @include for-phone {
+    margin-bottom: 30px;
+  }
 }
 
 .footer__nav .nav__link {
   @include for-tablet {
     font-size: 18px;
     line-height: 21px;
+  }
+  @include for-phone {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
@@ -77,6 +109,9 @@
   @include for-tablet {
     padding-top: 82px;
   }
+  @include for-phone {
+  padding-bottom: 40px;
+  }
 }
 
 .footer__text {
@@ -86,6 +121,16 @@
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 2px;
+  &_hidden {
+    @include for-phone {
+      display: none;
+    }
+  }
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .footer__link:hover {

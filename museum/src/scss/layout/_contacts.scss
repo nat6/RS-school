@@ -6,6 +6,9 @@
   @include for-tablet {
     padding-bottom: 61px;
   }
+  @include for-phone {
+    padding-bottom: 33px;
+  }
 }
 
 .contacts__content {
@@ -26,6 +29,10 @@
     font-size: 18px;
     line-height: 21px;
   }
+  @include for-tablet {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .contacts__subtitle {
@@ -34,6 +41,7 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 33px;
+
   @include for-laptop {
     margin-bottom: 35px;
     max-width: 185px;
@@ -45,6 +53,11 @@
     max-width: 155px;
     font-size: 20px;
     line-height: 23px;
+  }
+  @include for-phone {
+    max-width: 124px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 

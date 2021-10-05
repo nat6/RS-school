@@ -34,9 +34,12 @@
 }
 
 .welcome__controls_container {
-  width: 401px;
+  width: 451px;
   display: flex;
   justify-content: space-between;
+  @include for-laptop {
+    width: 401px;
+  }
   @include for-phone {
     width: 230px;
   }
@@ -58,7 +61,7 @@
   @include for-laptop {
     width: 160px;
   }
-  @include for-laptop {
+  @include for-tablet {
     width: 75px;
   }
 }

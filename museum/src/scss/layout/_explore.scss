@@ -47,12 +47,12 @@
 }
 
 .explore__slider {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 15px;
   width: 720px;
   height: 700px;
   @include for-laptop {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 58px;
   }
   @include for-tablet {

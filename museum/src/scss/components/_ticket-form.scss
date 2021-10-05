@@ -11,6 +11,12 @@
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
+  @include for-phone {
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .type__container {
@@ -30,6 +36,9 @@
   @include for-laptop {
     align-items: flex-start;
   }
+  @include for-phone {
+    margin-top: 33px;
+  }
 }
 
 .amount__container {
@@ -39,6 +48,9 @@
   }
   @include for-tablet {
     margin-top: 15px;
+  }
+  @include for-phone {
+    margin-top: 0;
   }
 }
 
@@ -52,14 +64,27 @@
   @include for-tablet {
     margin-top: 26px;
   }
+  @include for-phone {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @include for-phone {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: normal;
+  }
+  
 }
 
 .tickets__result_container {
   display: flex;
   justify-content: space-between;
-  width: 166px;
+  @include for-laptop {
+    width: 166px;
+  }
   @include for-tablet {
     margin-top: 15px;
+    justify-content: center;
   }
 }
 
@@ -114,7 +139,17 @@
   @include for-laptop {
     margin-top: 25px;
   }
+  @include for-phone {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: normal;
+  }
 }
 
+#tickets-result {
+  @include for-phone {
+    margin-left: 4px;
+  }
+}
 
 @import '_radio-item.scss';

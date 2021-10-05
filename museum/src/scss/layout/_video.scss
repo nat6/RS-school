@@ -9,6 +9,9 @@
   @include for-tablet {
     padding-bottom: 77px;
   }
+  @include for-phone {
+    padding-bottom: 33px;
+  }
 }
 
 .video__container_top {

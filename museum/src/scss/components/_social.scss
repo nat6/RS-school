@@ -12,6 +12,10 @@
     padding-bottom: 0;
     width: 100%;
   }
+  @include for-phone {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 .social__list {
@@ -20,6 +24,10 @@
   justify-content: space-between;
   @include for-tablet {
     margin-right: 90px;
+  }
+  @include for-phone {
+    width: 260px;
+    margin-right: 0;
   }
 }
 
