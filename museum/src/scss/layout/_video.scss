@@ -9,8 +9,12 @@
   @include for-tablet {
     padding-bottom: 77px;
   }
+  @include for-tablet-down {
+    padding-bottom: 50px;
+  }
   @include for-phone {
     padding-bottom: 33px;
+    padding-top: 39px;
   }
 }
 
@@ -22,14 +26,19 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 38px;
-  @include for-laptop {
+  @include for-laptop-mid {
     display: none;
+  }
+}
+.video__container_bottom {
+  @include for-laptop-up {
+    width: 100%;
   }
 }
 
 .video__main {
   margin-top: 75px;
-  @include for-laptop {
+  @include for-laptop-mid {
     margin-top: 30px;
   }
   @include for-tablet {
@@ -43,16 +52,17 @@
 .video__item_main {
   width: 1440px;
   height: 650px;
+  @include for-laptop-up {
+    width: 100%;
+  }
   @include for-laptop {
-    width: 984px;
     height: 444px;
   }
   @include for-tablet {
-    width: 728px;
     height: 329px;
   }
   @include for-phone {
-    width: 380px;
+    // width: 380px;
     height: 172px;
   }
 }
@@ -72,20 +82,40 @@
   @include for-phone {
     margin-top: 40px;
   }
+  @include for-phone-down {
+    margin-top: 15px;
+  }
 }
 
 .video__more iframe {
+  @include for-laptop-up {
+    width: calc(33% - 10px);
+  }
+  @include for-laptop-down {
+    height: 200px;
+  }
   @include for-laptop {
-    width: 300px;
+    width: calc(33% - 24px);
     height: 170px;
   }
+  @include for-tablet-up {
+    width: calc(33% - 10px);
+  }
   @include for-tablet {
-    width: 354px;
+    width: calc(50% - 10px);
     height: 199px;
   }
+  @include for-tablet-down {
+    height: 170px;
+  }
+  @include for-phone-up {
+    height: 140px;
+  }
   @include for-phone {
-    width: 180px;
     height: 101px;
+  }
+  @include for-phone-down {
+    width: calc(50% - 5px);
   }
 }
 .video__more iframe:last-child {

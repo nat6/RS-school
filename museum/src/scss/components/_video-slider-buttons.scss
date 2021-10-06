@@ -24,7 +24,7 @@
     margin-top: 15px;
   }
 
-  @include for-phone {
+  @include for-tablet-down {
     margin-top: 35px;
   }
 }
@@ -32,7 +32,9 @@
 .video__slider_pagination,
 .video__slider_container .button_right,
 .video__slider_container .button_left {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 22px;
   height: 22px;
   cursor: pointer;
@@ -43,9 +45,25 @@
   }
 }
 
+
+
+.video__slider_container .button_left,
+.video__slider_container .button_right {
+
+  @include for-phone {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .double__arrow {
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 10px;
   height: 12px;
   &_left {
@@ -60,17 +78,6 @@
   }
 }
 
-.video__slider_container .button_left,
-.video__slider_container .button_right {
-
-  @include for-phone {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .double__arrow:hover {
   @include red-filter;
   @include trans-fast;

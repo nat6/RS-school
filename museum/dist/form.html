@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/icons/favicon.ico" rel="shortcut icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&amp;family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
+    <title>form</title>
+    <!-- - links href-->
+    <!-- - img src-->
+  </head>
+  <body>
+    <aside class="form-buy" id="form-buy">
+      <div class="form-buy__container"> 
+        <div class="form-buy__booking">
+          <div class="form-buy__logo"></div>
+          <h2 class="section__title section__title_gold section__title_underline form-buy__title">Booking tickets</h2>
+          <p class="form-buy__subtitle">Tour to Louvre</p>
+          <form class="booking__form">
+            <input class="booking__input_hidden" type="date">
+            <input class="booking__input_hidden" type="time">
+            <div class="input__wrap input__wrap_date">
+              <input class="booking__input booking__input_narrow" placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+            <div class="input__wrap input__wrap_time">
+              <input class="booking__input booking__input_narrow" placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')">
+            </div>
+            <div class="input__wrap input__wrap_name">
+              <input class="booking__input" type="text" placeholder="Name">
+            </div>
+            <div class="input__wrap input__wrap_mail">
+              <input class="booking__input" type="email" placeholder="E-mail">
+            </div>
+            <div class="input__wrap input__wrap_phone">
+              <input class="booking__input" type="tel" placeholder="Phone">
+            </div>
+            <div class="input__wrap input__wrap_ticket">
+              <select class="booking__input booking__select">
+                <option class="booking__option" disabled selected>Ticket Type</option>
+                <option class="booking__option">Permanent exhibition</option>
+                <option class="booking__option">Temporary exhibition</option>
+                <option class="booking__option">Combined Admission</option>
+              </select>
+            </div>
+            <fieldset class="booking__amount">
+              <p class="booking__amount_title">Entry ticket</p>
+              <div class="booking__amount_container">
+                <div class="booking__amount_item">
+                  <p class="booking__text">Basic 18+ (20 €)</p>
+                  <div class="amount__block">
+                    <button class="amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+                    <input class="amount__input" type="number" min="0" max="20" value="1" readonly>
+                    <button class="amount__button" type="button" onclick="previousElementSibling.stepUp()">+</button>
+                  </div>
+                </div>
+                <div class="booking__amount_item">
+                  <p class="booking__text">Senior 65+ (10 €)</p>
+                  <div class="amount__block">
+                    <button class="amount__button" type="button" onclick="this.nextElementSibling.stepDown()">—</button>
+                    <input class="amount__input" type="number" min="0" max="20" value="1" readonly>
+                    <button class="amount__button" type="button" onclick="previousElementSibling.stepUp()">+</button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="form-buy__overview">
+          <div class="overview__title">Overview</div>
+          <div class="overview__subtitle">Tour to Louvre</div>
+          <div class="overview__info">
+            <div class="overview__item">
+              <div class="overview__icon overview__icon_date"></div>
+              <div class="overview__text">Friday, August 19</div>
+            </div>
+            <div class="overview__item">
+              <div class="overview__icon overview__icon_time"></div>
+              <div class="overview__text">16 : 30</div>
+            </div>
+            <div class="overview__item">
+              <div class="overview__icon overview__icon_check"></div>
+              <div class="overview__text">Temporary exhibition</div>
+            </div>
+            <div class="overview__img"></div>
+          </div>
+          <div class="overview__cost">
+            <div class="overview__item cost__item">
+              <div class="overview__item_container">
+                <div class="cost__icon"></div>
+                <div class="cost__text">Basic (20 €)</div>
+              </div>
+              <div class="cost__total">40 €</div>
+            </div>
+            <div class="overview__item cost__item">
+              <div class="overview__item_container">
+                <div class="cost__icon"></div>
+                <div class="cost__text">Senior (10 €)</div>
+              </div>
+              <div class="cost__total">20 €</div>
+            </div>
+          </div>
+          <div class="overview__pay">
+            <div class="pay__total">
+              <div>Total: </div>
+              <div>60 €</div>
+            </div>
+            <div class="pay__cards">
+              <div class="pay__card pay__card_back">
+                <div class="back__line"></div>
+                <div class="back__content">
+                  <div class="back__text back__title">CVC/CVV</div>
+                  <input class="back__input" type="text">
+                  <div class="back__text back__text_small">The last 3 or 4 digits on back of the card</div>
+                </div>
+              </div>
+              <div class="pay__card pay__card_front">
+                <p class="card__text">Card number</p>
+                <input class="pay__input pay__input_number" type="number">
+                <p class="card__text">Expiration date</p>
+                <label class="pay__label">
+                  <select class="pay__input pay__select">
+                    <option class="pay__option">01</option>
+                    <option class="pay__option">02</option>
+                    <option class="pay__option" selected>03</option>
+                    <option class="pay__option">04</option>
+                  </select>
+                </label>
+                <label class="pay__label">
+                  <select class="pay__input pay__select">
+                    <option class="pay__option">2021</option>
+                    <option class="pay__option">2022</option>
+                    <option class="pay__option">2023</option>
+                    <option class="pay__option" selected>2024</option>
+                  </select>
+                </label>
+                <p class="card__text">Cardholder name</p>
+                <input class="pay__input pay__input_name" type="text">
+                <div class="card__img card__img_visa"></div>
+                <div class="card__img card__img_master"></div>
+              </div>
+            </div>
+            <div class="button__book_container">
+              <button class="button__book">Book</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-buy__close"></div>
+      </div>
+    </aside>
+    <script src="js/script.js"></script>
+  </body>
+</html>

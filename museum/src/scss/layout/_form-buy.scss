@@ -12,6 +12,23 @@
   left: 0;
   background-color: white;
   @include trans-slow;
+  @include for-laptop-up {
+    margin-top: 0;
+    width: 1025px;
+    padding-top: 72px;
+    height: 693px;
+  }
+  @include for-laptop-form {
+    width: 590px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 80px;
+  }
+  @include for-phone-up {
+    overflow-x: hidden;
+    width: 420px;
+    padding-top: 80px;
+  }
 }
 #shadow { 
   position: fixed;
@@ -30,10 +47,28 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  @include for-laptop-form {
+    flex-direction: column;
+    align-items: center;
+    width: 590px;
+    height: 1350px;
+    padding-bottom: 110px;
+  }
+  @include for-phone-up {
+    width: 420px;
+    height: 1354px;
+    padding-bottom: 380px;
+  }
 }
 
 .form-buy__booking {
   width: 400px;
+  @include for-laptop-form {
+    width: 530px;
+  }
+  @include for-phone-up {
+    width: 360px;
+  }
 }
 
 .form-buy__logo {
@@ -48,6 +83,10 @@
   font-size: 50px;
   line-height: 55px;
   letter-spacing: normal;
+  @include for-phone-up {
+    font-size: 32px;
+    line-height: 35px;
+  }
 }
 
 .form-buy .form-buy__title::after {
@@ -66,6 +105,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 73px;
+  @include for-laptop-form {
+    margin-top: 54px;
+  }
+  // @include for-tablet {
+  //   margin-top: 50px;
+  // }
 }
 
 .booking__input {
@@ -73,10 +118,23 @@
   height: 43px;
   border: 1px solid $dark-color;
   margin-bottom: 20px;
+  @include for-laptop-form {
+    width: 528px;
+    height: 43px;
+  }
+  @include for-phone-up {
+    width: 358px;
+  }
 }
 
 .booking__input_narrow {
   width: 188px;
+  @include for-laptop-form {
+    width: 251px;
+  }
+  @include for-phone-up {
+    width: 358px;
+  }
 }
 
 .booking__amount {
@@ -84,6 +142,9 @@
   width: 400px;
   height: 115px;
   border: 1px solid $dark-color;
+  @include for-laptop-form {
+    width: 530px;
+  }
 }
 
 .booking__amount_title {
@@ -143,6 +204,15 @@
 
   height: 663px;
   border: 1px solid black;
+  @include for-laptop-form {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include for-phone-up {
+    width: 360px;
+    height: 885px;
+  }
 }
 
 .form-buy__close {
@@ -153,6 +223,14 @@
   width: 25px;
   height: 25px;
   background-image: url(assets/svg/close.svg);
+  @include for-laptop-up {
+    top: -45px;
+    right: 0;
+  }
+  @include for-laptop-form {
+    top: -50px;
+    right: 30px;
+  }
 }
 
 .overview__title {
@@ -177,6 +255,9 @@
 
 .overview__info {
   margin-top: 9px;
+  @include for-laptop-form {
+    position: relative;
+  }
 }
 .overview__item {
   display: flex;
@@ -250,6 +331,11 @@
 
   color: #030303;
 }
+.qwerview__pay {
+  @include for-laptop-form {
+    position: relative;
+  }
+}
 .overview__img {
   position: absolute;
   top: 24px;
@@ -259,6 +345,14 @@
   background-image: url(assets/img/form.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  @include for-laptop-form {
+    top: -75px;
+    right: 0px;
+  }
+  @include for-phone-up {
+    width: 120px;
+    height: 96px;
+  }
 }
 
 .overview__text {
@@ -335,10 +429,21 @@
 .pay__cards {
   width: 470px;
   position: relative;
+  @include for-laptop-form {
+    width: 500px;
+  }
+  @include for-phone-up {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .pay__card {
   position: absolute;
+  border-radius: 5px;
+  @include for-phone-up {
+    position: static;
+  }
 }
 
 .pay__card_front {
@@ -346,9 +451,16 @@
   height: 176px;
   top: 10px;
   left: 0;
-  padding: 15px 20px 20px 20px;
+  padding: 15px 20px 15px 20px;
   background-color: #BCBCBC;
   position: relative;
+  @include for-laptop-form {
+    top: 14px;
+  }
+  @include for-phone-up {
+    width: 290px;
+    height: 179px;
+  }
 }
 .pay__card_back {
   width: 360px;
@@ -356,6 +468,13 @@
   top: 40px;
   right: 0;
   background-color: #939393;
+  @include for-laptop-form {
+    top: 46px;
+  }
+  @include for-phone-up {
+    width: 330px;
+    height: 209px;
+  }
 }
 
 .card__text {
@@ -374,6 +493,9 @@
   }
   &_name {
     width: 320px;
+    @include for-phone-up {
+      width: 290px;
+    }
   }
 }
 
@@ -401,6 +523,16 @@
   position: absolute;
   bottom: 26px;
   right: 30px;
+  @include for-laptop-form {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+  }
+  @include for-phone-up {
+    margin-top: 40px;
+  }
 }
 
 
@@ -501,12 +633,18 @@
   height: 45px;
   background-color: #161615;
   margin-top: 25px;
+  @include for-phone-up {
+    width: 330px;
+  }
 }
 
 .pay__card_back {
   flex-direction: column;
   display: flex;
   align-items: flex-end;
+  @include for-phone-up {
+    margin-top: 40px;
+  }
 }
 
 .back__text_small {

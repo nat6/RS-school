@@ -2,7 +2,11 @@
 	width: 660px;
   display: flex;
   justify-content: space-between;
-  @include for-laptop {
+
+  @include for-laptop-up {
+    width: 39%;
+  }
+  @include for-laptop-mid {
     width: 175px;
   }
 }
@@ -11,7 +15,7 @@
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
-  @include for-phone {
+  @include for-phone-mid {
     font-size: 16px;
     line-height: 19px;
     margin-left: auto;
@@ -24,7 +28,7 @@
 }
 
 .tickets__type {
-  @include for-laptop {
+  @include for-laptop-mid {
     display: none;
   }
 }
@@ -36,7 +40,7 @@
   @include for-laptop {
     align-items: flex-start;
   }
-  @include for-phone {
+  @include for-phone-mid {
     margin-top: 33px;
   }
 }
@@ -49,7 +53,7 @@
   @include for-tablet {
     margin-top: 15px;
   }
-  @include for-phone {
+  @include for-phone-mid {
     margin-top: 0;
   }
 }
@@ -64,16 +68,14 @@
   @include for-tablet {
     margin-top: 26px;
   }
-  @include for-phone {
+  @include for-phone-mid {
     font-size: 16px;
     line-height: 19px;
-  }
-  @include for-phone {
     margin-top: 20px;
     margin-bottom: 15px;
     letter-spacing: normal;
   }
-  
+
 }
 
 .tickets__result_container {
@@ -84,6 +86,9 @@
   }
   @include for-tablet {
     margin-top: 15px;
+  }
+  @include for-phone-mid {
+    margin-left: 4px;
     justify-content: center;
   }
 }
@@ -139,7 +144,7 @@
   @include for-laptop {
     margin-top: 25px;
   }
-  @include for-phone {
+  @include for-phone-mid {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: normal;
@@ -147,7 +152,7 @@
 }
 
 #tickets-result {
-  @include for-phone {
+  @include for-phone-mid {
     margin-left: 4px;
   }
 }

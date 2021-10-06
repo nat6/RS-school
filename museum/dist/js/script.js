@@ -11,7 +11,7 @@ function shuffleGallary() {
 		"assets/img/gallery/gallery8.jpg",
 		"assets/img/gallery/gallery9.jpg",
 		"assets/img/gallery/gallery10.jpg",
-		"assets/img/gallery/gallery111.jpg",
+		"assets/img/gallery/gallery11.jpg",
 		"assets/img/gallery/gallery12.jpg",
 		"assets/img/gallery/gallery13.jpg",
 		"assets/img/gallery/gallery14.jpg",

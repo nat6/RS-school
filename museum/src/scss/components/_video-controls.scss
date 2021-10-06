@@ -8,22 +8,25 @@
   padding-left: 30px;
   padding-right: 30px;
   background-color: $dark-color;
+  @include for-laptop-up {
+    width: calc(100% - 60px);
+  }
   @include for-laptop {
-    width: 904px;
     height: 61px;
+    width: calc(100% - 80px);
     padding-left: 40px;
     padding-right: 40px;
   }
-  @include for-tablet {
+  @include for-tablet-mid {
+    width: calc(100% - 60px);
     padding-left: 30px;
     padding-right: 30px;
-    width: 668px;
     height: 56px;
   }
-  @include for-phone {
+  @include for-phone-mid {
+    width: calc(100% - 40px);
     padding-left: 20px;
     padding-right: 20px;
-    width: 340px;
     height: 54px;
   }
 }
@@ -38,13 +41,13 @@
     width: 23px;
     height: 31px;
     background: url(assets/svg/play.svg);
-    @include for-laptop {
+    @include for-laptop-down {
       width: 23px;
       height: 29px;
       background-size: contain;
       background-repeat: no-repeat;
     }
-    @include for-phone {
+    @include for-phone-mid {
       width: 14px;
       height: 18px;
     }
@@ -53,13 +56,13 @@
     width: 36px;
     height: 31px;
     background: url(assets/svg/audio.svg);
-    @include for-laptop {
+    @include for-laptop-down {
       width: 26px;
       height: 20px;
       background-size: contain;
       background-repeat: no-repeat;
     }
-    @include for-phone {
+    @include for-phone-mid {
       width: 18px;
       height: 14px;
     }
@@ -68,13 +71,13 @@
     width: 35px;
     height: 35px;
     background: url(assets/svg/fullscreen.svg);
-    @include for-laptop {
+    @include for-laptop-down {
       width: 26px;
       height: 26px;
       background-size: contain;
       background-repeat: no-repeat;
     }
-    @include for-phone {
+    @include for-phone-mid {
       width: 18px;
       height: 18px;
     }
@@ -94,7 +97,7 @@
   @include for-laptop {
     height: 5px;
   }
-  @include for-phone {
+  @include for-phone-mid {
     height: 4px;
   }
 }
@@ -115,18 +118,14 @@
 .controls_progress {
   width: 929px;
   background: linear-gradient(to right, $main-color 0%, $main-color 54%, $light-gray-color 54%, $light-gray-color 100%);
+  @include for-laptop-up {
+    width: 62%;
+  }
   @include for-laptop {
-    width: 564px;
     background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
   }
   @include for-tablet {
-    width: 728px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  @include for-phone {
-    width: 380px;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -142,7 +141,7 @@
   @include for-tablet {
     width: 486px;
   }
-  @include for-phone {
-    width: 200px;
+  @include for-tablet-down {
+    width: 75%;
   }
 }

@@ -11,22 +11,43 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url(./assets/img/welcome-slider/1.jpg);
-  @include for-laptop {
+  background-position: 100%;
+  @include for-laptop-mid {
     height: 525px;
+  }
+  @include for-tablet-up {
+    height: 850px;
+    background-position: bottom -80px center;
+    justify-content: center;
+    text-align: center;
+  }
+  @include for-tablet-mid {
+    height: 780px;
   }
   @include for-tablet {
     height: 800px;
     background-position: bottom 40px center;
-    justify-content: center;
-    text-align: center;
+  }
+  @include for-tablet-down {
+    height: 590px;
+    background-position: bottom -80px center;
+  }
+  @include for-phone-up {
+    background-position: bottom -20px center;
+  }
+  @include for-phone-mid {
+    height: 530px;
+    background-position: bottom 0 center;
   }
   @include for-phone {
     height: 494px;
     background-position: bottom 20px center;
+  }
+  @include for-phone-down {
+    height: 444px;
   }
 }
 
@@ -38,11 +59,11 @@
   top: 0;
   right: 0;
   background-image: linear-gradient(to right, black 0%, transparent 30%);
-  @include for-laptop {
+  @include for-laptop-mid {
     width: 700px;
     height: 525px;
   }
-  @include for-tablet {
+  @include for-tablet-up {
     display: none;
   }
 }
@@ -52,10 +73,10 @@
   margin-top: 150px;
   z-index: 2;
 	color: $light-color;
-  @include for-laptop {
+  @include for-laptop-mid {
     margin-top: 50px;
   }
-  @include for-tablet {
+  @include for-tablet-up {
     margin-top: 0;
   }
   @include for-phone {
@@ -69,11 +90,11 @@
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 2px;
-  @include for-laptop {
+  @include for-laptop-mid {
     font-size: 24px;
     line-height: 28px;
   }
-  @include for-tablet {
+  @include for-tablet-up {
     font-size: 20px;
     line-height: 23px;
   }
