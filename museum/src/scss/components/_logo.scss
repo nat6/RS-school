@@ -3,7 +3,7 @@
   height: 33px;
   display: flex;
   justify-content: space-between;
-  @include for-phone {
+  @include for-phone-up {
     width: 138px;
     height: 20px;
   }
@@ -17,7 +17,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  @include for-phone {
+  @include for-phone-up {
     width: 29px;
     height: 16px;
     // margin-right: 32px;
@@ -32,7 +32,7 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: $light-color;
-  @include for-phone {
+  @include for-phone-up {
     font-size: 16px;
     line-height: 18px;
   }

@@ -4,7 +4,7 @@
     padding-bottom: 56px;
   }
   @include for-tablet {
-    padding-bottom: 61px;
+    padding-bottom: 60px;
   }
   @include for-phone {
     padding-bottom: 33px;
@@ -18,6 +18,7 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
+
   @include for-laptop {
     margin-top: 74px;
     font-size: 20px;
@@ -29,7 +30,7 @@
     font-size: 18px;
     line-height: 21px;
   }
-  @include for-tablet {
+  @include for-phone {
     font-size: 16px;
     line-height: 19px;
   }
@@ -83,7 +84,12 @@
 }
 
 .map__img {
+  object-fit: cover;
+  object-position: center center;
   width: 960px;
+  @include for-laptop-up {
+    width: calc(100vw - 430px);
+  }
   @include for-laptop {
     width: calc(100vw - 330px);
     height: calc(65vw - 212px);

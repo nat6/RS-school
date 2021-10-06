@@ -13,7 +13,7 @@
     height: 60px;
     margin-top: 50px;
   }
-  @include for-tablet {
+  @include for-tablet-up {
     display: none;
   }
 }

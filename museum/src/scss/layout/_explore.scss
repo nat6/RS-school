@@ -1,7 +1,15 @@
+.explore {
+  @include for-tablet {
+    padding-bottom: 37px;
+  }
+  @include for-phone {
+    padding-bottom: 40px;
+  }
+}
 .explore__container {
   display: flex;
   justify-content: space-between;
-  @include for-laptop {
+  @include for-laptop-mid {
     display: block;
   }
 }
@@ -12,6 +20,13 @@
   font-size: 22px;
   line-height: 38px;
   color: $light-color;
+  @include for-laptop-up {
+    margin-right: 40px;
+  }
+  @include for-laptop-mid {
+    margin-right: 0;
+    max-width: 100%;
+  }
   @include for-laptop {
     max-width: 984px;
     font-size: 20px;
@@ -20,7 +35,13 @@
 
 .explore__text_container {
   margin-top: 104px;
+  @include for-laptop-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @include for-laptop {
+    align-items: flex-start;
     margin-top: 73px;
   }
   @include for-tablet {
@@ -36,12 +57,15 @@
   }
 
   &_hidden {
-    @include for-laptop {
+    @include for-laptop-down {
       display: none;
     }
   }
-
+  @include for-laptop-mid {
+    width: calc(100% - 80px);
+  }
   @include for-laptop {
+    width: auto;
     margin-bottom: 0;
   }
 }
@@ -50,29 +74,47 @@
   margin-top: 15px;
   width: 720px;
   height: 700px;
+  @include for-laptop-up {
+    width: calc(100% - 20px);
+  }
   @include for-laptop {
+    width: 720px;
+    height: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 58px;
   }
+  @include for-laptop-mid {
+    display: flex;
+    justify-content: center;
+  }
   @include for-tablet {
     margin-top: 63px;
-    width: 728px;
-    height: 705px;
+    height: auto;
+    width: 100%;
   }
   @include for-phone {
-    width: 380px;
+    // width: 380px;
     height: 368px;
   }
 }
 
 .explore__img {
+  @include for-laptop-mid {
+    width: calc(100% - 80px);
+    object-fit: cover;
+    object-position: center 80%;
+  }
+  @include for-laptop {
+    width: 720px;
+    height: 700px;
+  }
   @include for-tablet {
-    width: 728px;
-    height: 705px;
+    width: 100%;
+    height: auto;
   }
   @include for-phone {
-    width: 380px;
+    // width: 380px;
     height: 368px;
   }
 }

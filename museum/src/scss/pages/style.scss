@@ -53,14 +53,11 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  @include for-laptop-up {
+    width: calc(100% - 80px);
+  }
   @include for-laptop {
-    max-width: 984px;
-  }
-  @include for-tablet {
-    max-width: 728px;
-  }
-  @include for-phone {
-    max-width: 380px;
+    width: calc(100% - 40px);
   }
 }
 
@@ -100,7 +97,10 @@ body {
       }
     }
   }
-  @include for-laptop {
+  @include for-laptop-up {
+    font-size: 65px;
+  }
+  @include for-laptop-down {
     font-size: 50px;
   }
   @include for-tablet {

@@ -48,9 +48,34 @@
 @mixin red-filter {
 	filter: invert(11%) sepia(26%) saturate(6519%) hue-rotate(352deg) brightness(50%) contrast(102%);
 }
+@mixin for-laptop-up {
+	@media (max-width: 1500px) {
+		@content;
+	}
+}
+@mixin for-laptop-mid {
+	@media (max-width: 1300px) {
+		@content;
+	}
+}
+@mixin for-laptop-down {
+	@media (max-width: 1150px) {
+		@content;
+	}
+}
 
 @mixin for-laptop {
 	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin for-tablet-up {
+	@media (max-width: 950px) {
+		@content;
+	}
+}
+@mixin for-tablet-mid {
+	@media (max-width: 850px) {
 		@content;
 	}
 }
@@ -60,9 +85,29 @@
 		@content;
 	}
 }
+@mixin for-tablet-down {
+	@media (max-width: 700px) {
+		@content;
+	}
+}
 
+@mixin for-phone-up {
+	@media (max-width: 610px) {
+		@content;
+	}
+}
+@mixin for-phone-mid {
+	@media (max-width: 510px) {
+		@content;
+	}
+}
 @mixin for-phone {
 	@media (max-width: 420px) {
+		@content;
+	}
+}
+@mixin for-phone-down {
+	@media (max-width: 410px) {
 		@content;
 	}
 }

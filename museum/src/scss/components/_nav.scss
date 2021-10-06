@@ -54,10 +54,10 @@
     display: block;
   }
   @include for-tablet {
-    top: 94px;
+    top: 54px;
     right: 20px;
   }
-  @include for-tablet {
+  @include for-phone {
     top: 44px;
     right: 20px;
   }
