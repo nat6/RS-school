@@ -2503,6 +2503,29 @@ body {
   -o-transition: 1s linear;
   transition: 1s linear;
 }
+@media (max-width: 1500px) {
+  .form-buy {
+    margin-top: 0;
+    width: 1025px;
+    padding-top: 72px;
+    height: 693px;
+  }
+}
+@media (max-width: 1023px) {
+  .form-buy {
+    width: 590px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 610px) {
+  .form-buy {
+    overflow-x: hidden;
+    width: 420px;
+    padding-top: 80px;
+  }
+}
 
 #shadow {
   position: fixed;
@@ -2523,9 +2546,35 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1023px) {
+  .form-buy__container {
+    flex-direction: column;
+    align-items: center;
+    width: 590px;
+    height: 1350px;
+    padding-bottom: 110px;
+  }
+}
+@media (max-width: 610px) {
+  .form-buy__container {
+    width: 420px;
+    height: 1354px;
+    padding-bottom: 380px;
+  }
+}
 
 .form-buy__booking {
   width: 400px;
+}
+@media (max-width: 1023px) {
+  .form-buy__booking {
+    width: 530px;
+  }
+}
+@media (max-width: 610px) {
+  .form-buy__booking {
+    width: 360px;
+  }
 }
 
 .form-buy__logo {
@@ -2540,6 +2589,12 @@ body {
   font-size: 50px;
   line-height: 55px;
   letter-spacing: normal;
+}
+@media (max-width: 610px) {
+  .form-buy .form-buy__title {
+    font-size: 32px;
+    line-height: 35px;
+  }
 }
 
 .form-buy .form-buy__title::after {
@@ -2559,6 +2614,11 @@ body {
   flex-wrap: wrap;
   margin-top: 73px;
 }
+@media (max-width: 1023px) {
+  .booking__form {
+    margin-top: 54px;
+  }
+}
 
 .booking__input {
   width: 398px;
@@ -2566,9 +2626,30 @@ body {
   border: 1px solid #030303;
   margin-bottom: 20px;
 }
+@media (max-width: 1023px) {
+  .booking__input {
+    width: 528px;
+    height: 43px;
+  }
+}
+@media (max-width: 610px) {
+  .booking__input {
+    width: 358px;
+  }
+}
 
 .booking__input_narrow {
   width: 188px;
+}
+@media (max-width: 1023px) {
+  .booking__input_narrow {
+    width: 251px;
+  }
+}
+@media (max-width: 610px) {
+  .booking__input_narrow {
+    width: 358px;
+  }
 }
 
 .booking__amount {
@@ -2576,6 +2657,11 @@ body {
   width: 400px;
   height: 115px;
   border: 1px solid #030303;
+}
+@media (max-width: 1023px) {
+  .booking__amount {
+    width: 530px;
+  }
 }
 
 .booking__amount_title {
@@ -2637,6 +2723,19 @@ body {
   height: 663px;
   border: 1px solid black;
 }
+@media (max-width: 1023px) {
+  .form-buy__overview {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 610px) {
+  .form-buy__overview {
+    width: 360px;
+    height: 885px;
+  }
+}
 
 .form-buy__close {
   cursor: pointer;
@@ -2646,6 +2745,18 @@ body {
   width: 25px;
   height: 25px;
   background-image: url(assets/svg/close.svg);
+}
+@media (max-width: 1500px) {
+  .form-buy__close {
+    top: -45px;
+    right: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .form-buy__close {
+    top: -50px;
+    right: 30px;
+  }
 }
 
 .overview__title {
@@ -2670,6 +2781,11 @@ body {
 
 .overview__info {
   margin-top: 9px;
+}
+@media (max-width: 1023px) {
+  .overview__info {
+    position: relative;
+  }
 }
 
 .overview__item {
@@ -2748,6 +2864,12 @@ body {
   color: #030303;
 }
 
+@media (max-width: 1023px) {
+  .qwerview__pay {
+    position: relative;
+  }
+}
+
 .overview__img {
   position: absolute;
   top: 24px;
@@ -2757,6 +2879,18 @@ body {
   background-image: url(assets/img/form.jpg);
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (max-width: 1023px) {
+  .overview__img {
+    top: -75px;
+    right: 0px;
+  }
+}
+@media (max-width: 610px) {
+  .overview__img {
+    width: 120px;
+    height: 96px;
+  }
 }
 
 .overview__text {
@@ -2842,9 +2976,26 @@ body {
   width: 470px;
   position: relative;
 }
+@media (max-width: 1023px) {
+  .pay__cards {
+    width: 500px;
+  }
+}
+@media (max-width: 610px) {
+  .pay__cards {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
 .pay__card {
   position: absolute;
+  border-radius: 5px;
+}
+@media (max-width: 610px) {
+  .pay__card {
+    position: static;
+  }
 }
 
 .pay__card_front {
@@ -2852,9 +3003,20 @@ body {
   height: 176px;
   top: 10px;
   left: 0;
-  padding: 15px 20px 20px 20px;
+  padding: 15px 20px 15px 20px;
   background-color: #BCBCBC;
   position: relative;
+}
+@media (max-width: 1023px) {
+  .pay__card_front {
+    top: 14px;
+  }
+}
+@media (max-width: 610px) {
+  .pay__card_front {
+    width: 290px;
+    height: 179px;
+  }
 }
 
 .pay__card_back {
@@ -2863,6 +3025,17 @@ body {
   top: 40px;
   right: 0;
   background-color: #939393;
+}
+@media (max-width: 1023px) {
+  .pay__card_back {
+    top: 46px;
+  }
+}
+@media (max-width: 610px) {
+  .pay__card_back {
+    width: 330px;
+    height: 209px;
+  }
 }
 
 .card__text {
@@ -2883,6 +3056,11 @@ body {
 }
 .pay__input_name {
   width: 320px;
+}
+@media (max-width: 610px) {
+  .pay__input_name {
+    width: 290px;
+  }
 }
 
 .card__img {
@@ -2909,6 +3087,20 @@ body {
   position: absolute;
   bottom: 26px;
   right: 30px;
+}
+@media (max-width: 1023px) {
+  .button__book_container {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 610px) {
+  .button__book_container {
+    margin-top: 40px;
+  }
 }
 
 .button__book {
@@ -3011,11 +3203,21 @@ body {
   background-color: #161615;
   margin-top: 25px;
 }
+@media (max-width: 610px) {
+  .back__line {
+    width: 330px;
+  }
+}
 
 .pay__card_back {
   flex-direction: column;
   display: flex;
   align-items: flex-end;
+}
+@media (max-width: 610px) {
+  .pay__card_back {
+    margin-top: 40px;
+  }
 }
 
 .back__text_small {
