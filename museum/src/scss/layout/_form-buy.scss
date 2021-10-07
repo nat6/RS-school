@@ -342,7 +342,7 @@
   right: 28px;
   width: 150px;
   height: 120px;
-  background-image: url(assets/img/form.jpg);
+  background-image: url(assets/img/form.webp);
   background-position: center;
   background-repeat: no-repeat;
   @include for-laptop-form {
@@ -508,14 +508,14 @@
     height: 16px;
     top: 34px;
     right: 20px;
-    background-image: url(assets/icons/visa.png);
+    background-image: url(assets/icons/visa.webp);
   }
   &_master {
     width: 53px;
     height: 32px;
     top: 65px;
     right: 20px;
-    background-image: url(assets/icons/master.png);
+    background-image: url(assets/icons/master.webp);
   }
 }
 
