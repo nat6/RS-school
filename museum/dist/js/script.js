@@ -31,6 +31,7 @@ function shuffleGallary() {
 		img.classList.add('gallery__img')
 		img.src = item;
 		img.alt = ``;
+		img.loading = 'lazy';
 		picturesContainer.append(img);
 	})
 }
