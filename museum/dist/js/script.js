@@ -96,4 +96,33 @@ buttonBook.addEventListener('click', function (e) {
 	setTimeout(() => circle.remove(), 500)
 })
 
+
+const welcome = document.querySelector('.welcome__container');
+const welcomeCont = document.querySelector('.welcome__content');
+const navList = document.querySelector('.nav__list');
+const navBtn = document.querySelector('#nav-button');
+
+
+
+navBtn.addEventListener('change', function () {
+	if (this.checked) {
+		welcomeCont.style.display = 'none';
+		navList.style.left = '35px';
+		navList.style.transition = '1s linear';
+		welcome.classList.add('welcome_hidden');
+	} else {
+		navList.style.left = '-200px';
+		navList.style.transition = '1s linear';
+
+		function initial() {
+			welcomeCont.style.display = 'initial';
+
+		}
+		function remove() {
+			welcome.classList.remove('welcome_hidden');
+		}
+		setTimeout(initial, 500);
+		setTimeout(remove, 1000);
+	}
+})
 console.log('Привет! Не успела доделать часть задач. Если возможно, проверьте таск завтра или оставьте контакты для связи. Спасибо!')
