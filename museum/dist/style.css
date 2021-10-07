@@ -528,7 +528,7 @@
   justify-content: space-between;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(./assets/img/welcome-slider/1.jpg);
+  background-image: url(./assets/img/welcome-slider/1.webp);
   background-position: 100%;
 }
 @media (max-width: 1300px) {
@@ -2137,7 +2137,7 @@
 .parallax {
   width: 100%;
   height: 400px;
-  background-image: url(assets/img/parallax.jpg);
+  background-image: url(assets/img/parallax.webp);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -3082,7 +3082,7 @@ body {
   right: 28px;
   width: 150px;
   height: 120px;
-  background-image: url(assets/img/form.jpg);
+  background-image: url(assets/img/form.webp);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -3279,14 +3279,14 @@ body {
   height: 16px;
   top: 34px;
   right: 20px;
-  background-image: url(assets/icons/visa.png);
+  background-image: url(assets/icons/visa.webp);
 }
 .card__img_master {
   width: 53px;
   height: 32px;
   top: 65px;
   right: 20px;
-  background-image: url(assets/icons/master.png);
+  background-image: url(assets/icons/master.webp);
 }
 
 .button__book_container {

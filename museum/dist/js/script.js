@@ -1,21 +1,21 @@
 function shuffleGallary() {
 	const picturesContainer = document.querySelector('.gallery__pictures_container');
 
-	const src = ["assets/img/gallery/gallery1.jpg",
-		"assets/img/gallery/gallery2.jpg",
-		"assets/img/gallery/gallery3.jpg",
-		"assets/img/gallery/gallery4.jpg",
-		"assets/img/gallery/gallery5.jpg",
-		"assets/img/gallery/gallery6.jpg",
-		"assets/img/gallery/gallery7.jpg",
-		"assets/img/gallery/gallery8.jpg",
-		"assets/img/gallery/gallery9.jpg",
-		"assets/img/gallery/gallery10.jpg",
-		"assets/img/gallery/gallery11.jpg",
-		"assets/img/gallery/gallery12.jpg",
-		"assets/img/gallery/gallery13.jpg",
-		"assets/img/gallery/gallery14.jpg",
-		"assets/img/gallery/gallery15.jpg",
+	const src = ["assets/img/gallery/gallery1.webp",
+		"assets/img/gallery/gallery2.webp",
+		"assets/img/gallery/gallery3.webp",
+		"assets/img/gallery/gallery4.webp",
+		"assets/img/gallery/gallery5.webp",
+		"assets/img/gallery/gallery6.webp",
+		"assets/img/gallery/gallery7.webp",
+		"assets/img/gallery/gallery8.webp",
+		"assets/img/gallery/gallery9.webp",
+		"assets/img/gallery/gallery10.webp",
+		"assets/img/gallery/gallery11.webp",
+		"assets/img/gallery/gallery12.webp",
+		"assets/img/gallery/gallery13.webp",
+		"assets/img/gallery/gallery14.webp",
+		"assets/img/gallery/gallery15.webp",
 	]
 
 	function shuffle(array) {
