@@ -5,7 +5,7 @@ mixin nav__item(name)
 mixin visiting__card(href, src, title)
 	a.visiting__link(href=href target='_blank')
 		div.visiting__card
-			img.visiting__img(src=src alt=title)
+			img.visiting__img(src=src alt=title loading='lazy')
 			h3.visiting__title=title
 			p.visiting__subtitle 360° Virtual Tour
 			p.visiting__text Google Street Panorama View
@@ -23,6 +23,7 @@ mixin video__item(width, height, src, loading)
 		src=src
 		title='YouTube video player'
 		loading=loading
+		preload='none'
 		allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 		allowfullscreen
 	)
