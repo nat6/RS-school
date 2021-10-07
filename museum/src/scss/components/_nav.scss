@@ -4,12 +4,6 @@
   margin-top: 0;
   margin-bottom: 0;
   z-index: 3;
-  @include for-laptop {
-    // display: flex;
-    // flex-direction: column;
-    // width: 200px; 
-    display: none;//TODO:temp!
-  }
 }
 
 .nav__link {
@@ -55,11 +49,10 @@
   }
   @include for-tablet {
     top: 54px;
-    right: 20px;
+    right: 0;
   }
   @include for-phone {
     top: 44px;
-    right: 20px;
   }
 }
 
@@ -96,15 +89,6 @@
 
 #nav-button:checked ~ .nav__label .nav__button_span::after {
   display: none;
-}
-
-.nav__container .nav {
-  @include for-laptop {
-    visibility: hidden; 
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-  }
 }
 
 #nav-button:checked ~ .nav {
