@@ -1,3 +1,5 @@
+@import '../components/_explore-controls.scss';
+
 .explore {
   @include for-tablet {
     padding-bottom: 37px;
@@ -70,18 +72,20 @@
   }
 }
 
-.explore__slider {
+.explore__slider_container {
+  overflow: hidden;
   margin-top: 15px;
   width: 720px;
   height: 700px;
   @include for-laptop-up {
     width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
   }
   @include for-laptop {
     width: 720px;
     height: 700px;
-    margin-left: auto;
-    margin-right: auto;
+
     margin-top: 58px;
   }
   @include for-laptop-mid {
@@ -90,20 +94,19 @@
   }
   @include for-tablet {
     margin-top: 63px;
-    height: auto;
+    height: 500px;
     width: 100%;
   }
   @include for-phone {
-    // width: 380px;
     height: 368px;
   }
 }
 
-.explore__img {
+.explore__slider {
+  position: relative;
   @include for-laptop-mid {
     width: calc(100% - 80px);
-    object-fit: cover;
-    object-position: center 80%;
+    
   }
   @include for-laptop {
     width: 720px;
@@ -111,10 +114,31 @@
   }
   @include for-tablet {
     width: 100%;
-    height: auto;
+    height: 500px;
   }
   @include for-phone {
-    // width: 380px;
+    height: 368px;
+  }
+}
+
+.explore__item, .explore__img  {
+  @include for-tablet {
+    height: 500px;
+  }
+}
+
+.explore__item {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.explore__img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  @include for-phone {
     height: 368px;
   }
 }
