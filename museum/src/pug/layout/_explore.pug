@@ -11,5 +11,9 @@ section.section.section_dark.explore(id='explore')
 					| of dust that had gathered since the previous restoration in the 19th century.
 				p.explore__text.explore__text_hidden
 					| The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
-		div.explore__slider
-			img.explore__img(src='assets/img/explore-slider/temp.webp' loading='lazy' alt='before / after')
+		div.explore__slider_container
+			div.explore__slider
+				div.explore__item
+					img.explore__img(src=exploreSrc1 alt='before / after')
+				div.explore__item.explore__item_overlay
+					img.explore__img(src=exploreSrc2 alt='before / after')

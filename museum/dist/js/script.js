@@ -127,5 +127,66 @@ navBtn.addEventListener('change', function () {
 	}
 })
 
-const grade = 'Добрый день! Оценка - 150 баллов, не выполнена оптимизация скорости загрузки страницы.'
-console.log(grade);
+function initComparison() {
+	const overlay = document.querySelector('.explore__item_overlay');
+
+	function compareImages(img) {
+		let clicked = 0;
+
+		w = img.offsetWidth;
+		h = img.offsetHeight;
+		img.style.width = (w / 2) + 'px';
+
+		const slider = document.createElement('div');
+		slider.setAttribute('class', 'explore__controls');
+		slider.style.top = 0;
+		slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+
+		img.parentElement.insertBefore(slider, img);
+
+		function getCursorPos(e) {
+			let a, x = 0;
+			e = e || window.event;
+			a = img.getBoundingClientRect();
+			x = e.pageX - a.left;
+			x = x - window.pageXOffset;
+			return x;
+		}
+
+		function slide(x) {
+			img.style.width = x + "px";
+			slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+		}
+
+		function slideMove(e) {
+			if (clicked === 0) return false;
+
+			let pos = getCursorPos(e);
+			if (pos < 0) pos = 0;
+			if (pos > w) pos = w;
+
+			slide(pos);
+		}
+
+		function slideReady(e) {
+			e.preventDefault();
+			clicked = 1;
+
+			window.addEventListener("mousemove", slideMove);
+			window.addEventListener("touchmove", slideMove);
+		}
+
+		function slideFinish() {
+			clicked = 0;
+		}
+
+		slider.addEventListener("mousedown", slideReady);
+		window.addEventListener("mouseup", slideFinish);
+
+		slider.addEventListener("touchstart", slideReady);
+		window.addEventListener("touchstop", slideFinish);
+	}
+
+	compareImages(overlay);
+}
+initComparison();
