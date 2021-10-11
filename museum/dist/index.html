@@ -15,7 +15,7 @@
     <!-- - img src-->
   </head>
   <body>
-    <header class="header section_dark">
+    <header class="header section_dark fullscreen_hidden">
       <div class="container header__container">
         <div class="logo">
           <div class="logo__icon"></div>
@@ -38,7 +38,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="section section_dark welcome">
+      <section class="section section_dark welcome fullscreen_hidden">
         <div class="container welcome__container">
           <div class="welcome__content">
             <h1 class="section__title section__title_light">Welcome </h1>
@@ -89,7 +89,7 @@
           </div>
         </div>
       </section>
-      <section class="section visiting" id="visiting">
+      <section class="section visiting fullscreen_hidden" id="visiting">
         <div class="container visiting__container">
           <h2 class="section__title section__title_gold section__title_underline">Virtual tour</h2>
           <div class="visiting__cards"><a class="visiting__link" href="tours/tour1.html" target="_blank">
@@ -126,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_dark explore" id="explore">
+      <section class="section section_dark explore fullscreen_hidden" id="explore">
         <div class="container explore__container">
           <div class="explore__content">
             <h2 class="section__title section__title_light section__title_underline">Picture explore</h2>
@@ -146,25 +146,25 @@
       </section>
       <section class="section video" id="video">
         <div class="container video__container">
-          <div class="video__container_top">
+          <div class="video__container_top fullscreen_hidden">
             <h2 class="section__title section__title_gold">Video journey</h2>
             <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
           </div>
           <div class="video__container_bottom">
             <div class="video__main">
-              <div class="video__item_main">
-                    <button class="video_play"></button>
-                    <iframe width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+              <video class="video__item_main" src="assets/video/video0.mp4" id="video-item"></video>
+              <div class="video__button"></div>
               <div class="video__controls">
-                <div class="controls_icon controls_play"></div>
-                <input class="controls_range controls_progress" type="range" value="40" min="0" max="100" step="1">
-                <div class="controls_icon controls_audio"></div>
-                <input class="controls_range controls_volume" type="range" value="38" min="0" max="100" step="1">
+                <button class="controls_icon controls_play"></button>
+                <div class="controls__range controls_progress">
+                  <div class="controls__range controls_bar"></div>
+                </div>
+                <button class="controls_icon controls_audio"></button>
+                <input class="controls__range controls_volume" type="range" name="volume" min="0" max="1" step="0.01" value="0.5">
                 <div class="controls_icon controls_fullscreen"></div>
               </div>
             </div>
-            <div class="video__more">
+            <div class="video__more fullscreen_hidden">
                   <button class="video_play"></button>
                   <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <button class="video_play"></button>
@@ -172,7 +172,7 @@
                   <button class="video_play"></button>
                   <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="video__slider">
+            <div class="video__slider fullscreen_hidden">
               <div class="video__slider_container">
                 <button class="button_left"><span class="double__arrow double__arrow_left"></span></button>
                 <div class="video__slider_pagination">
@@ -196,7 +196,7 @@
           </div>
         </div>
       </section>
-      <section class="section section_dark gallery" id="gallery">
+      <section class="section section_dark gallery fullscreen_hidden" id="gallery">
         <div class="container gallery__container">
           <h2 class="section__title section__title_light">Art Gallery</h2>
           <div class="gallery__pictures">
@@ -204,7 +204,7 @@
           </div>
         </div>
       </section>
-      <section class="section tickets" id="tickets">
+      <section class="section tickets fullscreen_hidden" id="tickets">
         <div class="container tickets__container">
           <h2 class="section__title section__title_gold section__title_underline">Buy tickets</h2>
           <div class="tickets__content">
@@ -389,8 +389,8 @@
           </div>
         </aside>
       </section>
-      <div class="parallax"></div>
-      <section class="section contacts" id="contacts">
+      <div class="parallax fullscreen_hidden"></div>
+      <section class="section contacts fullscreen_hidden" id="contacts">
         <div class="container contacts__container">
           <h2 class="section__title section__title_gold section__title_underline">Contacts</h2>
           <div class="contacts__content">
@@ -405,7 +405,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer section_dark">
+    <footer class="footer section_dark fullscreen_hidden">
       <div class="container footer__container">
         <div class="footer__block footer__block_top">
           <div class="footer__nav">
@@ -444,6 +444,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"> </script>
   </body>
 </html>

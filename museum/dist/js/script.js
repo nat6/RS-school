@@ -38,20 +38,6 @@ function shuffleGallary() {
 
 shuffleGallary();
 
-const progress = document.querySelector('.controls_progress');
-
-progress.addEventListener('input', function () {
-	const value = this.value;
-	this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`
-})
-
-const volume = document.querySelector('.controls_volume');
-
-volume.addEventListener('input', function () {
-	const value = this.value;
-	this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`
-})
-
 
 function showModalWin() {
 
@@ -127,6 +113,8 @@ navBtn.addEventListener('change', function () {
 	}
 })
 
+// explore slider
+
 function initComparison() {
 	const overlay = document.querySelector('.explore__item_overlay');
 
@@ -189,4 +177,131 @@ function initComparison() {
 
 	compareImages(overlay);
 }
+
 initComparison();
+
+
+
+// CUSTOM PLAYER
+
+const player = document.querySelector('.video__main');
+const video = player.querySelector('.video__item_main');
+
+const playButton = player.querySelector('.controls_play');
+const videoButton = player.querySelector('.video__button');
+
+// play button
+
+function updateBtnPlay() {
+	(video.paused || video.currentTime == video.duration) ? playButton.classList.remove('controls_pause') : playButton.classList.add('controls_pause');
+}
+
+// video button
+
+function updateBtnVideo() {
+	videoButton.style.display = (video.paused || video.currentTime == video.duration) ? 'block' : 'none';
+}
+
+// play
+
+function togglePlay() {
+	const method = video.paused ? 'play' : 'pause';
+	video[method]();
+	updateBtnPlay();
+	updateBtnVideo();
+}
+
+playButton.addEventListener('click', togglePlay);
+videoButton.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
+
+// volume button
+
+const volumeButton = player.querySelector('.controls_audio');
+
+function updateBtnVolume() {
+	(volumeRange.value * 100 === 0) ? volumeButton.classList.add('controls_mute') : volumeButton.classList.remove('controls_mute');
+}
+
+// update volume
+
+const volumeRange = player.querySelector('.controls_volume');
+
+function handleVolume() {
+	video.volume = volumeRange.value;
+	const value = volumeRange.value * 100;
+	volumeRange.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
+	updateBtnVolume();
+}
+
+volumeRange.addEventListener('change', handleVolume);
+volumeRange.addEventListener('mousemove', handleVolume);
+volumeRange.addEventListener('input', handleVolume);
+
+function toggleVolume() {
+	(volumeRange.value * 100 === 0) ? volumeRange.value = 0.5 : volumeRange.value = 0;
+	handleVolume();
+	updateBtnVolume();
+}
+
+volumeButton.addEventListener('click', toggleVolume);
+
+// fullscreen
+
+const fullscreen = player.querySelector('.controls_fullscreen');
+
+function updateBtnFullSreen() {
+	!document.fullscreenElement ? fullscreen.classList.add('controls_exit') : fullscreen.classList.remove('controls_exit');
+}
+
+function stopVideo() {
+	video['pause']();
+	updateBtnPlay();
+	updateBtnVideo();
+}
+
+function moveToVideo() {
+	document.location.href = "#video-item";
+}
+
+const body = document.querySelector('body');
+
+function toggleFullScreen() {
+	if (!document.fullscreenElement) {
+		document.documentElement.requestFullscreen();
+		body.classList.add('body_fullscreen');
+	} else {
+		document.exitFullscreen();
+		body.classList.remove('body_fullscreen');
+		stopVideo();
+		setTimeout(moveToVideo, 100);
+	}
+	updateBtnFullSreen();
+}
+
+fullscreen.addEventListener('click', toggleFullScreen);
+
+const progress = player.querySelector('.controls_progress');
+const progressBar = player.querySelector('.controls_bar');
+
+function handleProgress() {
+	const percent = (video.currentTime / video.duration) * 100;
+	progressBar.style.width = `${percent}%`;
+	updateBtnPlay();
+	updateBtnVideo();
+}
+
+video.addEventListener('timeupdate', handleProgress);
+
+progress.addEventListener('click', (e) => {
+	const progressTime = (e.offsetX / progress.offsetWidth) * video.duration;
+	video.currentTime = progressTime;
+})
+
+console.log(
+	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
+	
+	 Оценка: 36 баллов.
+	 - Кастомный видеоплеер +26 
+	 - Слайдер в секции Explore +10`
+)
