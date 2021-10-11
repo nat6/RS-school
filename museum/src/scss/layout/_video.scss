@@ -1,5 +1,6 @@
 @import '../components/_video-controls.scss';
 @import '../components/_video-slider-buttons.scss';
+@import '_fullscreen.scss';
 
 .video {
   padding-bottom: 70px;
@@ -37,6 +38,7 @@
 }
 
 .video__main {
+  position: relative;
   margin-top: 75px;
   @include for-laptop-mid {
     margin-top: 30px;
@@ -52,6 +54,8 @@
 .video__item_main {
   width: 1440px;
   height: 650px;
+  object-fit: cover;
+  margin-bottom: -4px;
   @include for-laptop-up {
     width: 100%;
   }

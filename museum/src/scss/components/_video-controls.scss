@@ -1,3 +1,16 @@
+.video__button {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 29%;
+  left: calc(50% - 110px);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background: url(assets/svg/video-button.svg);
+}
+
 .video__controls {
   display: flex;
   align-items: center;
@@ -36,16 +49,28 @@
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    border: none;
   }
   &_play {
-    width: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22px;
     height: 31px;
     background: url(assets/svg/play.svg);
     @include for-laptop-down {
-      width: 23px;
+      width: 22px;
       height: 29px;
-      background-size: contain;
-      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 14px;
+      height: 18px;
+    }
+  }
+  &_pause {
+    background: url(assets/svg/pause.svg);
+    @include for-laptop-down {
+      width: 22px;
+      height: 29px;
     }
     @include for-phone-mid {
       width: 14px;
@@ -56,6 +81,19 @@
     width: 36px;
     height: 31px;
     background: url(assets/svg/audio.svg);
+    @include for-laptop-down {
+      width: 26px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 18px;
+      height: 14px;
+    }
+  }
+  &_mute {
+    background: url(assets/svg/audio-mute.svg);
     @include for-laptop-down {
       width: 26px;
       height: 20px;
@@ -82,6 +120,19 @@
       height: 18px;
     }
   }
+  &_exit {
+    background: url(assets/svg/fullscreen-exit.svg);
+    @include for-laptop-down {
+      width: 26px;
+      height: 26px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include for-phone-mid {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .controls_icon:hover {
@@ -89,7 +140,7 @@
   @include trans-fast;
 }
 
-.controls_range {
+.controls__range {
   height: 8px;
   outline: none;
   transition: background 450ms ease-in;
@@ -102,7 +153,7 @@
   }
 }
 
-.controls_range::-webkit-slider-thumb {
+.controls__range::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -115,14 +166,16 @@
   }
 }
 
+
 .controls_progress {
   width: 929px;
-  background: linear-gradient(to right, $main-color 0%, $main-color 54%, $light-gray-color 54%, $light-gray-color 100%);
+  background-color: $light-gray-color;
+  // background: linear-gradient(to right, $main-color 0%, $main-color 54%, $light-gray-color 54%, $light-gray-color 100%);
   @include for-laptop-up {
     width: 62%;
   }
   @include for-laptop {
-    background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
+    // background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
   }
   @include for-tablet {
     width: 100%;
@@ -131,12 +184,34 @@
     left: 0;
   }
 }
+
+.controls_bar {
+  position: relative;
+  width: 1px;
+  background-color: $main-color;
+}
+
+.controls_bar::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: ew-resize;
+  background: $light-color;
+  @include for-laptop {
+    width: 13px;
+    height: 13px;
+  }
+}
+
 .controls_volume {
    width: 153px;
-   background: linear-gradient(to right, $main-color 0%, $main-color 43%, $light-gray-color 43%, $light-gray-color 100%);
+   background: linear-gradient(to right, $main-color 0%, $main-color 50%, $light-gray-color 50%, $light-gray-color 100%);
    @include for-laptop {
     width: 143px;
-    background: linear-gradient(to right, $main-color 0%, $main-color 38%, $light-gray-color 38%, $light-gray-color 100%);
   }
   @include for-tablet {
     width: 486px;

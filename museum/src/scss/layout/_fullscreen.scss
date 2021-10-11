@@ -1,0 +1,66 @@
+.body_fullscreen .fullscreen_hidden {
+  display: none;
+}
+.body_fullscreen {
+  background-color: $dark-color;
+}
+
+.body_fullscreen,
+.body_fullscreen .video,
+.body_fullscreen .video__container,
+.body_fullscreen .video__main {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: none;
+  width: 100%;
+}
+
+.body_fullscreen .video__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.body_fullscreen .video__item_main {
+  width: 100%;
+  height: auto;
+}
+
+.body_fullscreen .video__button {
+  top: auto;
+}
+
+.body_fullscreen .video__controls {
+  width: calc(100% - 60px);
+}
+
+.body_fullscreen .controls_progress {
+  width: 70%;
+  @include for-laptop-up {
+    width: 62%;
+  }
+  @include for-laptop {
+    background: linear-gradient(to right, $main-color 0%, $main-color 40%, $light-gray-color 40%, $light-gray-color 100%);
+  }
+  @include for-tablet {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.body_fullscreen .controls_volume {
+  width: 16%;
+  @include for-laptop {
+    width: 143px;
+  }
+  @include for-tablet {
+    width: 486px;
+  }
+  @include for-tablet-down {
+    width: 75%;
+  }
+}
