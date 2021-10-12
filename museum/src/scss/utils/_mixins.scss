@@ -17,6 +17,12 @@
   user-select: none;
 }
 
+@mixin trans-super-slow {
+	-webkit-transition: 1.2s ease-in;
+	-moz-transition: 1.2s ease-in;
+	-o-transition: 1.2s ease-in;
+	transition: 1.2s ease-in;
+}
 @mixin trans-slow {
 	-webkit-transition: 1s linear;
 	-moz-transition: 1s linear;

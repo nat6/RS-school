@@ -40,6 +40,9 @@
     <main class="main">
       <section class="section section_dark welcome fullscreen_hidden">
         <div class="container welcome__container">
+          <div class="welcome__slider">
+            <div class="welcome__slider_container"><img class="welcome__img welcome__img_active" src="assets/img/welcome-slider/1.webp" alt=""><img class="welcome__img" src="assets/img/welcome-slider/2.webp" alt=""><img class="welcome__img" src="assets/img/welcome-slider/3.webp" alt=""><img class="welcome__img" src="assets/img/welcome-slider/4.webp" alt=""><img class="welcome__img" src="assets/img/welcome-slider/5.webp" alt=""></div>
+          </div>
           <div class="welcome__content">
             <h1 class="section__title section__title_light">Welcome </h1>
             <h2 class="section__title section__title_light section__title_welcome">to the Louvre</h2>
@@ -49,20 +52,20 @@
           <div class="welcome__controls">
             <div class="welcome__controls_container">
               <div class="controls__num">
-                <p class="controls__item">01</p>
+                <output class="controls__item" id="controls__output">01</output>
                 <p class="controls__item">|</p>
                 <p class="controls__item">05</p>
               </div>
               <div class="controls__pagination">
-                <div class="pagination_square"></div>
+                <div class="pagination_square pagination_square_active"></div>
                 <div class="pagination_square"></div>
                 <div class="pagination_square"></div>
                 <div class="pagination_square"></div>
                 <div class="pagination_square"></div>
               </div>
               <div class="controls__buttons">
-                <button class="button_left"><span class="controls__arrow controls__arrow_left"></span></button>
-                <button class="button_right"><span class="controls__arrow controls__arrow_right"></span></button>
+                <button class="button_left welcome__button"><span class="controls__arrow controls__arrow_left welcome__prev" id="welcome__prev"></span></button>
+                <button class="button_right welcome__button"><span class="controls__arrow controls__arrow_right welcome__next" id="welcome__next"></span></button>
               </div>
             </div>
           </div>
@@ -165,32 +168,33 @@
               </div>
             </div>
             <div class="video__more fullscreen_hidden">
-                  <button class="video_play"></button>
-                  <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <button class="video_play"></button>
-                  <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <button class="video_play"></button>
-                  <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="video__more_container">
+                    <iframe class="video__more_frame video__more_frame1" width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame video__more_frame2" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame video__more_frame3" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame video__more_frame4" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame video__more_frame5" width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
             <div class="video__slider fullscreen_hidden">
               <div class="video__slider_container">
-                <button class="button_left"><span class="double__arrow double__arrow_left"></span></button>
-                <div class="video__slider_pagination">
-                  <div class="pagination__dot pagination__dot_first"></div>
-                </div>
-                <div class="video__slider_pagination">
-                  <div class="pagination__dot"></div>
-                </div>
-                <div class="video__slider_pagination">
-                  <div class="pagination__dot"></div>
-                </div>
-                <div class="video__slider_pagination">
-                  <div class="pagination__dot"></div>
-                </div>
-                <div class="video__slider_pagination">
-                  <div class="pagination__dot"></div>
-                </div>
-                <button class="button_right"><span class="double__arrow double__arrow_right"></span></button>
+                    <button class="slider__button" id="slider__button_left"><span class="double__arrow double__arrow_left"></span></button>
+                    <div class="video__pagination" id="video__pagination_1">
+                      <div class="pagination__dot"></div>
+                    </div>
+                    <div class="video__pagination" id="video__pagination_2">
+                      <div class="pagination__dot"></div>
+                    </div>
+                    <div class="video__pagination" id="video__pagination_3">
+                      <div class="pagination__dot"></div>
+                    </div>
+                    <div class="video__pagination" id="video__pagination_4">
+                      <div class="pagination__dot"></div>
+                    </div>
+                    <div class="video__pagination" id="video__pagination_5">
+                      <div class="pagination__dot"></div>
+                    </div>
+                    <button class="slider__button" id="slider__button_right"><span class="double__arrow double__arrow_right"></span></button>
               </div>
             </div>
           </div>

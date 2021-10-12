@@ -1,0 +1,40 @@
+.welcome__slider {
+  height: 750px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 1000px;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.welcome__slider_container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include trans-super-slow;
+}
+
+.welcome__container::before {
+  content: '';
+  width: 1000px;
+  height: 750px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-image: linear-gradient(to right, black 0%, transparent 30%);
+  @include for-laptop-mid {
+    width: 700px;
+    height: 525px;
+  }
+  @include for-tablet-up {
+    display: none;
+  }
+}
+
+.welcome__img {
+  pointer-events: none;
+}
