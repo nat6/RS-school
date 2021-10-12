@@ -1,5 +1,12 @@
 section.section.section_dark.welcome.fullscreen_hidden
 	div.container.welcome__container
+		div.welcome__slider
+			div.welcome__slider_container
+				img.welcome__img.welcome__img_active(src='assets/img/welcome-slider/1.webp' alt='')
+				img.welcome__img(src='assets/img/welcome-slider/2.webp' alt='')
+				img.welcome__img(src='assets/img/welcome-slider/3.webp' alt='')
+				img.welcome__img(src='assets/img/welcome-slider/4.webp' alt='')
+				img.welcome__img(src='assets/img/welcome-slider/5.webp' alt='')
 		div.welcome__content
 			h1.section__title.section__title_light Welcome 
 			h2.section__title.section__title_light.section__title_welcome to the Louvre
@@ -8,20 +15,20 @@ section.section.section_dark.welcome.fullscreen_hidden
 		div.welcome__controls
 			div.welcome__controls_container
 				div.controls__num
-					p.controls__item 01
+					output.controls__item(id='controls__output') 01
 					p.controls__item |
 					p.controls__item 05
 				div.controls__pagination
-					div.pagination_square
+					div.pagination_square.pagination_square_active
 					div.pagination_square
 					div.pagination_square
 					div.pagination_square
 					div.pagination_square
 				div.controls__buttons
-					button.button_left
-						span.controls__arrow.controls__arrow_left
-					button.button_right
-						span.controls__arrow.controls__arrow_right
+					button.button_left.welcome__button
+						span.controls__arrow.controls__arrow_left.welcome__prev(id='welcome__prev')
+					button.button_right.welcome__button
+						span.controls__arrow.controls__arrow_right.welcome__next(id='welcome__next')
 		div.nav-add
 			div.nav-add__images
 				img.nav-add__img(src='assets/img/nav-add1.webp' loading='lazy' alt='')

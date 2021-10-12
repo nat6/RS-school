@@ -1,5 +1,7 @@
 @import '../components/_buttons.scss';
 @import '../components/_welcome-controls.scss';
+@import '../components/_welcome-slider.scss';
+@import '../components/_nav_hidden.scss';
 
 .welcome {
   padding-top: 0;
@@ -11,67 +13,50 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(./assets/img/welcome-slider/1.webp);
-  background-position: 100%;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-image: url(./assets/img/welcome-slider/1.webp);
+  // background-position: 100%;
   @include for-laptop-mid {
     height: 525px;
   }
   @include for-tablet-up {
     height: 850px;
-    background-position: bottom -80px center;
-    justify-content: center;
-    text-align: center;
+    // background-position: bottom -80px center;
+    // justify-content: center;
+    // text-align: center;
   }
   @include for-tablet-mid {
     height: 780px;
   }
   @include for-tablet {
     height: 800px;
-    background-position: bottom 40px center;
+    // background-position: bottom 40px center;
   }
   @include for-tablet-down {
     height: 590px;
-    background-position: bottom -80px center;
+    // background-position: bottom -80px center;
   }
-  @include for-phone-up {
-    background-position: bottom -20px center;
-  }
+  // @include for-phone-up {
+  //   background-position: bottom -20px center;
+  // }
   @include for-phone-mid {
     height: 530px;
-    background-position: bottom 0 center;
+    // background-position: bottom 0 center;
   }
   @include for-phone {
     height: 494px;
-    background-position: bottom 20px center;
+    // background-position: bottom 20px center;
   }
   @include for-phone-down {
     height: 444px;
   }
 }
 
-.welcome__container::before {
-  content: '';
-  width: 1000px;
-  height: 750px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-image: linear-gradient(to right, black 0%, transparent 30%);
-  @include for-laptop-mid {
-    width: 700px;
-    height: 525px;
-  }
-  @include for-tablet-up {
-    display: none;
-  }
-}
-
 .welcome__content {
 	max-width: 598px;
   margin-top: 150px;
-  z-index: 2;
+  z-index: 3;
 	color: $light-color;
   @include for-laptop-mid {
     margin-top: 50px;
@@ -101,133 +86,5 @@
   @include for-phone {
     font-size: 16px;
     line-height: 19px;
-  }
-}
-
-.nav-add {
-  display: none;
-}
-
-.welcome_hidden {
-  @include for-tablet-up {
-    background-image: none;
-  }
-}
-.welcome_hidden .nav-add {
-  @include for-tablet-up {
-    margin-top: 330px;
-    display: initial;
-  }
-}
-
-.welcome_hidden .nav-add__images {
-  @include for-tablet-up {
-    width: 658px;
-    height: 375px;
-  }
-  @include for-tablet-down {
-    display: flex;
-    width: 315px;
-    height: 95px;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-}
-
-.welcome_hidden .nav-add__img_container {
-  @include for-tablet-up {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 18px;
-  }
-  @include for-tablet-down {
-    width: 205px;
-    margin-top: 0;
-  }
-  &::after {
-    @include for-tablet-up {
-      content: '';
-      position: absolute;
-      bottom: 90px;
-      left: 35px;
-      right: 35px;
-      height: 2px;
-      background-color: $dark-gray-color;
-    }
-    @include for-tablet-mid {
-      bottom: 44px;
-    }
-    @include for-tablet {
-      bottom: 59px;
-    }
-    @include for-tablet-down {
-      bottom: 35px;
-    }
-    @include for-phone-mid {
-      bottom: 60px;
-    }
-    @include for-phone {
-      bottom: 35px;
-    }
-    @include for-phone-down {
-      display: none;
-    }
-  }
-}
-
-.nav-add__social {
-  @include for-tablet-up {
-    margin-top: 100px;
-  }
-  @include for-tablet-mid {
-    margin-top: 50px;
-  }
-  @include for-tablet {
-    margin-top: 70px;
-  }
-  @include for-tablet-down {
-    margin-top: 48px;
-  }
-  @include for-phone-down {
-    margin-top: 5px;
-  }
-}
-.nav-add__social .social__list {
-  @include for-tablet-up {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-}
-
-.welcome_hidden .nav-add__img {
-  @include for-tablet-up {
-    width: 658px;
-    height: 194px;
-  }
-}
-.welcome_hidden .nav-add__img_small {
-  @include for-tablet-up {
-    width: 319px;
-    height: 161px;
-  }
-}
-.welcome_hidden .nav-add__img_small,
-.welcome_hidden .nav-add__img {
-  @include for-tablet-down {
-    width: 95px;
-    height: 95px;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-.welcome_hidden .welcome__controls {
-  @include for-tablet-up {
-    display: none;
-  }
-}
-.welcome_hidden .welcome__controls {
-  @include for-tablet-up {
-    display: none;
   }
 }

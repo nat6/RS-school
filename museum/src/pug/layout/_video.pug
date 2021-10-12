@@ -9,22 +9,18 @@ section.section.video(id='video')
 				div.video__button
 				include ../components/_video-controls.pug
 			div.video__more.fullscreen_hidden
-				+video__item('452', '254', expositionHref, 'lazy')
-				+video__item('452', '254', louvreHref, 'lazy')
-				+video__item('452', '254', promenadeHref, 'lazy')
+				div.video__more_container
+					+video__item('452', '254', expositionHref, '1', 'lazy')
+					+video__item('452', '254', louvreHref, '2', 'lazy')
+					+video__item('452', '254', promenadeHref, '3', 'lazy')
+					+video__item('452', '254', welcomeHref, '4', 'lazy')
+					+video__item('452', '254', petitsHref, '5', 'lazy')
 			div.video__slider.fullscreen_hidden
 				div.video__slider_container
-					button.button_left
-						span.double__arrow.double__arrow_left
-					div.video__slider_pagination
-						div.pagination__dot.pagination__dot_first
-					div.video__slider_pagination
-						div.pagination__dot
-					div.video__slider_pagination
-						div.pagination__dot
-					div.video__slider_pagination
-						div.pagination__dot
-					div.video__slider_pagination
-						div.pagination__dot
-					button.button_right
-						span.double__arrow.double__arrow_right
+					+video__button('left')
+					+video__pagination('1')
+					+video__pagination('2')
+					+video__pagination('3')
+					+video__pagination('4')
+					+video__pagination('5')
+					+video__button('right')

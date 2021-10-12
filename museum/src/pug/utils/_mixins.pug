@@ -15,9 +15,9 @@ mixin social__item(href, name)
 		a.social__link(href=href target='_blank')
 			div.social__icon(class='social__icon_' + name)
 
-mixin video__item(width, height, src, loading)
-	button.video_play
+mixin video__item(width, height, src, num, loading)
 	iframe(
+		class='video__more_frame video__more_frame' + num
 		width=width
 		height=height
 		src=src
@@ -32,3 +32,11 @@ mixin radio__item(block, text, name, checked)
 	label.radio__item(class=`${block}`)=text
 		span.radio__checkmark(class=block + '__checkmark')
 		input.radio__input(class=block + '__input' type='radio' name=name checked=checked)
+
+mixin video__pagination(num)
+	div.video__pagination(id='video__pagination_' + num)
+		div.pagination__dot
+
+mixin video__button(name)
+	button.slider__button(id='slider__button_' + name)
+		span.double__arrow(class='double__arrow_' + name)

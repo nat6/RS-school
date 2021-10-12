@@ -29,9 +29,8 @@
   }
 }
 
-.video__slider_pagination,
-.video__slider_container .button_right,
-.video__slider_container .button_left {
+.video__pagination,
+.video__slider_container .slider__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,8 +46,7 @@
 
 
 
-.video__slider_container .button_left,
-.video__slider_container .button_right {
+.video__slider_container .slider__button {
 
   @include for-phone {
     width: 20px;
@@ -78,12 +76,11 @@
   }
 }
 
-.double__arrow:hover {
+.slider__button:hover .double__arrow {
   @include red-filter;
-  @include trans-fast;
 }
 
-.video__slider_pagination {
+.video__pagination {
   position: relative;
 }
 
@@ -107,7 +104,7 @@
 
 }
 
-.video__slider_pagination:hover .pagination__dot {
+.video__pagination:hover .pagination__dot {
   background-color: $main-color;
   @include trans-medium;
 }

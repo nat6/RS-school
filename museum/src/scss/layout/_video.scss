@@ -66,7 +66,6 @@
     height: 329px;
   }
   @include for-phone {
-    // width: 380px;
     height: 172px;
   }
 }
@@ -78,8 +77,9 @@
 
 .video__more {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  max-width: 1440px;
   @include for-tablet {
     margin-top: 21px;
   }
@@ -91,7 +91,15 @@
   }
 }
 
-.video__more iframe {
+.video__more_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  width: 2426px;
+}
+
+.video__more_container iframe {
   @include for-laptop-up {
     width: calc(33% - 10px);
   }
