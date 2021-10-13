@@ -31,7 +31,7 @@ function shuffleGallary() {
 		img.classList.add('gallery__img')
 		img.src = item;
 		img.alt = ``;
-		img.loading = 'lazy';
+		// img.loading = 'lazy';
 		picturesContainer.append(img);
 	})
 }
@@ -301,11 +301,12 @@ progress.addEventListener('click', (e) => {
 console.log(
 	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
 
-	Оценка: 60 баллов
+	Оценка: 68 баллов
 	
 	- Слайдер в секции Welcome +24
 	- Кастомный видеоплеер +26 
-	- Слайдер в секции Explore +10`
+	- Слайдер в секции Explore +10
+	- Анимация в секции Galery +8`
 )
 
 // WATCH SLIDER
@@ -427,3 +428,34 @@ function swipeEnd() {
 
 document.addEventListener('touchstart', swipeStart);
 document.addEventListener('mousedown', swipeStart);
+
+// GALLERY
+
+const galleryImages = document.querySelectorAll('.gallery__img');
+const test2 = document.querySelector('.gallery');
+const test = document.querySelector('.gallery__img');
+
+
+const options = {
+	root: null,
+	rootMargin: '0px',
+	threshold: 0.1
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+
+	entries.forEach(entry => {
+
+		if (entry.isIntersecting) {
+			entry.target.classList.add('gallery__img_active');
+		}
+		else {
+			entry.target.classList.remove('gallery__img_active');
+		}
+	})
+}, options)
+
+const arr = Array.from(document.querySelectorAll('.gallery__img'))
+arr.forEach(i => {
+	observer.observe(i);
+})
