@@ -301,9 +301,9 @@ progress.addEventListener('click', (e) => {
 console.log(
 	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
 
-	Оценка: 56 баллов
+	Оценка: 60 баллов
 	
-	- Слайдер в секции Welcome +20
+	- Слайдер в секции Welcome +24
 	- Кастомный видеоплеер +26 
 	- Слайдер в секции Explore +10`
 )
@@ -348,19 +348,17 @@ const welcomeButtons = welcome.querySelector('.controls__buttons');
 
 
 
-function slideImg(event /*, type*/) {
+function slideImg(event) {
 	const currentImg = welcome.querySelector('.welcome__img_active');
 	let index = welcomeSlides.indexOf(currentImg);
 	const imgWidth = welcomeSlides[0].width;
 
-	/*	console.log(event.target.className); */
-
-	if (/*type == 'prev' || */event.target.id == 'welcome__prev') {
+	if (event.target.id == 'welcome__prev') {
 		(index == 0) ? (index = welcomeSlides.length - 1) : (index--);
 		welcomeSlider.style.left = -(imgWidth * index) + 'px';
 
 	}
-	else if (/*type == 'next' || */ event.target.id == 'welcome__next') {
+	else if (event.target.id == 'welcome__next') {
 
 		(index == welcomeSlides.length - 1) ? (index = 0) : (index++);
 		welcomeSlider.style.left = -(imgWidth * index) + 'px';
@@ -373,7 +371,6 @@ function slideImg(event /*, type*/) {
 welcomeButtons.addEventListener('click', (event) => slideImg(event));
 
 
-/*
 let posInit = 0,
 	posX1 = 0,
 	posX2 = 0,
@@ -402,7 +399,10 @@ function swipeAction() {
 }
 
 function swipeEnd() {
-	let event = getEvent();
+	const currentImg = welcome.querySelector('.welcome__img_active');
+	let index = welcomeSlides.indexOf(currentImg);
+	const imgWidth = welcomeSlides[0].width;
+
 	posFinal = posInit - posX1;
 
 	welcome.removeEventListener('touchmove', swipeAction);
@@ -412,14 +412,18 @@ function swipeEnd() {
 
 	if (Math.abs(posFinal) > posThreshold) {
 		if (posInit < posX1) {
-			slideImg(event, 'prev');
-		} else if (posInit > posX1) {
-			slideImg(event, 'next');
+			(index == 0) ? (index = welcomeSlides.length - 1) : (index--);
+			welcomeSlider.style.left = -(imgWidth * index) + 'px';
 		}
+		else if (posInit > posX1) {
+			(index == welcomeSlides.length - 1) ? (index = 0) : (index++);
+			welcomeSlider.style.left = -(imgWidth * index) + 'px';
+		}
+		currentSlide(index);
+		handleDots(index);
+		handleOutput(index);
 	}
 };
 
-welcome.addEventListener('touchstart', swipeStart);
-welcome.addEventListener('mousedown', swipeStart);
-
-*/
+document.addEventListener('touchstart', swipeStart);
+document.addEventListener('mousedown', swipeStart);
