@@ -298,16 +298,48 @@ progress.addEventListener('click', (e) => {
 	video.currentTime = progressTime;
 })
 
-console.log(
-	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
+// handle keys
 
-	Оценка: 68 баллов
-	
-	- Слайдер в секции Welcome +24
-	- Кастомный видеоплеер +26 
-	- Слайдер в секции Explore +10
-	- Анимация в секции Galery +8`
-)
+const videoObserver = new IntersectionObserver((entries, observer) => {
+
+	entries.forEach(entry => {
+
+		if (entry.isIntersecting) document.addEventListener('keypress', activeKeys);
+		else {
+			document.removeEventListener('keypress', activeKeys);
+			console.log('buy')
+		}
+	});
+})
+
+videoObserver.observe(player);
+
+function activeKeys(event) {
+	let rate;
+
+	if (event.key === '>') {
+		rate = video.playbackRate;
+		rate = (rate + 0.2 > 4) ? 4 : rate + 0.2;
+		video.playbackRate = rate.toFixed(1)
+	}
+	else if (event.key === '<') {
+		rate = video.playbackRate;
+		rate = (rate - 0.2 < 0) ? 0 : rate - 0.2;
+		video.playbackRate = rate.toFixed(1)
+	}
+	switch (event.code) {
+		case 'Space':
+			event.preventDefault();
+			togglePlay();
+			break;
+		case 'KeyM':
+			toggleVolume();
+			break;
+		case 'KeyF':
+			toggleFullScreen();
+			break;
+	}
+}
 
 // WATCH SLIDER
 
@@ -442,7 +474,7 @@ const options = {
 	threshold: 0.1
 }
 
-const observer = new IntersectionObserver((entries, observer) => {
+const galleryObserver = new IntersectionObserver((entries, observer) => {
 
 	entries.forEach(entry => {
 
@@ -456,6 +488,19 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, options)
 
 const arr = Array.from(document.querySelectorAll('.gallery__img'))
-arr.forEach(i => {
-	observer.observe(i);
+arr.forEach(img => {
+	galleryObserver.observe(img);
 })
+
+
+
+console.log(
+	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
+
+	Оценка: 78 баллов
+	
+	- Слайдер в секции Welcome +24
+	- Кастомный видеоплеер +36
+	- Слайдер в секции Explore +10
+	- Анимация в секции Galery +8`
+)
