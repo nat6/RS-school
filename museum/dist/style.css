@@ -2012,8 +2012,14 @@
 }
 
 .gallery__img {
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -o-transition: 1s linear;
+  transition: 1s linear;
   width: 456px;
   margin-bottom: 20px;
+  margin-top: 60px;
+  transform: scale(0.9);
 }
 @media (max-width: 1500px) {
   .gallery__img {
@@ -2024,6 +2030,11 @@
   .gallery__img {
     margin-bottom: 24px;
   }
+}
+
+.gallery__img_active {
+  margin-top: 0;
+  transform: scale(1);
 }
 
 .gallery__img:nth-child(1),

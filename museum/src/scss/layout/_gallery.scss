@@ -23,6 +23,7 @@
 
 	&_container {
 		height: auto;
+		// display: grid;
 		column-count: 3;
 		column-gap: 36px;
 		@include for-tablet-up {
@@ -50,14 +51,23 @@
 }
 
 .gallery__img {
+	@include trans-slow;
   width: 456px;
   margin-bottom: 20px;
+
+	margin-top: 60px;
+	transform: scale(0.9);
 	@include for-laptop-up {
 		width: 100%;
 	}
 	@include for-tablet {
 		margin-bottom: 24px;
 	}
+}
+
+.gallery__img_active {
+	margin-top: 0;
+	transform: scale(1);
 }
 
 .gallery__img:nth-child(1),
