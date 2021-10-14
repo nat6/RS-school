@@ -5,12 +5,12 @@ section.section.video(id='video')
 			p.video__text Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
 		div.video__container_bottom
 			div.video__main
-				video.video__item_main(src='assets/video/video0.mp4' id='video-item')
+				video.video__item_main(src='assets/video/video0.mp4' id='video-item' poster='assets/video/poster0.jpg')
 				div.video__button
 				include ../components/_video-controls.pug
 			div.video__more.fullscreen_hidden
 				div.video__more_container
-					+video__item('452', '254', expositionHref, '1', 'lazy')
+					+video__item('452', '254', expositionHref, '1', 'lazy', 'active')
 					+video__item('452', '254', louvreHref, '2', 'lazy')
 					+video__item('452', '254', promenadeHref, '3', 'lazy')
 					+video__item('452', '254', welcomeHref, '4', 'lazy')
@@ -18,7 +18,7 @@ section.section.video(id='video')
 			div.video__slider.fullscreen_hidden
 				div.video__slider_container
 					+video__button('left')
-					+video__pagination('1')
+					+video__pagination('1', 'active')
 					+video__pagination('2')
 					+video__pagination('3')
 					+video__pagination('4')

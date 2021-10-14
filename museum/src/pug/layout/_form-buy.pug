@@ -5,18 +5,18 @@ aside.form-buy(id='form-buy')
 			h2.section__title.section__title_gold.section__title_underline.form-buy__title Booking tickets
 			p.form-buy__subtitle Tour to Louvre
 			form.booking__form
-				input.booking__input_hidden(type="date")
-				input.booking__input_hidden(type="time")
+				input.booking__input_hidden.booking__input_date(type="date" min="13.10.2021" onchange="changeDate()" required)
+				input.booking__input_hidden(type="time" required)
 				div.input__wrap.input__wrap_date
-					input.booking__input.booking__input_narrow(placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')")
+					input.booking__input.booking__input_narrow(placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" required)
 				div.input__wrap.input__wrap_time
-					input.booking__input.booking__input_narrow(placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')")
+					input.booking__input.booking__input_narrow(placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required)
 				div.input__wrap.input__wrap_name
-					input.booking__input(type='text' placeholder='Name')
+					input.booking__input(type='text' placeholder='Name' minlength="3" maxlength="15" pattern="^[a-zA-Z-][a-zA-Z -]*$" required)
 				div.input__wrap.input__wrap_mail
-					input.booking__input(type='email' placeholder='E-mail')
+					input.booking__input(type='email' placeholder='E-mail' required)
 				div.input__wrap.input__wrap_phone
-					input.booking__input(type='tel' placeholder='Phone')
+					input.booking__input(type='tel' placeholder='Phone' required)
 				div.input__wrap.input__wrap_ticket
 					select.booking__input.booking__select
 						option.booking__option(disabled selected) Ticket Type
@@ -38,7 +38,7 @@ aside.form-buy(id='form-buy')
 			div.overview__info
 				div.overview__item
 					div.overview__icon.overview__icon_date
-					div.overview__text Friday, August 19
+					div.overview__text.overview__text_date Friday, August 19
 				div.overview__item
 					div.overview__icon.overview__icon_time
 					div.overview__text 16 : 30

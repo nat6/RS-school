@@ -31,7 +31,6 @@ function shuffleGallary() {
 		img.classList.add('gallery__img')
 		img.src = item;
 		img.alt = ``;
-		// img.loading = 'lazy';
 		picturesContainer.append(img);
 	})
 }
@@ -307,7 +306,6 @@ const videoObserver = new IntersectionObserver((entries, observer) => {
 		if (entry.isIntersecting) document.addEventListener('keypress', activeKeys);
 		else {
 			document.removeEventListener('keypress', activeKeys);
-			console.log('buy')
 		}
 	});
 })
@@ -492,15 +490,135 @@ arr.forEach(img => {
 	galleryObserver.observe(img);
 })
 
+// MAP
 
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0NiIsImEiOiJja3VwaDdvMGgwb2trMnBtZHZoNGlrYXg3In0.Q6bH6qz2dgxVBkgoVlLzgw';
+const map = new mapboxgl.Map({
+	container: 'map',
+	center: [2.3361, 48.86111],
+	zoom: 15.8,
+	style: 'mapbox://styles/mapbox/streets-v11'
+});
+
+map.addControl(new mapboxgl.NavigationControl());
+new mapboxgl.Marker({ color: '#000000' }).setLngLat([2.33638, 48.860845]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.3333, 48.86014]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.33965, 48.86064]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.333, 48.86184]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.33648, 48.86243]).addTo(map);
 
 console.log(
-	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
+	`Добрый день! Спасибо за ожидание :)
 
-	Оценка: 78 баллов
+	Оценка: 108 баллов
 	
 	- Слайдер в секции Welcome +24
+
+	- Слайдер в секции видео +18 (частично реализован 'клик по кнопке Pause' - видео не останавливается, если кликнуть по другому слайду (-1). частично реализована зацикленность - нет динамической подгрузки новых фреймов, при клике на стрелку на последнем слайде происходит переход на первый(-1))
+
 	- Кастомный видеоплеер +36
-	- Слайдер в секции Explore +10
-	- Анимация в секции Galery +8`
+
+	- Слайдер в секции Explore +10 (иногда подвисает, нужно обновить страницу)
+
+	- Анимация в секции Galery +8
+
+	- Карта в секции Contacts +12`
 )
+
+
+// VIDEO SLIDER
+
+
+const videoSlider = document.querySelector('.video__more_container');
+
+const videoSlides = Array.from(document.querySelectorAll('.video__more_frame'));
+const videoDots = Array.from(document.querySelectorAll('.pagination__dot'));
+
+function handleDotsVideo(index) {
+	videoDots.forEach(dot => dot.classList.remove('video__pagination_active'));
+	videoDots[index].classList.add('video__pagination_active');
+}
+
+function currentSlideVideo(index) {
+	videoSlides.forEach(video => video.classList.remove('frame_active'));
+	videoSlides[index].classList.add('frame_active');
+}
+
+const srcVideo = ['assets/video/video3.mp4',
+	'assets/video/video1.mp4',
+	'assets/video/video2.mp4',
+	'assets/video/video0.mp4',
+	'assets/video/video4.mp4']
+
+const posterVideo = ['assets/video/poster3.jpg',
+	'assets/video/poster1.jpg',
+	'assets/video/poster2.jpg',
+	'assets/video/poster0.jpg',
+	'assets/video/poster4.jpg']
+
+function updateVideo(index) {
+	video.src = srcVideo[index];
+	video.poster = posterVideo[index];
+}
+
+function switchVideo(event) {
+	const index = videoDots.indexOf(event.target);
+	const videoWidth = videoSlides[0].width;
+	videoSlider.style.left = -(videoWidth * index + (50 * index)) + 'px';
+
+	updateVideo(index);
+	currentSlideVideo(index);
+	handleDotsVideo(index);
+}
+
+videoDots.forEach(dot => dot.addEventListener('click', (event) => switchVideo(event)));
+
+
+
+
+
+const sliderContainer = document.querySelector('.video__slider_container');
+
+
+
+function slideVideo(event) {
+	const currentVideo = document.querySelector('.frame_active');
+
+	let index = videoSlides.indexOf(currentVideo);
+	const videoWidth = videoSlides[0].width;
+
+	if (event.target.id == 'slider__button_left') {
+		(index == 0) ? (index = videoSlides.length - 1) : (index--);
+		videoSlider.style.left = -(videoWidth * index + (50 * index)) + 'px';
+
+	}
+	else if (event.target.id == 'slider__button_right') {
+
+		(index == videoSlides.length - 1) ? (index = 0) : (index++);
+		videoSlider.style.left = -(videoWidth * index + (50 * index)) + 'px';
+	}
+	updateVideo(index);
+	currentSlideVideo(index);
+	handleDotsVideo(index);
+}
+
+sliderContainer.addEventListener('click', (event) => slideVideo(event));
+
+document.addEventListener('click', (event) => one(event));
+
+
+
+const videos = document.querySelectorAll('iframe');
+const close = document.querySelector('.close');
+
+function stopVideo(event) {
+	const target = event.target;
+
+	if (target.id == 'slider__button_right' || target.id == 'slider__button_left' || target.classList.contains('pagination__dot')) {
+		videos.forEach(i => {
+			i.src = i.src;
+		});
+	}
+}
+
+sliderContainer.addEventListener('click', (event) => stopVideo(event));

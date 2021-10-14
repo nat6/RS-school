@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&amp;family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
     <title>Museum</title>
     <!-- - links href-->
     <!-- - img src-->
@@ -155,7 +157,7 @@
           </div>
           <div class="video__container_bottom">
             <div class="video__main">
-              <video class="video__item_main" src="assets/video/video0.mp4" id="video-item"></video>
+              <video class="video__item_main" src="assets/video/video0.mp4" id="video-item" poster="assets/video/poster0.jpg"></video>
               <div class="video__button"></div>
               <div class="video__controls">
                 <button class="controls_icon controls_play"></button>
@@ -169,32 +171,32 @@
             </div>
             <div class="video__more fullscreen_hidden">
               <div class="video__more_container">
-                    <iframe class="video__more_frame video__more_frame1" width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="video__more_frame video__more_frame2" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="video__more_frame video__more_frame3" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="video__more_frame video__more_frame4" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="video__more_frame video__more_frame5" width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame frame_active" width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame frame_undefined" width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame frame_undefined" width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame frame_undefined" width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video__more_frame frame_undefined" width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" loading="lazy" preload="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
             <div class="video__slider fullscreen_hidden">
               <div class="video__slider_container">
-                    <button class="slider__button" id="slider__button_left"><span class="double__arrow double__arrow_left"></span></button>
+                    <button class="slider__button"><span class="double__arrow double__arrow_left" id="slider__button_left"></span></button>
                     <div class="video__pagination" id="video__pagination_1">
-                      <div class="pagination__dot"></div>
+                      <div class="pagination__dot video__pagination_active"></div>
                     </div>
                     <div class="video__pagination" id="video__pagination_2">
-                      <div class="pagination__dot"></div>
+                      <div class="pagination__dot video__pagination_undefined"></div>
                     </div>
                     <div class="video__pagination" id="video__pagination_3">
-                      <div class="pagination__dot"></div>
+                      <div class="pagination__dot video__pagination_undefined"></div>
                     </div>
                     <div class="video__pagination" id="video__pagination_4">
-                      <div class="pagination__dot"></div>
+                      <div class="pagination__dot video__pagination_undefined"></div>
                     </div>
                     <div class="video__pagination" id="video__pagination_5">
-                      <div class="pagination__dot"></div>
+                      <div class="pagination__dot video__pagination_undefined"></div>
                     </div>
-                    <button class="slider__button" id="slider__button_right"><span class="double__arrow double__arrow_right"></span></button>
+                    <button class="slider__button"><span class="double__arrow double__arrow_right" id="slider__button_right"></span></button>
               </div>
             </div>
           </div>
@@ -262,22 +264,22 @@
               <h2 class="section__title section__title_gold section__title_underline form-buy__title">Booking tickets</h2>
               <p class="form-buy__subtitle">Tour to Louvre</p>
               <form class="booking__form">
-                <input class="booking__input_hidden" type="date">
-                <input class="booking__input_hidden" type="time">
+                <input class="booking__input_hidden booking__input_date" type="date" min="13.10.2021" onchange="changeDate()" required>
+                <input class="booking__input_hidden" type="time" required>
                 <div class="input__wrap input__wrap_date">
-                  <input class="booking__input booking__input_narrow" placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+                  <input class="booking__input booking__input_narrow" placeholder="Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" required>
                 </div>
                 <div class="input__wrap input__wrap_time">
-                  <input class="booking__input booking__input_narrow" placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')">
+                  <input class="booking__input booking__input_narrow" placeholder="Time" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" required>
                 </div>
                 <div class="input__wrap input__wrap_name">
-                  <input class="booking__input" type="text" placeholder="Name">
+                  <input class="booking__input" type="text" placeholder="Name" minlength="3" maxlength="15" pattern="^[a-zA-Z-][a-zA-Z -]*$" required>
                 </div>
                 <div class="input__wrap input__wrap_mail">
-                  <input class="booking__input" type="email" placeholder="E-mail">
+                  <input class="booking__input" type="email" placeholder="E-mail" required>
                 </div>
                 <div class="input__wrap input__wrap_phone">
-                  <input class="booking__input" type="tel" placeholder="Phone">
+                  <input class="booking__input" type="tel" placeholder="Phone" required>
                 </div>
                 <div class="input__wrap input__wrap_ticket">
                   <select class="booking__input booking__select">
@@ -316,7 +318,7 @@
               <div class="overview__info">
                 <div class="overview__item">
                   <div class="overview__icon overview__icon_date"></div>
-                  <div class="overview__text">Friday, August 19</div>
+                  <div class="overview__text overview__text_date">Friday, August 19</div>
                 </div>
                 <div class="overview__item">
                   <div class="overview__icon overview__icon_time"></div>
@@ -404,7 +406,9 @@
               <p class="contacts__text">phone: <a class="contacts__link" href="tel:+33(0)140205050">+33(0) 1 40 20 50 50</a></p>
               <p class="contacts__text">mail: <a class="contacts__link" href="mailto:info@louvre.fr">info@louvre.fr</a></p>
             </div>
-            <div class="contacts__map"><img class="map__img" src="assets/img/map.webp" loading="lazy" alt="map"></div>
+            <div class="contacts__map">
+              <div class="map__img" id="map" style="width: 960px; height: 620px;"></div>
+            </div>
           </div>
         </div>
       </section>

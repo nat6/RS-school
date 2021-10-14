@@ -22,6 +22,7 @@
 .video__container_top {
   @include flex-basic;
 }
+
 .video__text {
   max-width: 720px;
   font-weight: 300;
@@ -31,6 +32,7 @@
     display: none;
   }
 }
+
 .video__container_bottom {
   @include for-laptop-up {
     width: 100%;
@@ -77,7 +79,8 @@
 
 .video__more {
   margin-top: 40px;
-  overflow: hidden;
+  height: 254px;
+  overflow-x: hidden;
   position: relative;
   max-width: 1440px;
   @include for-tablet {
@@ -92,46 +95,57 @@
 }
 
 .video__more_container {
+  @include trans-slow;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
   top: 0;
-  width: 2426px;
+  left: 0;
+  width: auto;
 }
 
-.video__more_container iframe {
-  @include for-laptop-up {
-    width: calc(33% - 10px);
-  }
-  @include for-laptop-down {
-    height: 200px;
-  }
-  @include for-laptop {
-    width: calc(33% - 24px);
-    height: 170px;
-  }
-  @include for-tablet-up {
-    width: calc(33% - 10px);
-  }
-  @include for-tablet {
-    width: calc(50% - 10px);
-    height: 199px;
-  }
-  @include for-tablet-down {
-    height: 170px;
-  }
-  @include for-phone-up {
-    height: 140px;
-  }
-  @include for-phone {
-    height: 101px;
-  }
-  @include for-phone-down {
-    width: calc(50% - 5px);
-  }
+.video__more_frame {
+  margin-right: 50px;
 }
-.video__more iframe:last-child {
-  @include for-tablet {
-    display: none;
-  }
+
+.video__more_frame {
+  width: 452px;
 }
+
+// .video__more_container iframe {
+//   @include for-laptop-up {
+//     width: calc(33% - 10px);
+//   }
+//   @include for-laptop-down {
+//     height: 200px;
+//   }
+//   @include for-laptop {
+//     width: calc(33% - 24px);
+//     height: 170px;
+//   }
+//   @include for-tablet-up {
+//     width: calc(33% - 10px);
+//   }
+//   @include for-tablet {
+//     width: calc(50% - 10px);
+//     height: 199px;
+//   }
+//   @include for-tablet-down {
+//     height: 170px;
+//   }
+//   @include for-phone-up {
+//     height: 140px;
+//   }
+//   @include for-phone {
+//     height: 101px;
+//   }
+//   @include for-phone-down {
+//     width: calc(50% - 5px);
+//   }
+// }
+
+// .video__more iframe:last-child {
+//   @include for-tablet {
+//     display: none;
+//   }
+// }

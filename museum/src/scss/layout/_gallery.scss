@@ -22,8 +22,7 @@
 	}
 
 	&_container {
-		height: auto;
-		// display: grid;
+		height: 3000px;
 		column-count: 3;
 		column-gap: 36px;
 		@include for-tablet-up {

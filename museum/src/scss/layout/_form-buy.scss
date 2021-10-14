@@ -114,10 +114,11 @@
 }
 
 .booking__input {
-  width: 398px;
+  width: 348px;
   height: 43px;
   border: 1px solid $dark-color;
   margin-bottom: 20px;
+  padding-left: 50px;
   @include for-laptop-form {
     width: 528px;
     height: 43px;
@@ -125,6 +126,14 @@
   @include for-phone-up {
     width: 358px;
   }
+}
+
+.booking__input:invalid {
+  background-color: rgba(255, 0, 0, 0.096);
+}
+
+.booking__input:valid {
+  background-color: white;
 }
 
 .booking__input_narrow {
@@ -331,7 +340,7 @@
 
   color: #030303;
 }
-.qwerview__pay {
+.overview__pay {
   @include for-laptop-form {
     position: relative;
   }
@@ -373,7 +382,7 @@
   display: flex;
   align-items: center;
   color: #030303;
-  padding-left: 45px;
+  // padding-left: 45px;
 }
 .input__wrap {
   position: relative;
@@ -388,6 +397,7 @@
   width: 15px;
   height: 15px;
 }
+
 .input__wrap_date::after {
   background-image: url(assets/svg/date.svg);
 }
