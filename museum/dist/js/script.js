@@ -31,7 +31,6 @@ function shuffleGallary() {
 		img.classList.add('gallery__img')
 		img.src = item;
 		img.alt = ``;
-		// img.loading = 'lazy';
 		picturesContainer.append(img);
 	})
 }
@@ -307,7 +306,6 @@ const videoObserver = new IntersectionObserver((entries, observer) => {
 		if (entry.isIntersecting) document.addEventListener('keypress', activeKeys);
 		else {
 			document.removeEventListener('keypress', activeKeys);
-			console.log('buy')
 		}
 	});
 })
@@ -492,15 +490,32 @@ arr.forEach(img => {
 	galleryObserver.observe(img);
 })
 
+// MAP
 
+mapboxgl.accessToken = 'pk.eyJ1IjoibmF0NiIsImEiOiJja3VwaDdvMGgwb2trMnBtZHZoNGlrYXg3In0.Q6bH6qz2dgxVBkgoVlLzgw';
+const map = new mapboxgl.Map({
+	container: 'map',
+	center: [2.3361, 48.86111],
+	zoom: 15.8,
+	style: 'mapbox://styles/mapbox/streets-v11'
+});
+
+map.addControl(new mapboxgl.NavigationControl());
+new mapboxgl.Marker({ color: '#000000' }).setLngLat([2.33638, 48.860845]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.3333, 48.86014]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.33965, 48.86064]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.333, 48.86184]).addTo(map);
+new mapboxgl.Marker({ color: '#727272' }).setLngLat([2.33648, 48.86243]).addTo(map);
 
 console.log(
 	`Добрый день! Не успела всё доделать. Если не сложно, оставьте, пожалуйста, контакты. Либо проверьте в четверг. Спасибо!
 
-	Оценка: 78 баллов
+	Оценка: 90 баллов
 	
 	- Слайдер в секции Welcome +24
 	- Кастомный видеоплеер +36
 	- Слайдер в секции Explore +10
-	- Анимация в секции Galery +8`
+	- Анимация в секции Galery +8
+	- Карта в секции Contacts +12`
 )
+

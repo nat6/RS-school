@@ -84,18 +84,17 @@
 }
 
 .map__img {
-  object-fit: cover;
-  object-position: center center;
-  width: 960px;
-  @include for-laptop-up {
-    width: calc(100vw - 430px);
-  }
-  @include for-laptop {
-    width: calc(100vw - 330px);
-    height: calc(65vw - 212px);
-  }
-  @include for-tablet {
-    width: calc(100vw - 40px);
-    height: calc(65vw - 21px);
-  }
+
+  filter: saturate(8%) contrast(90%) brightness(110%);
+  // @include for-laptop-up {
+  //   width: calc(100vw - 430px);
+  // }
+  // @include for-laptop {
+  //   width: calc(100vw - 330px);
+  //   height: calc(65vw - 212px);
+  // }
+  // @include for-tablet {
+  //   width: calc(100vw - 40px);
+  //   height: calc(65vw - 21px);
+  // }
 }
