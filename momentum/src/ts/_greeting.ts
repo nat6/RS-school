@@ -1,7 +1,7 @@
 import getTimeOfDay from "./_getTime";
 
 const greetingBox = document.querySelector('.greeting');
-const nameBox = (<HTMLInputElement>document.querySelector('.name'));
+const nameBox = (<HTMLInputElement> document.querySelector('.name'));
 
 
 export default function showGreeting() {
@@ -18,10 +18,7 @@ window.addEventListener('beforeunload', setLocalStorage);
 
 
 function getLocalStorage() {
-  let currentName:any = localStorage.getItem('name') || '';
-
-  if(localStorage.getItem('name')) {
-    nameBox.value = currentName;
-  }
+  let currentName:any = localStorage.getItem('name');
+  if (localStorage.getItem('name')) nameBox.value = currentName;
 }
 window.addEventListener('load', getLocalStorage);

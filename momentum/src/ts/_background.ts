@@ -7,11 +7,11 @@ const slidePrev = document.querySelector('.slide-prev');
 let backgroundNum:number;
 
 
-function getRandomNum(max:number) {
-  const num = Math.floor(Math.random() * 20 + 1);
+function getBackgroundNum(max:number) {
+  const num = Math.floor(Math.random() * max + 1);
   backgroundNum = num;
 }
-getRandomNum(20);
+getBackgroundNum(20);
 
 
 function setBackground() {
@@ -32,13 +32,13 @@ function getSlideNext() {
   backgroundNum = (backgroundNum >= 20) ? 1 : (backgroundNum + 1);
   setBackground();
 }
-if(slideNext) slideNext.addEventListener('click', getSlideNext);
+slideNext?.addEventListener('click', getSlideNext);
 
 
 function getSlidePrev() {
   backgroundNum = (backgroundNum <= 1) ? 20 : (backgroundNum - 1);
   setBackground();
 }
-if(slidePrev) slidePrev.addEventListener('click', getSlidePrev);
+slidePrev?.addEventListener('click', getSlidePrev);
 
 
