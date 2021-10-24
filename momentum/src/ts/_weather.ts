@@ -23,6 +23,9 @@ function getLocalStorageWeather() {
   if (localStorage.getItem('city')) {
     cityBox.value = currentCity;
     getWeather();
+  } else {
+    cityBox.value = 'Minsk';
+    getWeather();
   }
 }
 window.addEventListener('load', getLocalStorageWeather);
