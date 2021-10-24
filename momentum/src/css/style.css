@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'Arial-MT';
-  src: url('../assets/fonts/Arial-MT.woff'); /* Путь к файлу со шрифтом */
+  src: url('../assets/fonts/Arial-MT.woff');
+}
+
+:root {
+  --main-color: #c5b358; /* var(--main-color); */
+  --gray-color: rgb(187, 181, 189); /* var(--gray-color); */
+  --gray-color-trans: rgba(187, 181, 189, 0.5); /* var(--gray-color-trans); */
+  --light-color: white; /* var(--light-color); */
 }
 
 * {
@@ -31,50 +38,98 @@ body {
   padding: 20px;
 }
 
+.player-info {
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.time-wrapper {
+  display: flex;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .player-controls {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 120px;
-  margin-bottom: 28px;
+  flex-direction: column;
+  width: 320px;
+  margin-bottom: 16px;
+}
+
+.list-wrapper {
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--gray-color-trans);
 }
 
 .play-list {
   text-align: left;
+  font-size: 15px;
 }
 
 .play-item {
   position: relative;
   padding: 5px;
-  padding-left: 20px;
+  padding-left: 24px;
   list-style: none;
-  opacity: 0.8;
+  opacity: 0.7;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 1s;
 }
 
-.play-item:hover {
+.play-item:hover,
+.item-active {
   opacity: 1;
 }
 
 .play-item::before {
-  content: '\2713';
+  content: '';
   position: absolute;
-  left: 0;
-  top: 2px;
-  font-weight: 900;
+  left: 10px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background-size: 10px 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url('../assets/svg/play-small.svg');
 }
 
+.play-item:hover::before,
 .item-active::before {
-  color: #c5b358;
+  opacity: 1;
+  transition: 0.5s ease;
+  background-image: url('../assets/svg/play-small-color.svg');
+}
+
+.play-list .item-pause::before {
+  transition: 0.3s ease;
+  background-image: url('../assets/svg/pause-color.svg');
 }
 
 .player-icon,
 .slider-icon,
 .change-quote {
-  width: 32px;
-  height: 32px;
-  background-size: 32px 32px;
+  width: 40px;
+  height: 40px;
+  background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -99,10 +154,90 @@ body {
   transform: scale(1.1);
 }
 
+.range-wrapper {
+  height: 30px;
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.controls-range {
+  height: 3px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  border-radius: 5px;
+}
+
+.controls-range::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: var(--light-color);
+}
+
+.controls-progress {
+  width: 100%;
+  height: 3px;
+  background-color: var(--gray-color);
+}
+
+.controls-bar {
+  position: relative;
+  width: 1px;
+  background-color: var(--main-color);
+}
+
+.controls-bar::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: ew-resize;
+  background: var(--light-color);
+}
+
+.controls-volume {
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 50%,
+    var(--gray-color) 50%,
+    var(--gray-color) 100%
+  );
+  cursor: pointer;
+}
+
+.volume {
+  background-image: url('../assets/svg/audio.svg');
+}
+
+.mute {
+  background-image: url('../assets/svg/audio-mute.svg');
+}
+
+.controls-audio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+}
+
 .play {
   width: 40px;
   height: 40px;
-  background-size: 40px 40px;
+  background-size: 24px 24px;
   background-image: url('../assets/svg/play.svg');
 }
 

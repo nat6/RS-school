@@ -11,12 +11,43 @@
   <body>
     <header class="header">
       <div class="player">
-        <div class="player-controls">
-          <button class="play-prev player-icon"></button>
-          <button class="play player-icon"></button>
-          <button class="play-next player-icon"></button>
+        <div class="player-info">
+          <div class="song-name"></div>
+          <div class="time-wrapper">
+            <div class="song-time"></div>
+            <div>/</div>
+            <div class="song-duration"></div>
+          </div>
         </div>
-        <ul class="play-list"></ul>
+        <div class="player-controls">
+          <div class="range-wrapper">
+            <div class="controls-range controls-progress">
+              <div class="controls-range controls-bar"></div>
+            </div>
+          </div>
+          <div class="buttons-wrapper">
+            <div class="controls-audio">
+              <button class="volume player-icon"></button>
+              <input
+                class="controls-range controls-volume"
+                type="range"
+                name="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5"
+              />
+            </div>
+            <div class="controls-buttons">
+              <button class="play-prev player-icon"></button>
+              <button class="play player-icon"></button>
+              <button class="play-next player-icon"></button>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <ul class="play-list"></ul>
+        </div>
       </div>
       <div class="weather">
         <input type="text" class="city" />
@@ -50,6 +81,6 @@
         <div class="author"></div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
