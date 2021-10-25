@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.png" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <div class="player-info">
+          <div class="song-name"></div>
+          <div class="time-wrapper">
+            <div class="song-time"></div>
+            <div>/</div>
+            <div class="song-duration"></div>
+          </div>
+        </div>
+        <div class="player-controls">
+          <div class="range-wrapper">
+            <div class="controls-range controls-progress">
+              <div class="controls-range controls-bar"></div>
+            </div>
+          </div>
+          <div class="buttons-wrapper">
+            <div class="controls-audio">
+              <button class="volume player-icon"></button>
+              <input
+                class="controls-range controls-volume"
+                type="range"
+                name="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5"
+              />
+            </div>
+            <div class="controls-buttons">
+              <button class="play-prev player-icon"></button>
+              <button class="play player-icon"></button>
+              <button class="play-next player-icon"></button>
+            </div>
+          </div>
+        </div>
+        <div class="list-wrapper">
+          <ul class="play-list"></ul>
+        </div>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature weather_clean"></span>
+          <span class="weather-description weather_clean"></span>
+        </div>
+        <div class="feels weather_clean"></div>
+        <div class="wind weather_clean"></div>
+        <div class="humidity weather_clean"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="settings-button footer-button"></button>
+      <div class="settings footer-aside">
+        <div class="settings-item settings-item_double">
+          <span class="language-ru settings-item_disable">Русский</span>
+          <input class="language-button" type="checkbox" id="language" name="language" checked />
+          <span class="language-en">English</span>
+        </div>
+        <div class="settings-item settings-item_input">
+          <input type="text" id="source-query" placeholder="background tag" />
+        </div>
+        <div class="settings-item settings-item_full">
+          <p>Source of images</p>
+          <select class="images-source" id="images-source">
+            <option class="source-variant" value="github">GitHub</option>
+            <option class="source-variant" value="unsplash">Unsplash</option>
+            <option class="source-variant" value="flickr">Flickr</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <label for="visibility-player" class="visibility-player">Player</label>
+          <input class="visibility-button" type="checkbox" id="visibility-player" name="visibility-player" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-weather" class="visibility-weather">Weather</label>
+          <input class="visibility-button" type="checkbox" id="visibility-weather" name="visibility-weather" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-time" class="visibility-time">Time</label>
+          <input class="visibility-button" type="checkbox" id="visibility-time" name="visibility-time" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-date" class="visibility-date">Date</label>
+          <input class="visibility-button" type="checkbox" id="visibility-date" name="visibility-date" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-greeting" class="visibility-greeting">Greeting</label>
+          <input
+            class="visibility-button"
+            type="checkbox"
+            id="visibility-greeting"
+            name="visibility-greeting"
+            checked
+          />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-quote" class="visibility-quote">Quote</label>
+          <input class="visibility-button" type="checkbox" id="visibility-quote" name="visibility-quote" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-todo" class="visibility-todo">ToDo</label>
+          <input class="visibility-button" type="checkbox" id="visibility-todo" name="visibility-todo" checked />
+        </div>
+        <div class="settings-item">
+          <label for="visibility-controls" class="visibility-quote">Controls</label>
+          <input
+            class="visibility-button"
+            type="checkbox"
+            id="visibility-controls"
+            name="visibility-controls"
+            checked
+          />
+        </div>
+      </div>
+      <div class="quote-wrapper">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+      <div class="todo-wrapper">
+        <button class="todo-button footer-button"></button>
+        <div class="todo footer-aside"></div>
+      </div>
+
+      <!-- <div class="author"></div> -->
+    </footer>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
