@@ -11,14 +11,14 @@ export default function showGreeting() {
 }
 
 
-function setLocalStorage() {
+function setLocalStorageGreeting() {
   localStorage.setItem('name', nameBox.value);
 }
-window.addEventListener('beforeunload', setLocalStorage);
+window.addEventListener('beforeunload', setLocalStorageGreeting);
 
 
-function getLocalStorage() {
+function getLocalStorageGreeting() {
   let currentName:any = localStorage.getItem('name');
   if (localStorage.getItem('name')) nameBox.value = currentName;
 }
-window.addEventListener('load', getLocalStorage);
+window.addEventListener('load', getLocalStorageGreeting);
