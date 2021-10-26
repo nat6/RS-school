@@ -1,13 +1,31 @@
-import getTimeOfDay from "./_getTime";
+import { getTimeOfDay, getGreetingRu } from "./_getTime";
+import returnLang from "./_language";
 
 const greetingBox = document.querySelector('.greeting');
 const nameBox = (<HTMLInputElement> document.querySelector('.name'));
 
+const languageButton = (<HTMLInputElement> document.querySelector('#language'));
+
+
+
+function setLang() {
+  const lang = returnLang();
+  return lang;
+}
+languageButton?.addEventListener('click', setLang);
 
 export default function showGreeting() {
-  const timeOfDay = getTimeOfDay();
-  const greetingText = `Good ${timeOfDay}`;
-  if (greetingBox) greetingBox.textContent = greetingText;
+  let lang = returnLang();
+
+  if (lang == 'en') {
+    const timeOfDay = getTimeOfDay();
+    const greetingText = `Good ${timeOfDay}`;
+    if (greetingBox) greetingBox.textContent = greetingText;
+  }
+  else if (lang == 'ru') {
+    const greetingText = getGreetingRu();
+    if (greetingBox) greetingBox.textContent = greetingText;
+  }
 }
 
 

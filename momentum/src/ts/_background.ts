@@ -1,4 +1,4 @@
-import getTimeOfDay from "./_getTime";
+import { getTimeOfDay } from "./_getTime";
 
 const body = document.querySelector('body');
 const slideNext = document.querySelector('.slide-next');

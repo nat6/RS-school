@@ -1,3 +1,5 @@
+import returnLang from "./_language";
+
 const weatherIconBox = document.querySelector('.weather-icon');
 const temperatureBox = document.querySelector('.temperature');
 const weatherDescriptionBox = document.querySelector('.weather-description');
@@ -31,10 +33,11 @@ function getLocalStorageWeather() {
 window.addEventListener('load', getLocalStorageWeather);
 
 
-async function getWeather() {
+export default async function getWeather() {
+  let lang = returnLang();
   const currentCity = (cityBox.value);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&lang=en&appid=7a00c7fc97cb4345fae62739e75e89e1&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&lang=${lang}&appid=7a00c7fc97cb4345fae62739e75e89e1&units=metric`;
   const res = await fetch(url);
   const data = await res.json();
 
@@ -55,9 +58,17 @@ async function getWeather() {
   }
   if (temperatureBox) temperatureBox.textContent = `${temperature}°C`;
   if (weatherDescriptionBox) weatherDescriptionBox.textContent = description;
-  if (feelsBox) feelsBox.textContent = `Feels like: ${feels}°C`;
-  if (windBox) windBox.textContent = `Wind speed: ${wind} m/s`;
-  if (humidityBox) humidityBox.textContent = `Humidity: ${humidity}%`;
+
+  if (lang == 'en') {
+    if (feelsBox) feelsBox.textContent = `Feels like: ${feels}°C`;
+    if (windBox) windBox.textContent = `Wind speed: ${wind} m/s`;
+    if (humidityBox) humidityBox.textContent = `Humidity: ${humidity}%`;
+  }
+  else if (lang == 'ru') {
+    if (feelsBox) feelsBox.textContent = `Ощущается как: ${feels}°C`;
+    if (windBox) windBox.textContent = `Скорость ветра: ${wind} m/s`;
+    if (humidityBox) humidityBox.textContent = `Влажность: ${humidity}%`;
+  }
 }
 getWeather();
 cityBox.addEventListener('change', getWeather);
