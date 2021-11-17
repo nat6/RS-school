@@ -3,9 +3,9 @@ import CategoryElement from './Category.html';
 export class Category {
   constructor() {}
 
-  async render () {
+  async render() {
     return CategoryElement;
   }
 
-  async after_render () {};
+  async after_render() {}
 }

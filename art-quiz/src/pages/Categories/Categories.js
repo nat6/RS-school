@@ -2,9 +2,8 @@ import CategoriesElement from './Categories.html';
 
 import { images } from '@/data/images';
 
-const splitArr = (arr, chunks) =>[
-  ...Array(chunks),
-].map((_, c) => arr.filter((n, index) => index % chunks === c));
+const splitArr = (arr, chunks) =>
+  [...Array(chunks)].map((_, c) => arr.filter((n, index) => index % chunks === c));
 
 const questionsByAuthor = [];
 const questionsByName = [];
@@ -25,8 +24,8 @@ images.forEach((item, index) => {
   }
 });
 
-const uniqAnswersByAuthor = [...new Set(questionsByAuthor.map(item => item.author))];
-const uniqAnswersByName = [...new Set(questionsByName.map(item => item.author))];
+const uniqAnswersByAuthor = [...new Set(questionsByAuthor.map((item) => item.author))];
+const uniqAnswersByName = [...new Set(questionsByName.map((item) => item.author))];
 
 const newQuestionsByAuthor = splitArr(questionsByAuthor, 12);
 const newQuestionsByName = splitArr(questionsByName, 12);
@@ -34,7 +33,7 @@ const newQuestionsByName = splitArr(questionsByName, 12);
 const answers = {
   uniqAnswersByAuthor,
   uniqAnswersByName,
-}
+};
 
 const questions = {
   questionsByAuthor: newQuestionsByAuthor,
@@ -43,16 +42,16 @@ const questions = {
 
 const pageCategories = questions['questionsByAuthor'];
 
-const categoriesToRender = pageCategories.map(pageCategory => {
+const categoriesToRender = pageCategories.map((pageCategory) => {
   return;
 });
 
 export class Categories {
-  constructor() {};
+  constructor() {}
 
-  async render () {
+  async render() {
     return CategoriesElement;
   }
 
-  async after_render () {};
+  async after_render() {}
 }

@@ -3,9 +3,9 @@ import FooterElement from './Footer.html';
 export class Footer {
   constructor() {}
 
-  async render () {
+  async render() {
     return FooterElement;
   }
 
-  async after_render () {};
+  async after_render() {}
 }
