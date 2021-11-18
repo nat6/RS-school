@@ -42,10 +42,8 @@ module.exports = (env, options) => {
           use: ['style-loader', 'css-loader', 'sass-loader'],
         },
         {
-          test: /\.(png|svg|jpe?g|gif|ttf)$/,
-          use: {
-            loader: 'file-loader',
-          },
+          test: /\.(png|svg|jpe?g|gif|ttf)$/i,
+          type: 'asset/resource',
         },
         {
           test: /\.html$/,
