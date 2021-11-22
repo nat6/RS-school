@@ -1,0 +1,56 @@
+.card {
+  width: 195px;
+  height: 239px;
+  position: relative;
+  display: block;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.card__text {
+  margin-bottom: 12px;
+  @include flex-between;
+}
+
+.card:hover .card__title {
+  color: $white;
+}
+
+.card__output {
+  color: $general;
+}
+
+.card__img {
+  width: 195px;
+  height: 206px;
+  border-radius: 20px;
+  background-image: url('../assets/img/test.png');
+}
+
+.card__button {
+  padding-left: 15px;
+  width: 195px;
+  height: 50px;
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  @include flex-center;
+  border-radius: 0 0 20px 20px;
+  color: $black;
+  background-color: $general;
+}
+
+.card:hover .card__button {
+  bottom: -2px;
+}
+
+.card__button::before {
+  content: '';
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  background-image: url('../assets/svg/reload.svg');
+  @include icon-background;
+}

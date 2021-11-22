@@ -1,0 +1,31 @@
+$general: #ffbca2;
+$general-trans-8: rgba(255, 188, 162, 0.8);
+$general-trans-7: rgba(255, 188, 162, 0.7);
+$general-trans-5: rgba(255, 188, 162, 0.5);
+$general-trans-1: rgba(255, 188, 162, 0.1);
+$black: #010101;
+$back-trans-3: rgba(1, 1, 1, 0.3);
+$back-trans-1: rgba(1, 1, 1, 0.1);
+$grey: #a4a4a4;
+$green: #3dda69;
+$error: #ff7e7e;
+$white: #ffffff;
+$white-trans-7: rgba(255, 255, 255, 0.7);
+$white-trans-5: rgba(255, 255, 255, 0.5);
+
+$header-height: 11vh;
+$footer-height: 5vh;
+
+$header-height-tablet: 19vh;
+$header-height-tablet-settings: 11vh;
+$footer-height-tablet: 11vh;
+
+$header-height-phone: 14vh;
+$header-height-phone-settings: 11vh;
+$footer-height-phone: 8vh;
+
+$nav-height-phone: 75px;
+
+$main-height: calc(100vh - $header-height - $footer-height);
+$main-height-tablet: calc(100vh - $header-height-tablet - $footer-height-tablet);
+$main-height-phone: calc(100vh - $header-height-phone - $footer-height-phone);
