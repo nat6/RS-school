@@ -1,0 +1,79 @@
+.home {
+  width: 100%;
+  min-height: $main-height;
+  @include flex-column-center;
+  justify-content: center;
+  @include for-tablet {
+    min-height: $main-height-tablet;
+  }
+  @include for-phone-up {
+    min-height: $main-height-phone;
+  }
+}
+
+.home__logo {
+  margin-bottom: 140px;
+  padding-left: 35px;
+  position: relative;
+  font-weight: bold;
+  font-size: 7rem;
+  letter-spacing: -2px;
+  @include for-tablet {
+    font-size: 5rem;
+  }
+  @include for-phone {
+    margin-bottom: 40px;
+    padding-left: 0;
+    font-size: 2.5rem;
+  }
+}
+
+.home__logo::before,
+.home__logo::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 1px;
+  width: 160px;
+  height: 160px;
+  display: block;
+  z-index: -1;
+  border: 2px solid $white;
+  border-radius: 50%;
+  opacity: 0.5;
+  @include for-tablet {
+    width: 116px;
+    height: 116px;
+    opacity: 0.6;
+  }
+  @include for-phone {
+    top: -4px;
+    left: -12px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $white;
+    opacity: 0.8;
+  }
+}
+
+.home__logo::after {
+  left: 83px;
+  @include for-tablet {
+    left: 63px;
+  }
+  @include for-phone {
+    left: 18px;
+  }
+}
+
+.home__buttons {
+  width: 615px;
+  @include flex-between;
+  font-size: 1.3rem;
+  @include for-tablet {
+    width: auto;
+    height: 132px;
+    @include flex-column-center;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,138 @@
+@import '../assets/fonts/Gilroy/font-gilroy.css';
+@import '../utils/_variables.scss';
+@import '../utils/_mixins.scss';
+
+@import '../components/Header/Header.scss';
+@import '../pages/Categories/Categories.scss';
+@import '../pages/Settings/Settings.scss';
+@import '../pages/Home/Home.scss';
+@import '../pages/Error404/Error404.scss';
+@import '../components/Footer/Footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include trans-medium;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Gilroy';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: $white;
+  background-color: $black;
+  @include for-phone {
+    font-size: 14px;
+  }
+}
+
+.home-page,
+.error-page {
+  background-image: url('../assets/img/home.jpeg');
+  background-size: cover;
+  background-position: 50% 9%;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $general;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.main {
+  min-height: $main-height;
+  @include for-tablet {
+    min-height: $main-height-tablet;
+  }
+  @include for-phone-up {
+    min-height: $main-height-phone;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1360px;
+  width: calc(100% - 80px);
+  @include for-tablet {
+    max-width: 705px;
+    width: calc(100% - 63px);
+  }
+  @include for-phone {
+    width: calc(100% - 32px);
+  }
+}
+
+.main__container {
+  max-width: 1299px;
+}
+
+button,
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button {
+  width: 287px;
+  height: 62px;
+  @include flex-center;
+  border: 1px solid $white-trans-5;
+  border-radius: 60px;
+  background-color: $back-trans-1;
+  @include for-tablet {
+    width: 268px;
+    height: 56px;
+    border-radius: 56px;
+  }
+
+  &:hover {
+    border: 1px solid $white-trans-7;
+    color: $white;
+    background-color: $back-trans-3;
+  }
+}
+
+.button_color {
+  border: none;
+  color: $black;
+  background-color: $general;
+  &:hover {
+    border: none;
+    color: $black;
+    background-color: $general-trans-8;
+  }
+}
+
+.button_classic {
+  &:hover {
+    color: $general;
+    border: 1px solid $general-trans-7;
+    @include trans-fast;
+  }
+}
+
+.icon {
+  @include icon-background;
+}
+
+.text_color {
+  color: $general;
+}

@@ -1,0 +1,55 @@
+<div class="settings">
+  <div class="settings__container settings__container_top">
+    <div class="settings__item volume">
+      <h3 class="settings__title volume__title">Volume</h3>
+      <div class="settings__content volume__item">
+        <input
+          type="range"
+          class="volume__range range"
+          name="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.5"
+        />
+        <div class="volume__buttons">
+          <button type="button" class="volume__button volume__button_mute icon"></button>
+          <button type="button" class="volume__button volume__button_sound icon"></button>
+        </div>
+      </div>
+    </div>
+    <div class="settings__item time-game">
+      <h3 class="settings__title time-game__title">Time game</h3>
+      <div class="settings__content time-game__item">
+        <!-- <label for="time-game" class="time-game__label">Off</label> -->
+        <label for="time-game" class="time-game__label">On</label>
+        <input class="time-game__input" type="checkbox" id="time-game" name="time-game" />
+      </div>
+    </div>
+    <div class="settings__item time-answer">
+      <h3 class="settings__title time-answer__title">Time to answer</h3>
+      <div class="settings__content time-answer__item">
+        <button type="button" class="amount__button amount__button_minus icon"></button>
+        <input
+          type="number"
+          class="amount__input time-answer__input"
+          min="5"
+          max="30"
+          value="5"
+          readonly
+        />
+        <button type="button" class="amount__button amount__button_plus icon"></button>
+      </div>
+    </div>
+  </div>
+  <div class="settings__container settings__container_bottom">
+    <div class="settings__buttons">
+      <a class="button button_classic settings__default" href="/#/">
+        <div class="">Default</div>
+      </a>
+      <a class="button button_color settings__save" href="/#/">
+        <div class="">Save</div>
+      </a>
+    </div>
+  </div>
+</div>

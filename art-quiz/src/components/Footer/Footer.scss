@@ -1,0 +1,55 @@
+.footer {
+  height: $footer-height;
+  @include for-tablet {
+    height: $footer-height-tablet;
+  }
+  @include for-phone-up {
+    height: $footer-height-phone;
+  }
+}
+
+.footer__container {
+  height: 100%;
+  @include flex-between;
+}
+
+.footer__text {
+  font-size: 1rem;
+  @include for-phone {
+    font-size: 0.9rem;
+  }
+}
+
+.footer__link {
+  display: block;
+}
+
+.rs-link {
+  width: 85px;
+  height: 31px;
+  background-image: url('../assets/svg/rs.svg');
+  @include for-phone {
+    width: 61px;
+    height: 23px;
+  }
+
+  &:hover {
+    background-image: url('../assets/svg/rs-color.svg');
+  }
+}
+
+.footer__author {
+  width: calc(100% - 280px);
+  @include flex-end;
+  @include for-phone {
+    width: calc(100% - 100px);
+    @include flex-center;
+  }
+}
+
+.author-link {
+  padding: 10px;
+  @include for-phone {
+    padding: 10px 0;
+  }
+}

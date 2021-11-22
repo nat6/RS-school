@@ -26,10 +26,12 @@ const routes = {
   '/categories': categoriesInstance,
 };
 
+const body = document.querySelector('#body');
+
 const router = async () => {
-  const header = null || document.getElementById('header_container');
-  const content = null || document.getElementById('page_container');
-  const footer = null || document.getElementById('footer_container');
+  const header = null || document.getElementById('header');
+  const main = null || document.getElementById('main');
+  const footer = null || document.getElementById('footer');
 
   header.innerHTML = await headerInstance.render();
   await headerInstance.after_render();
@@ -45,11 +47,28 @@ const router = async () => {
     (request.verb ? `/${request.verb}` : '');
 
   const page = routes[parsedURL] ? routes[parsedURL] : error404Instance;
+  const bodyClass = routes[parsedURL] ? parsedURL.split('/')[1] : 'error';
+  const isHome = bodyClass ? false : true;
 
-  content.innerHTML = await page.render();
-
+  main.innerHTML = await page.render();
   await page.after_render();
+
+  body.className = 'body';
+  body.classList.add(isHome ? 'home-page' : bodyClass + '-page');
 };
 
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
+
+console.log(`
+
+
+Добрый день! Не успела сделать таск, готова только вёрстка.
+Если не сложно, оставьте, пожалуйста, контакты (либо проверьте в четверг).
+Спасибо за понимание, ничего не успеваю, знаний не хватает.
+
+Желаю успехов на курсе :)
+
+
+
+`);
