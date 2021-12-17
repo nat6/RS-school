@@ -11,7 +11,7 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-plusplus": "off",
-    "no-console": "warn",
+    "no-console": 0,
     "max-len": ["warn", { "code": 120 }],
     "indent": [
       "warn",
@@ -34,6 +34,7 @@
         "props": false
       }
     ],
+    "class-methods-use-this": "off",
     "@typescript-eslint/no-explicit-any": "error"
   },
   "ignorePatterns": ["*config.js"]
