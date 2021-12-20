@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Christmas Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/ico" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./normalize.css" />
+  </head>
+  <body class="body body__start">
+    <header class="header">
+      <div class="container header__container">
+        <nav class="nav" role="navigation">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__home" href="/#/"> </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__toys" href="#toys"> Игрушки </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__tree" href="#tree"> Ёлка </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__toys">
+          <input class="toys__search" type="search" autocomplete="off" />
+          <div class="toys__selected">
+            <span class="toys__count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container main__container">
+        <section class="start section">
+          <!-- <h1 class="start__title">Помогите бабушке нарядить елку</h1> -->
+          <!-- ! temp -->
+          <p class="start__title start__temp">
+            Добрый день! Не успела доделать фильтрацию и "помирить" все компоненты с ts, оставила просто заглушку. Если
+            не сложно, оставьте, пожалуйста, контакты (либо проверьте в четверг). Спасибо за понимание. Желаю успехов на
+            курсе :)
+          </p>
+
+          <button class="start__button" id="start">С Наступающим Новым годом 🙃</button>
+          <!-- <button class="start__button" id="start">Начать</button> -->
+        </section>
+
+        <section class="toys section">
+          <div class="toys__container">
+            <div class="filters">
+              <div class="filters__sort filters__item">
+                <div class="filters__label">Сортировать</div>
+                <select name="sort" id="sort">
+                  <option value="sort-name-max">По названию от «А» до «Я»</option>
+                  <option value="sort-name-min">По названию от «Я» до «А»</option>
+                  <option value="sort-count-max">По количеству по возрастанию</option>
+                  <option value="sort-count-min">По количеству по убыванию</option>
+                </select>
+              </div>
+
+              <div class="filters__shape filters__item">
+                <div class="filters__label">Форма</div>
+                <div class="shapes">
+                  <button class="ball shapes__button" data-filter="шар"></button>
+                  <button class="bell shapes__button" data-filter="колокольчик"></button>
+                  <button class="cone shapes__button" data-filter="шишка"></button>
+                  <button class="snowflake shapes__button" data-filter="снежинка"></button>
+                  <button class="figure shapes__button" data-filter="фигурка"></button>
+                </div>
+              </div>
+
+              <div class="filters__count filters__item">
+                <div class="filters__label">Количество экземпляров</div>
+                <div class="slider"></div>
+              </div>
+
+              <div class="filters__year filters__item">
+                <div class="filters__label">Год приобретения</div>
+                <div class="slider"></div>
+              </div>
+
+              <div class="filters__color filters__item">
+                <div class="filters__label">Цвет</div>
+                <div class="colors">
+                  <button class="white colors__button" data-filter="белый"></button>
+                  <button class="yellow colors__button" data-filter="желтый"></button>
+                  <button class="red colors__button" data-filter="красный"></button>
+                  <button class="blue colors__button" data-filter="синий"></button>
+                  <button class="green colors__button" data-filter="зелёный"></button>
+                </div>
+              </div>
+
+              <div class="filters__size filters__item">
+                <div class="filters__label">Размер</div>
+                <div class="size">
+                  <div class="size__item">
+                    <input type="checkbox" class="size__input" id="large" />
+                    <label for="large" class="size__label"> <span class="checkbox"></span><span>Большой</span> </label>
+                  </div>
+                  <div class="size__item">
+                    <input type="checkbox" class="size__input" id="medium" />
+                    <label for="medium" class="size__label"> <span class="checkbox"></span><span>Средний</span> </label>
+                  </div>
+                  <div class="size__item">
+                    <input type="checkbox" class="size__input" id="small" />
+                    <label for="small" class="size__label">
+                      <span class="checkbox"></span><span>Маленький</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filters__favorite filters__item">
+                <div class="favorite__item">
+                  <input type="checkbox" class="favorite__input" id="favorite" />
+                  <label for="favorite" class="favorite__label">
+                    <span class="checkbox"></span><span>Только любимые</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="toys__items"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="footer__link" href="https://github.com/nat6" target="_blank"> ☮ nat6 </a>
+        <a class="footer__rs icon" href="https://rs.school/" target="_blank"></a>
+      </div>
+    </footer>
+  </body>
+</html>
