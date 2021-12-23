@@ -1,0 +1,53 @@
+@import '../../../utils/_variables.scss';
+@import '../../../utils/_mixins.scss';
+
+// * current page
+
+.body__toys {
+  background-position: center left 29vw;
+  backdrop-filter: blur(10px);
+  @include for-laptop {
+    background-position: center left 34vw;
+  }
+  @include for-laptop-down {
+    background-position: center left 37vw;
+  }
+}
+
+.body__toys .main {
+  justify-content: start;
+}
+
+.body__toys .main__container {
+  padding-top: 40px;
+}
+
+.body__toys .toys {
+  display: block;
+}
+
+// * toys
+
+.toys {
+  width: 100%;
+}
+
+.toys__container {
+  width: 100%;
+  @include flex-between;
+  align-items: start;
+}
+
+// * toys items
+
+.toys__items {
+  @include flex-between;
+  align-items: start;
+  width: calc(69% - 15px);
+  @include for-laptop {
+    width: calc(63% - 15px);
+  }
+  @include for-laptop-down {
+    width: calc(61% - 15px);
+  }
+}
