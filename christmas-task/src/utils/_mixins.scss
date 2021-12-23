@@ -1,0 +1,82 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin icon-background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin trans-slow {
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+
+@mixin trans-medium {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@mixin for-laptop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin for-laptop-down {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin shadow-bottom {
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+}
+
+@mixin shadow-top {
+  -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+}
