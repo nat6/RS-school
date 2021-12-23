@@ -19,9 +19,7 @@ class AppController {
     cardContainer.innerHTML = '';
 
     cards.forEach((item) => {
-      const {
-        name, num, count, year, shape, color, size, favorite,
-      } = item;
+      const { name, num, count, year, shape, color, size, favorite } = item;
       const card = new Card(name, num, count, year, shape, color, size, favorite);
       cardContainer.append(card.createCard());
     });
@@ -51,28 +49,24 @@ class AppController {
     }
   }
 
-  test(elem: HTMLInputElement): void {
-    console.log(elem.checked);
-  }
-
   updateCards(e: Event): void {
     const target = e.target as HTMLElement;
     const favorite = document.querySelector('.favorite__input') as HTMLInputElement;
     favorite.addEventListener('change', () => {
       const currentCards = this.filters.filterCards(favorite);
+      const sort = document.querySelector('#sort') as HTMLSelectElement;
 
       if (currentCards.length > 0) {
         this.loadCards(currentCards);
       } else {
         this.loadCards();
       }
+      this.sortCards(sort.value);
     });
   }
 
-  sortCards(e: Event): void {
-    const target = e.target as HTMLSelectElement;
-
-    const currentCards = this.filters.sortCards(target.value);
+  sortCards(value: string): void {
+    const currentCards = this.filters.sortCards(value);
     this.loadCards(currentCards);
   }
 }

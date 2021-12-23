@@ -29,7 +29,10 @@ class App implements IApp {
     filters?.addEventListener('click', (e) => this.controller.updateCards(e));
 
     const sort = document.querySelector('#sort') as HTMLSelectElement;
-    sort.addEventListener('change', (e) => this.controller.sortCards(e));
+    sort.addEventListener('change', (e) => {
+      const target = e.target as HTMLSelectElement;
+      this.controller.sortCards(target.value);
+    });
   }
 }
 
