@@ -1,0 +1,53 @@
+@import '../../../utils/_variables.scss';
+@import '../../../utils/_mixins.scss';
+
+.toys__card {
+  width: calc(25% - 20px);
+  min-width: 200px;
+  margin-bottom: 25px;
+  padding: 15px;
+  position: relative;
+  background: radial-gradient(109.56% 109.56% at 0% -2.94%, rgba(255, 255, 255, 0.5) 0%, rgba(179, 246, 255, 0.5) 100%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  @include for-laptop {
+    width: calc(33% - 20px);
+  }
+  @include for-laptop-down {
+    width: calc(50% - 20px);
+  }
+}
+
+.card__name {
+  min-height: 52px;
+  font-size: 20px;
+}
+
+.card__img {
+  height: 115px;
+  display: block;
+  margin: 15px auto 20px;
+}
+
+.card__text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card__star {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 23px;
+  right: 18px;
+  background-image: url(../../../assets/svg/star.svg);
+}
+
+.toys__card_active .card__star {
+  background-image: url(../../../assets/svg/star-color.svg);
+}
