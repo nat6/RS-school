@@ -21,6 +21,7 @@ const esLintPlugin = (isDev) => (isDev ? [] : [new ESLintPlugin({ extensions: ['
 module.exports = ({ development }) => ({
   mode: development ? 'development' : 'production',
   devtool: development ? 'inline-source-map' : false,
+  target: development ? 'web' : 'browserslist',
   entry: {
     main: './src/index.ts',
   },
@@ -52,6 +53,12 @@ module.exports = ({ development }) => ({
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+        },
+      },
     ],
   },
   plugins: [
@@ -61,7 +68,8 @@ module.exports = ({ development }) => ({
     new CopyPlugin({
       patterns: [
         {
-          from: 'public',
+          from: path.resolve(__dirname, './src/assets/toys'),
+          to: path.resolve(__dirname, './dist/assets/toys'),
           noErrorOnMissing: true,
         },
       ],
