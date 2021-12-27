@@ -38,8 +38,13 @@
     <main class="main">
       <div class="container main__container">
         <section class="start section">
-          <h1 class="start__title">Помогите бабушке нарядить елку</h1>
-          <button class="start__button" id="start">Начать</button>
+          <h1 class="start__title temp">
+            Добрый день! Дикая загрузка на работе перед праздниками, не успела сделать таск. Если не сложно, оставьте,
+            пожалуйста, контакты (либо проверьте в четверг вечером). Спасибо за понимание. Желаю успехов на курсе :)
+          </h1>
+          <button class="start__button" id="start">С Наступающим Новым годом 🙃</button>
+          <!-- <h1 class="start__title">Помогите бабушке нарядить елку</h1> -->
+          <!-- <button class="start__button" id="start">Начать</button> -->
         </section>
 
         <section class="toys section">
@@ -48,7 +53,7 @@
               <div class="filters__sort filters__item">
                 <div class="filters__label">Сортировать</div>
                 <select name="sort" id="sort">
-                  <option value="sort-default">Выберите вариант сортировки...</option>
+                  <!-- <option value="sort-default">Выберите вариант сортировки...</option> -->
                   <option value="sort-name-max">По названию от «А» до «Я»</option>
                   <option value="sort-name-min">По названию от «Я» до «А»</option>
                   <option value="sort-count-max">По количеству по возрастанию</option>
@@ -92,20 +97,16 @@
                 <div class="filters__label">Размер</div>
                 <div class="size">
                   <div class="size__item">
-                    <input type="checkbox" class="size__input" id="size-large" data-filter="большой" />
-                    <label for="size-large" class="size__label">
-                      <span class="checkbox"></span><span>Большой</span>
-                    </label>
+                    <input type="checkbox" class="size__input" id="large" data-filter="большой" />
+                    <label for="large" class="size__label"> <span class="checkbox"></span><span>Большой</span> </label>
                   </div>
                   <div class="size__item">
-                    <input type="checkbox" class="size__input" id="size-medium" data-filter="средний" />
-                    <label for="size-medium" class="size__label">
-                      <span class="checkbox"></span><span>Средний</span>
-                    </label>
+                    <input type="checkbox" class="size__input" id="medium" data-filter="средний" />
+                    <label for="medium" class="size__label"> <span class="checkbox"></span><span>Средний</span> </label>
                   </div>
                   <div class="size__item">
-                    <input type="checkbox" class="size__input" id="size-small" data-filter="малый" />
-                    <label for="size-small" class="size__label">
+                    <input type="checkbox" class="size__input" id="small" data-filter="малый" />
+                    <label for="small" class="size__label">
                       <span class="checkbox"></span><span>Маленький</span>
                     </label>
                   </div>
@@ -124,6 +125,88 @@
 
             <div class="toys__items"></div>
           </div>
+        </section>
+
+        <section class="tree section">
+          <aside class="tree__settings">
+            <div class="settings__effects settings__container">
+              <div class="audio-control settings__item"></div>
+              <div class="snow-control settings__item"></div>
+            </div>
+            <div class="settings__wood settings__container">
+              <div class="wood settings__item" data-wood="1"></div>
+              <div class="wood settings__item" data-wood="2"></div>
+              <div class="wood settings__item" data-wood="3"></div>
+              <div class="wood settings__item" data-wood="4"></div>
+              <div class="wood settings__item" data-wood="5"></div>
+              <div class="wood settings__item" data-wood="6"></div>
+            </div>
+            <div class="settings__background settings__container">
+              <div class="bg settings__item" data-bg="1"></div>
+              <div class="bg settings__item" data-bg="2"></div>
+              <div class="bg settings__item" data-bg="3"></div>
+              <div class="bg settings__item" data-bg="4"></div>
+              <div class="bg settings__item" data-bg="5"></div>
+              <div class="bg settings__item" data-bg="6"></div>
+              <div class="bg settings__item" data-bg="7"></div>
+              <div class="bg settings__item" data-bg="8"></div>
+              <div class="bg settings__item" data-bg="9"></div>
+              <div class="bg settings__item" data-bg="10"></div>
+            </div>
+            <div class="settings__garland settings__container">
+              <div class="garland__buttons">
+                <button class="color-btn multicolor-btn" data-color="multicolor"></button>
+                <button class="color-btn red-btn" data-color="red"></button>
+                <button class="color-btn blue-btn" data-color="blue"></button>
+                <button class="color-btn yellow-btn" data-color="yellow"></button>
+                <button class="color-btn green-btn" data-color="green"></button>
+              </div>
+              <div class="garland__onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch__checkbox" id="onoffswitch" checked />
+                <label class="onoffswitch__label" for="onoffswitch">
+                  <div class="onoffswitch__inner"></div>
+                  <div class="onoffswitch__switch"></div>
+                </label>
+              </div>
+            </div>
+          </aside>
+
+          <div class="tree-item">
+            <div class="tree-item__container">
+              <div class="snowflakes hide"></div>
+              <div class="tree-item__garland"></div>
+              <!-- <map name="tree-map">
+                <area
+                  coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664"
+                  shape="poly"
+                />
+              </map> -->
+              <img src="assets/tree/1.png" class="tree-item__img" usemap="#tree-map" alt="tree" />
+            </div>
+          </div>
+
+          <aside class="tree__user">
+            <div class="user__favorites"></div>
+            <div class="user__decorate">
+              <div class="decorate__container">
+                <div class="decorate__tree">
+                  <img src="assets/tree/1.png" class="decorate__img" alt="decorate tree" />
+                </div>
+                <div class="decorate__tree">
+                  <img src="assets/tree/2.png" class="decorate__img" alt="decorate tree" />
+                </div>
+                <div class="decorate__tree">
+                  <img src="assets/tree/3.png" class="decorate__img" alt="decorate tree" />
+                </div>
+                <div class="decorate__tree">
+                  <img src="assets/tree/4.png" class="decorate__img" alt="decorate tree" />
+                </div>
+                <div class="decorate__tree">
+                  <img src="assets/tree/5.png" class="decorate__img" alt="decorate tree" />
+                </div>
+              </div>
+            </div>
+          </aside>
         </section>
       </div>
     </main>
