@@ -1,5 +1,5 @@
 class CarImg {
-  public static generateSVG(color: string): string {
+  static generateSVG(color: string): string {
     const svg = `
       <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
       fill="${color}" stroke="none">

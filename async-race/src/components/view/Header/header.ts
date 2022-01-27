@@ -24,7 +24,7 @@ class Header extends Component {
     this.container.innerHTML = headerHTML;
   }
 
-  public render(): HTMLElement {
+  render(): HTMLElement {
     this.createHTML();
     return this.container;
   }

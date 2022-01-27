@@ -15,7 +15,7 @@ class Footer extends Component {
     this.container.innerHTML = footerHTML;
   }
 
-  public render(): HTMLElement {
+  render(): HTMLElement {
     this.createHTML();
     return this.container;
   }
