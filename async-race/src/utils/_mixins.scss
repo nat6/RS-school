@@ -1,0 +1,50 @@
+@mixin flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin icon-background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin trans-medium {
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@mixin for-tablet {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin shadow-top {
+  -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+}
