@@ -28,7 +28,6 @@ class Loader implements ILoader {
       }
       throw Error(res.statusText);
     }
-    console.log(res);
     return res;
   }
 
