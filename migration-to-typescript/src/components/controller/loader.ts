@@ -1,5 +1,4 @@
 import ILoader from '../../utils/interfaces/ILoader';
-// import IResponse from '../../utils/interfaces/IResponse';
 import IOptions from '../../utils/interfaces/IOptions';
 import { Data, Callback, Options } from '../../utils/types';
 
