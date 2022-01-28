@@ -1,5 +1,5 @@
 import AppModel from './model';
-import { CarType, NewWinnerType } from '../../utils/types';
+import { CarType, NewWinnerType, Animation } from '../../utils/types';
 import { DefaultValues } from '../../utils/enums';
 
 class Store {
@@ -19,8 +19,7 @@ class Store {
 
   static newName: string = DefaultValues.Name;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static animation: any = {}; // object to save animation frames, it can't be typified differently
+  static animation: Animation = {};
 
   static winnersPage = 1;
 
