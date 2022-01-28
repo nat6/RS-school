@@ -303,7 +303,6 @@ class AppController {
     const time = Math.round(distance / velocity);
 
     Store.animation[id] = animation(engineButtons.carImg, htmlDistance, time);
-    console.log(Store.animation);
     const { success } = await this.model.drive(id);
 
     if (!success) {
