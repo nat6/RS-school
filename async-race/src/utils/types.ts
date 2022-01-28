@@ -52,3 +52,31 @@ export type EngineResponse = {
 export type DriveResponse = {
   success: true | false;
 };
+
+export type AnimationState = {
+  id?: number;
+};
+
+export type Animation = {
+  [key: string]: { [key: string]: number };
+};
+
+export type EngineButtons = {
+  start: HTMLElement;
+  stop: HTMLElement;
+  carImg: HTMLElement;
+  flag: HTMLElement;
+};
+
+export type RaceButtons = {
+  race: HTMLElement;
+  reset: HTMLElement;
+  message: HTMLElement;
+};
+
+export type SettingsInputs = {
+  currentName: HTMLInputElement;
+  currentColor: HTMLInputElement;
+  newName: HTMLInputElement;
+  newColor: HTMLInputElement;
+};
