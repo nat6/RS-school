@@ -2,7 +2,10 @@ import Page from '../../../templates/page';
 import Winner from '../Winner/winner';
 
 import { NewWinnerType } from '../../../utils/types';
-import { Components, ClassNames, ButtonsIds } from '../../../utils/enums';
+
+import {
+  Components, ClassNames, ButtonsIds, ButtonsClasses,
+} from '../../../utils/enums';
 
 class Winners extends Page {
   private count: string;
@@ -68,8 +71,8 @@ class Winners extends Page {
   protected addButtons(): void {
     const buttons = this.createBlock(ClassNames.PageButtons);
     const buttonsHTML = `
-      <button class="button button_page" id="${ButtonsIds.PrevWinners}">prev</button>
-      <button class="button button_page" id="${ButtonsIds.NextWinners}">next</button>
+      <button class="button ${ButtonsClasses.Page}" id="${ButtonsIds.PrevWinners}">prev</button>
+      <button class="button ${ButtonsClasses.Page}" id="${ButtonsIds.NextWinners}">next</button>
     `;
 
     buttons.innerHTML = buttonsHTML;

@@ -2,7 +2,10 @@ import Component from '../../../templates/component';
 import Car from '../Car/car';
 
 import { CarType } from '../../../utils/types';
-import { Components, ClassNames, ButtonsIds } from '../../../utils/enums';
+
+import {
+  Components, ClassNames, ButtonsIds, ButtonsClasses,
+} from '../../../utils/enums';
 
 class Cars extends Component {
   private count: string;
@@ -47,8 +50,8 @@ class Cars extends Component {
   protected addButtons(): void {
     const buttons = this.createBlock(ClassNames.PageButtons);
     const buttonsHTML = `
-      <button class="button button_page" id="${ButtonsIds.PrevGarage}">prev</button>
-      <button class="button button_page" id="${ButtonsIds.NextGarage}">next</button>
+      <button class="button ${ButtonsClasses.Page}" id="${ButtonsIds.PrevGarage}">prev</button>
+      <button class="button ${ButtonsClasses.Page}" id="${ButtonsIds.NextGarage}">next</button>
     `;
 
     buttons.innerHTML = buttonsHTML;
