@@ -14,20 +14,26 @@ class News implements INews {
 
       if (idx % 2) newsClone.querySelector('.news__item')?.classList.add('alt');
 
-      (newsClone.querySelector('.news__meta-photo') as HTMLElement).style.backgroundImage = `url(${
-        item.urlToImage || 'img/news_placeholder.jpg'
-      })`;
-      (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent = item.author || item.source.name;
-      (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
-        .slice(0, 10)
-        .split('-')
-        .reverse()
-        .join('-');
+      const photo: HTMLElement | null = newsClone.querySelector('.news__meta-photo');
+      if (photo) photo.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
 
-      (newsClone.querySelector('.news__description-title') as HTMLElement).textContent = item.title;
-      (newsClone.querySelector('.news__description-source') as HTMLElement).textContent = item.source.name;
-      (newsClone.querySelector('.news__description-content') as HTMLElement).textContent = item.description;
-      (newsClone.querySelector('.news__read-more a') as HTMLElement).setAttribute('href', item.url);
+      const author: HTMLElement | null = newsClone.querySelector('.news__meta-author');
+      if (author) author.textContent = item.author || item.source.name;
+
+      const date: HTMLElement | null = newsClone.querySelector('.news__meta-date');
+      if (date) date.textContent = item.publishedAt.slice(0, 10).split('-').reverse().join('-');
+
+      const title: HTMLElement | null = newsClone.querySelector('.news__description-title');
+      if (title) title.textContent = item.title;
+
+      const source: HTMLElement | null = newsClone.querySelector('.news__description-source');
+      if (source) source.textContent = item.source.name;
+
+      const content: HTMLElement | null = newsClone.querySelector('.news__description-content');
+      if (content) content.textContent = item.description;
+
+      const link: HTMLElement | null = newsClone.querySelector('.news__read-more a');
+      if (link) link.setAttribute('href', item.url);
 
       fragment.append(newsClone);
     });
