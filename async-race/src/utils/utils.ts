@@ -79,3 +79,7 @@ export function animation(car: HTMLElement, distance: number, animationTime: num
   state.id = window.requestAnimationFrame(step);
   return state;
 }
+
+export function getNumberId(currentId: string): number {
+  return +currentId.split('-')[1];
+}
