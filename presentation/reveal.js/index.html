@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Types of databases</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/moon.css" />
+    <link rel="icon" href="./assets/mongodb-icon.svg" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h2>Types of databases</h2>
+            <h2>and MongoDB advantages</h2>
+          </section>
+
+          <section>
+            <h2>Hierarchical databases</h2>
+            <img src="./assets/img/1.png" />
+          </section>
+
+          <section>
+            <h2>Relational databases</h2>
+            <img src="./assets/img/2.png" />
+          </section>
+
+          <section>
+            <h2>NoSQL databases</h2>
+            <ul>
+              <li>Key-value databases</li>
+              <li>Graph databases</li>
+              <li>Document-oriented databases</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Graph databases</h2>
+            <img src="./assets/img/3.png" />
+          </section>
+
+          <section>
+            <h2>Key-value databases</h2>
+            <img src="./assets/img/4.png" />
+          </section>
+
+          <section>
+            <h2>Document databases</h2>
+            <img src="./assets/img/5.png" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>MongoDB</h2>
+            <img src="./assets/img/6.svg" />
+          </section>
+
+          <section>
+            <img src="./assets/img/7.jpeg" />
+            <p>Linked in summary in document-oriented database</p>
+          </section>
+
+          <section>
+            <img src="./assets/img/8.jpeg" width="600" />
+            <p>Linked in summary in relational schema</p>
+          </section>
+
+          <section>
+            <pre>
+							<code>
+			{
+				"user_id": 251,
+				"first_name": "Bill",
+				"last_name": "Gates",
+				"summary": "Co-chair of the Bill & Melinda Gates... Active blogger.",
+				"region_id": "us:91",
+				"industry_id": 131,
+				"photo_url": "/p/7/000/253/05b/308dd6e.jpg",
+				"positions": [
+					{"job_title": "Co-chair", "organization": "Bill & Melinda Gates Foundation"},
+					{"job_title": "Co-founder, Chairman", "organization": "Microsoft"}
+				],
+				"education": [
+					{"school_name": "Harvard University", "start": 1973, "end": 1975},
+					{"school_name": "Lakeside School, Seattle", "start": null, "end": null}
+				],
+				"contact_info": {
+					"blog": "http://thegatesnotes.com",
+					"twitter": "http://twitter.com/BillGates"
+				}
+			}
+							</code>
+						</pre>
+          </section>
+        </section>
+
+        <section>
+          <p class="header_small">Main advantages of MongoDB:</p>
+          <ul class="ul_small">
+            <li>Lack of schema</li>
+            <li>Clear object structure</li>
+            <li>Scalability</li>
+            <li>Speed</li>
+            <li>Document-based query</li>
+            <li>JSON format</li>
+            <li>Cross-platform</li>
+            <li>Safety</li>
+            <li>Cloud</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
