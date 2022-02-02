@@ -74,8 +74,7 @@ class AppModel {
       method: 'PATCH',
     });
 
-    const data = await response.json();
-    return data;
+    return response.json();
   }
 
   async drive(id: number): Promise<DriveResponse> {
