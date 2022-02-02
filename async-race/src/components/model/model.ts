@@ -66,8 +66,7 @@ class AppModel {
       method: 'PATCH',
     });
 
-    const data = await response.json();
-    return data;
+    return response.json();
   }
 
   async stopEngine(id: number): Promise<EngineResponse> {
@@ -89,8 +88,7 @@ class AppModel {
       };
     }
 
-    const result = { ...(await response.json()) };
-    return result;
+    return { ...(await response.json()) };
   }
 
   static async getWinners(
