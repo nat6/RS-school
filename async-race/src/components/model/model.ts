@@ -19,8 +19,8 @@ class AppModel {
 
   static engine = `${AppModel.base}/engine`;
 
-  static async getCars(_page: number, _limit = DefaultValues.CarsLimit): Promise<CarsResponse> {
-    const response = await fetch(`${AppModel.garage}?_page=${_page}&_limit=${_limit}`);
+  static async getCars(page: number, limit = DefaultValues.CarsLimit): Promise<CarsResponse> {
+    const response = await fetch(`${AppModel.garage}?_page=${page}&_limit=${limit}`);
     const currentCount = response.headers.get('X-Total-Count') as string;
 
     return {
@@ -91,12 +91,12 @@ class AppModel {
   }
 
   static async getWinners(
-    _page: number,
-    _sort: string = DefaultValues.Sort,
-    _order: string = DefaultValues.Order,
-    _limit = DefaultValues.WinnersLimit,
+    page: number,
+    sort: string = DefaultValues.Sort,
+    order: string = DefaultValues.Order,
+    limit = DefaultValues.WinnersLimit,
   ): Promise<WinnersResponse> {
-    const response = await fetch(`${AppModel.winners}?_page=${_page}&_limit=${_limit}&_sort=${_sort}&_order=${_order}`);
+    const response = await fetch(`${AppModel.winners}?_page=${page}&_limit=${limit}&_sort=${sort}&_order=${order}`);
     const currentCount = response.headers.get('X-Total-Count') as string;
     const winners = await response.json();
 
